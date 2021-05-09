@@ -4,7 +4,9 @@ scoreboard players set v13 V 10
 execute if block ~ ~ ~ #gun:air if block ~ ~-1 ~ #gun:air if block ~ ~1 ~ #gun:air if block ~1 ~ ~ #gun:air if block ~-1 ~ ~ #gun:air if block ~ ~ ~1 #gun:air if block ~ ~ ~-1 #gun:air run scoreboard players set v15 V 3
 execute if score v15 V matches 0 if block ~ ~ ~ #gun:solid run scoreboard players set v15 V 2
 #shield
-execute if score v15 V matches 2 run scoreboard players set v1executexecute if score v15 V matches 0 run function gun/classes/core/util/collide
+execute if score v15 V matches 2 run scoreboard players set v13 V 0
+
+execute if score v15 V matches 0 run function gun:classes/main/util/collide
 execute if score v15 V matches 2 run scoreboard players set v0 V 0
 execute if score v15 V matches 1 run scoreboard players remove @s damage 1
 execute if entity @s[scores={damage=..0}] run scoreboard players set v0 V 0
@@ -45,11 +47,11 @@ execute if entity @s[tag=grenade,tag=water] run particle minecraft:splash ~ ~ ~ 
 
 
 #execute if entity @p[distance=..] run 
-#execute positioned ~ ~-0.975 ~ positioned ^ ^ ^0.5 as @e[distance=0..4,tag=shield] unless score @s UID = @e[tag=cbp,limit=1,sort=nearest] UID run function gun/classes/core/util/hitbox
-function gun/classes/core/util/bullet_player_inter
-execute positioned ~ ~-0.975 ~ positioned ^ ^ ^0.5 as @e[distance=0..4,type=#gun:supported,tag=!hit] run function gun/classes/core/util/hitbox
-execute as @e[type=giant,tag=!hit,distance=0..16] run function gun/classes/core/util/hitbox
-execute if entity @s[tag=reflected_b] run function gun/classes/core/util/hit_shield
+#execute positioned ~ ~-0.975 ~ positioned ^ ^ ^0.5 as @e[distance=0..4,tag=shield] unless score @s UID = @e[tag=cbp,limit=1,sort=nearest] UID run function gun:classes/main/util/hitbox
+function gun:classes/main/util/bullet_player_inter
+execute positioned ~ ~-0.975 ~ positioned ^ ^ ^0.5 as @e[distance=0..4,type=#gun:supported,tag=!hit] run function gun:classes/main/util/hitbox
+execute as @e[type=giant,tag=!hit,distance=0..16] run function gun:classes/main/util/hitbox
+execute if entity @s[tag=reflected_b] run function gun:classes/main/util/hit_shield
 
 #light hit
 execute if entity @s[tag=light,tag=hit] run kill @s
@@ -66,10 +68,8 @@ execute if entity @s[tag=bullet] if entity @e[distance=0..3,tag=hit,tag=!special
 execute if entity @s[tag=bullet] if entity @e[distance=0..3,tag=hit,tag=special] run particle minecraft:item gunpowder ~ ~ ~ 0.1 0.1 0.1 0.3 8 force
 execute if entity @s[tag=laser] if entity @e[distance=0..3,tag=hit] run particle minecraft:lava ~ ~ ~ 0.2 0.2 0.2 0.1 1 force
 
-#interaction with turret
-2 0.2 0.1 1 force
 
 #interaction with turret (REQUDT)
 
-execute as @e[tag=turret_effect,distance=..0.4] at @s run function games:throwable/turret/destruct
+#execute as @e[tag=turret_effect,distance=..0.4] at @s run function games:throwable/turret/destruct
 

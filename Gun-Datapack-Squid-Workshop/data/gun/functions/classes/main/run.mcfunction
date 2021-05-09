@@ -63,6 +63,8 @@ execute as @a[scores={right_click=1..},nbt={SelectedItem:{tag:{minigun:1b,silenc
 
 execute as @a[scores={right_click=1..},nbt={SelectedItem:{tag:{minigun:1b,silenced:0}}}] at @s run scoreboard players set @s cooldown 5
 
+
+execute as @a[scores={right_click=0,spin=10..,cooldown=0},nbt={SelectedItem:{tag:{minigun:1b,silenced:0}}}] at @s run stopsound @a player
 execute as @a[scores={right_click=0,spin=10..,cooldown=0},nbt={SelectedItem:{tag:{minigun:1b,silenced:0}}}] at @s run playsound minecraft:gun/minigun/spin_end player @a ^-0.3 ^ ^0.5 0.6 0.8
 
 execute as @a[scores={right_click=0,cooldown=0},nbt={SelectedItem:{tag:{minigun:1b,silenced:0}}}] at @s run scoreboard players set @s spin 0
