@@ -1,0 +1,16 @@
+{
+"values": [
+"#minecraft:wool",
+"#minecraft:anvil",
+"#minecraft:coral_blocks",
+"#minecraft:ice",
+"#minecraft:logs",
+"#minecraft:planks",
+"#gun:concrete",
+"#gun:terracotta",
+"#gun:stones",
+"#gun:ores",
+"#gun:dirt",
+"#gun:misc"
+]
+}
