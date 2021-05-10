@@ -13,10 +13,10 @@ execute store result entity @s Rotation[1] float 0.000001 run data get entity @s
 
 #spread
 execute if entity @s[tag=bullet] run scoreboard players set @s spread 5
-execute if entity @s[tag=bullet] run function gun:classes/main/spread/spread
+execute if entity @s[tag=bullet] run function gun:classes/gun/spread/spread
 
 execute at @s run tp @s ~ ~ ~ ~180 ~
 
-function gun:classes/main/fire
+function gun:classes/gun/fire
 
 

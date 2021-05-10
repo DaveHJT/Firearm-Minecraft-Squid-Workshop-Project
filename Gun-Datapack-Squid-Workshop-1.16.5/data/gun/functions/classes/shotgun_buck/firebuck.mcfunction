@@ -51,12 +51,12 @@ execute if entity @s[scores={recoil=18..}] as @e[tag=new_b,limit=1,sort=nearest]
 scoreboard players set @e[tag=new_b,limit=1,sort=nearest] spread 3
 
 #spread
-execute as @e[tag=new_b,limit=1,sort=nearest] at @s run function gun:classes/main/spread/spread
+execute as @e[tag=new_b,limit=1,sort=nearest] at @s run function gun:classes/gun/spread/spread
 
 scoreboard players set @e[tag=new_b,limit=1,sort=nearest] spread 1
-execute as @e[tag=new_b,limit=1,sort=nearest] at @s run function gun:classes/main/spread/spread
+execute as @e[tag=new_b,limit=1,sort=nearest] at @s run function gun:classes/gun/spread/spread
 
-execute as @e[tag=new_b,limit=1,sort=nearest] at @s run function gun:classes/main/fire
+execute as @e[tag=new_b,limit=1,sort=nearest] at @s run function gun:classes/gun/fire
 
 
 

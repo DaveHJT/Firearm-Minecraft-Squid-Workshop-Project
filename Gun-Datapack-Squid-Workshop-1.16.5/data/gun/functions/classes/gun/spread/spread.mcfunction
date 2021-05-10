@@ -1,7 +1,7 @@
 #rand
 #execute if entity @s[tag=!offset] run scoreboard players add rand accu 11
 #execute if entity @s[tag=!offset] run scoreboard players operation rand V = rand accu
-execute if entity @s[tag=!offset] run function gun:classes/main/util/random
+execute if entity @s[tag=!offset] run function gun:classes/gun/util/random
 execute if entity @s[tag=!offset] run scoreboard players operation rand V %= 10 C
 
 #execute if entity @s[tag=!offset] run say no
@@ -19,12 +19,12 @@ execute if entity @s[tag=!offset] run scoreboard players operation rand V %= 10 
 
 
 
-execute if score @s spread matches 1 run function gun:classes/main/spread/spread1
-execute if score @s spread matches 2 run function gun:classes/main/spread/spread2
-execute if score @s spread matches 3 run function gun:classes/main/spread/spread3
-execute if score @s spread matches 4 run function gun:classes/main/spread/spread4
-execute if score @s spread matches 5 run function gun:classes/main/spread/spread5
-execute if score @s spread matches 6 run function gun:classes/main/spread/spread6
+execute if score @s spread matches 1 run function gun:classes/gun/spread/spread1
+execute if score @s spread matches 2 run function gun:classes/gun/spread/spread2
+execute if score @s spread matches 3 run function gun:classes/gun/spread/spread3
+execute if score @s spread matches 4 run function gun:classes/gun/spread/spread4
+execute if score @s spread matches 5 run function gun:classes/gun/spread/spread5
+execute if score @s spread matches 6 run function gun:classes/gun/spread/spread6
 
 execute if entity @s[tag=!grenade] run scoreboard players set @s spread 0
 

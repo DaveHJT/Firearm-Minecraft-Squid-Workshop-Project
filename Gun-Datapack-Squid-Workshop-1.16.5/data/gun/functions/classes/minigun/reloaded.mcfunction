@@ -20,5 +20,5 @@ scoreboard players set @s reload 0
 
 replaceitem entity @s[nbt={Inventory:[{Slot:-106b,tag:{minigun:1b,silenced:0}}]}] weapon.offhand air
 
-function gun:get/minigun
+function gun:ui/get/minigun
 

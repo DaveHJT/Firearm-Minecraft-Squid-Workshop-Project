@@ -1,5 +1,6 @@
+# clean first
+function gun:classes/main/clean
 
-#mgs constants
 # init constants
 scoreboard objectives add C dummy
 scoreboard players set -4 C -4
@@ -43,7 +44,6 @@ scoreboard objectives add recoil dummy
 scoreboard objectives add r_cooldown dummy
 scoreboard objectives add spread dummy
 scoreboard objectives add spread_id dummy
-scoreboard objectives add tracer dummy
 
 scoreboard objectives add r dummy
 scoreboard objectives add h dummy
@@ -79,12 +79,21 @@ tag @a remove logged
 tag @a remove ini
 
 # init Session ID
-function gun:classes/main/util/random
+function gun:classes/gun/util/random
 scoreboard objectives add SID dummy
 scoreboard players operation SID C = randraw V
 
 # init settings
-scoreboard players set rule tracer 1
+scoreboard objectives add gun_setting dummy
+scoreboard objectives add aimbot dummy
+
+# tracer: 0.no tracer   1.yellow dust tracer    2.bright tracer
+# hack: 0.disable hacking for everyone    1.enable
+# @s aimbot: 0.disable  1.enable
+
+# default options
+scoreboard players set tracer gun_setting 1
+scoreboard players set hack gun_setting 0
 
 #message
 tellraw @a {"text":"[Server: Gun-Datapack from Squid-Workshop Loaded]","italic":true,"color":"gray"}

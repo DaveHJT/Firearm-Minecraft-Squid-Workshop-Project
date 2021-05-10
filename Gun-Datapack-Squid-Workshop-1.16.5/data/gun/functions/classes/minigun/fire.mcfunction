@@ -6,6 +6,10 @@ summon minecraft:area_effect_cloud ^ ^ ^0.4 {Duration:20,Tags:["bullet","b_mini"
 
 #execute anchored eyes positioned ^ ^-1 ^1 run tp @e[tag=new_b,limit=1,sort=nearest] ~ ~ ~ 
 
+#aimbot hack
+tag @s add me
+execute if score hack gun_setting matches 1 if score @s aimbot matches 1 run tp @s ~ ~ ~ facing entity @p[tag=!me]
+tag @s remove me
 
 
 execute at @e[tag=new_b,limit=1,sort=nearest] run tp @e[tag=new_b,limit=1,sort=nearest] ~ ~ ~ facing entity @s
@@ -78,12 +82,12 @@ execute if entity @s[scores={shift=1..}] run scoreboard players remove @s spread
 scoreboard players operation @e[tag=new_b,limit=1,sort=nearest] spread = @s spread
 
 # random spread
-function gun:classes/main/util/quick_random
+function gun:classes/gun/util/quick_random
 
 #spread
-execute as @e[tag=new_b,limit=1,sort=nearest] at @s run function gun:classes/main/spread/spread
+execute as @e[tag=new_b,limit=1,sort=nearest] at @s run function gun:classes/gun/spread/spread
 
-execute as @e[tag=new_b,limit=1,sort=nearest] at @s run function gun:classes/main/fire
+execute as @e[tag=new_b,limit=1,sort=nearest] at @s run function gun:classes/gun/fire
 
 #update bullet status
 tag @e[tag=new_b,limit=1,sort=nearest] add fired_b

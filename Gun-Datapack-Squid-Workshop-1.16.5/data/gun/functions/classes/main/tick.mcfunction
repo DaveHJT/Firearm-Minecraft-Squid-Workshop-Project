@@ -1,11 +1,11 @@
 #init
 execute as @a unless score @s SID = SID C run tag @s remove ini
-execute as @a[tag=!ini] run function gun:classes/main/init/player_init
+execute as @a[tag=!ini] run function gun:classes/gun/init/player_init
 scoreboard players set @a[tag=ini,scores={shift=1..}] h 1500
 scoreboard players set @a[tag=ini,scores={shift=..0}] h 1950
-execute as @e[type=#gun:supported,tag=babe,nbt={Age:0}] run function gun:classes/main/init/mob_init_a
-execute as @e[type=#gun:supported,tag=!ini] run function gun:classes/main/init/mob_init
-execute as @e[tag=shield,tag=!ini] run function gun:classes/main/init/mob_init
+execute as @e[type=#gun:supported,tag=babe,nbt={Age:0}] run function gun:classes/gun/init/mob_init_a
+execute as @e[type=#gun:supported,tag=!ini] run function gun:classes/gun/init/mob_init
+execute as @e[tag=shield,tag=!ini] run function gun:classes/gun/init/mob_init
 
 # init scores
 scoreboard players add @a ammo 0
@@ -86,7 +86,7 @@ execute as @a[scores={right_click=1..,b_energy=0},nbt={SelectedItem:{tag:{laser:
 execute as @a[scores={spin=75..,b_mini=0},nbt={SelectedItem:{tag:{minigun:1b}}}] at @s run function gun:classes/minigun/low_ammo
 
 #reload
-execute as @a[nbt={Inventory:[{Slot:-106b,tag:{gun:1b}}]}] at @s run function gun:classes/main/reload
+execute as @a[nbt={Inventory:[{Slot:-106b,tag:{gun:1b}}]}] at @s run function gun:classes/gun/reload
 
 #reload interrupted
 
@@ -169,7 +169,7 @@ execute as @a[scores={recoil=2..,r_cooldown=0}] run scoreboard players remove @s
 execute as @a[scores={r_cooldown=1..}] run scoreboard players remove @s r_cooldown 1
 
 #save last pos
-execute as @a[tag=!dead] at @s run function gun:classes/main/util/last_pos
+execute as @a[tag=!dead] at @s run function gun:classes/gun/util/last_pos
 
 #reset
 execute as @a[scores={right_click=1..}] run scoreboard players set @s right_click 0
@@ -183,11 +183,11 @@ execute as @a[scores={jump=1..}] run scoreboard players set @s jump 0
 #execute as @e[tag=fired_b] at @s run particle minecraft:crit ~ ~ ~ 0.1 0.1 0.1 1 0
 #execute as @e[tag=fired_b] at @s run tp @s ^ ^ ^0.1
 #execute as @e[tag=spread] at @s run tp @s ~ ~ ~ ~ ~2
-#execute as @e[tag=spread] at @s run function gun:classes/main/spread/spread
+#execute as @e[tag=spread] at @s run function gun:classes/gun/spread/spread
 #execute as @e[tag=spread] run tag @s remove spread
 
 #bullet /from MGS_2.0.1 gun mod/
-execute as @e[tag=fired_b] at @s run function gun:classes/main/bullet_physics
+execute as @e[tag=fired_b] at @s run function gun:classes/gun/bullet_physics
 
 #ammo display
 #rifle

@@ -29,7 +29,8 @@ scoreboard objectives remove recoil
 scoreboard objectives remove r_cooldown 
 scoreboard objectives remove spread 
 scoreboard objectives remove spread_id 
-scoreboard objectives remove tracer 
+scoreboard objectives remove gun_setting 
+scoreboard objectives remove aimbot
 
 scoreboard objectives remove r 
 scoreboard objectives remove h 
@@ -40,3 +41,7 @@ scoreboard objectives remove dz
 scoreboard objectives remove UID
 
 scoreboard objectives remove V 
+
+# remove all tags
+tag @a remove ini
+tag @a remove logged

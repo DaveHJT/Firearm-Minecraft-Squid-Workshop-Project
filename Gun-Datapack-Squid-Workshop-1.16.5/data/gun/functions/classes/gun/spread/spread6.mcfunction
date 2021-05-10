@@ -1,4 +1,4 @@
-execute if entity @s[tag=!offset] run function gun:classes/main/util/random
+execute if entity @s[tag=!offset] run function gun:classes/gun/util/random
 scoreboard players operation rand V %= 20 C
 
 execute if score rand V matches 0 run tp @s ~ ~ ~ facing ^-0.1 ^0.1 ^1

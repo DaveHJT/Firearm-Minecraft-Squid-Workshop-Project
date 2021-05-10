@@ -8,7 +8,7 @@ execute store result score v9 V run data get entity @s Pos[2] 1000
 tag @s add clp
 execute as @a[distance=..8] if score @s UID = @e[type=area_effect_cloud,tag=clp,limit=1] UID run tag @s add clp
 
-execute as @p[tag=clp] run function gun:classes/main/util/hitbox_bare
+execute as @p[tag=clp] run function gun:classes/gun/util/hitbox_bare
 #auxilliary commands:
 
 execute if entity @p[tag=clp] if score v14 V <= v15 V if score v14 V < v13 V if score v14 V matches 0.. run tag @p[tag=clp] add hit
@@ -27,7 +27,7 @@ execute as @p[tag=hit,tag=clp] if entity @e[tag=cbp,limit=1,sort=nearest,tag=tur
 
 
 #light arrow effects
-execute as @s[tag=hit,distance=..3] at @s if entity @e[tag=cbp,tag=light,limit=1,sort=nearest] run function gun:classes/main/util/light_hit
+execute as @s[tag=hit,distance=..3] at @s if entity @e[tag=cbp,tag=light,limit=1,sort=nearest] run function gun:classes/gun/util/light_hit
 
 #bullet effects
 execute as @p[tag=hit,tag=clp,gamemode=!creative,gamemode=!spectator] run effect give @s slowness 1 1 true

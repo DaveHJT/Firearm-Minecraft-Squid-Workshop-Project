@@ -1,4 +1,8 @@
 
+#aimbot hack
+tag @s add me
+execute if score hack gun_setting matches 1 if score @s aimbot matches 1 run tp @s ~ ~ ~ facing entity @p[tag=!me]
+tag @s remove me
 
 playsound minecraft:gun/shotgun/xm1014-1 player @a ~ ~ ~ 2 1
 execute as @a[distance=31..] run playsound minecraft:gun/shotgun/xm1014-1-distant player @s ~ ~ ~ 10 1
@@ -54,7 +58,7 @@ scoreboard players operation @e[tag=buck,limit=10,sort=nearest] spread = @s spre
 
 
 #spread
-execute as @e[tag=buck,limit=10,sort=nearest] at @s run function gun:classes/main/spread/spread
+execute as @e[tag=buck,limit=10,sort=nearest] at @s run function gun:classes/gun/spread/spread
 
 tag @e[tag=buck,limit=10,sort=nearest] remove buck
 
