@@ -64,6 +64,7 @@ scoreboard players operation v6 V += v3 V
 
 #execute if entity @e[distance=0..1,tag=hit] run particle minecraft:block redstone_block ~ ~ ~ 0.2 0.2 0.2 100 15 force
 
+# hit on entity
 execute if entity @s[tag=bullet] if entity @e[distance=0..3,tag=hit,tag=!special] run particle minecraft:item redstone ~ ~ ~ 0.2 0.2 0.2 0.1 30 force
 execute if entity @s[tag=bullet] if entity @e[distance=0..3,tag=hit,tag=special] run particle minecraft:item gunpowder ~ ~ ~ 0.1 0.1 0.1 0.3 8 force
 execute if entity @s[tag=laser] if entity @e[distance=0..3,tag=hit] run particle minecraft:lava ~ ~ ~ 0.2 0.2 0.2 0.1 1 force

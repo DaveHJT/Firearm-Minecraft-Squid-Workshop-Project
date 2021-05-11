@@ -18,7 +18,6 @@ scoreboard objectives remove b_shot
 scoreboard objectives remove b_sniper 
 scoreboard objectives remove b_energy 
 scoreboard objectives remove b_mini 
-scoreboard objectives remove playerID 
 
 scoreboard objectives remove deaths
 scoreboard objectives remove Kills
@@ -37,8 +36,6 @@ scoreboard objectives remove h
 scoreboard objectives remove dx 
 scoreboard objectives remove dy 
 scoreboard objectives remove dz 
-
-scoreboard objectives remove UID
 
 scoreboard objectives remove V 
 

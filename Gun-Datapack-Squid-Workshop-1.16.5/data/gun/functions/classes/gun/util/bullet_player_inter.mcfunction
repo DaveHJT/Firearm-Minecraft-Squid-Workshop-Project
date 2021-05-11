@@ -37,5 +37,3 @@ execute if entity @s[tag=!reflected_b] run execute positioned ~ ~-0.975 ~ positi
 execute if entity @s[tag=grenade,tag=!reflected_b] positioned ~ ~-0.975 ~ positioned ^ ^ ^0.5 as @e[tag=lp,distance=0..1.14,tag=!hit,nbt={Age:2}] run function gun:classes/gun/util/hitbox_p
 
 execute if entity @s[tag=turret,tag=!reflected_b] positioned ~ ~-0.975 ~ positioned ^ ^ ^0.5 as @e[tag=lp,distance=0..1.14,tag=!hit,nbt={Age:2}] run function gun:classes/gun/util/hitbox_p
-
-#@e[tag=lp,distance=0..1.14,nbt={Age:2},tag=!hit,tag=!own] run function gun:classes/gun/util/hitbox_p

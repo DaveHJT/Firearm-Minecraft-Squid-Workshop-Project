@@ -1,7 +1,6 @@
 {
     "values": [
         "minecraft:shulker",
-        "minecraft:turtle",
-        "minecraft:strider"
+        "minecraft:turtle"
     ]
 }

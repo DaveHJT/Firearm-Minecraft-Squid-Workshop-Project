@@ -12,6 +12,7 @@
         "minecraft:witch",
         "minecraft:vindicator",
         "minecraft:illusioner",
-        "minecraft:pillager"
+        "minecraft:pillager",
+        "minecraft:strider"
     ]
 }

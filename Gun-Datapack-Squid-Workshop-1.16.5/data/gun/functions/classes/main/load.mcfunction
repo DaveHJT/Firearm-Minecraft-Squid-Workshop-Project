@@ -1,5 +1,5 @@
 # clean first
-function gun:classes/main/clean
+# function gun:classes/main/clean
 
 # init constants
 scoreboard objectives add C dummy
@@ -33,7 +33,6 @@ scoreboard objectives add b_shot dummy
 scoreboard objectives add b_sniper dummy
 scoreboard objectives add b_energy dummy
 scoreboard objectives add b_mini dummy
-scoreboard objectives add playerID dummy
 
 scoreboard objectives add deaths deathCount
 scoreboard objectives add Kills playerKillCount

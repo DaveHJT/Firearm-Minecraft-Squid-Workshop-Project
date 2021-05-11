@@ -35,7 +35,7 @@ execute as @a[distance=31..] run playsound minecraft:gun/awp/awp_distant player 
 #own view
 execute if entity @s[scores={shift=0}] positioned ~ ~1.6 ~ run particle minecraft:flame ^-0.1 ^ ^0.7 0.01 0.01 0.01 100 1 force @s
 
-execute if entity @s[scores={shift=1..}] positioned ~ ~1.3 ~ run particle minecraft:flame ^ ^ ^1 0.01 0.01 0.01 100 1 force @s
+#execute if entity @s[scores={shift=1..}] positioned ~ ~1.3 ~ run particle minecraft:flame ^ ^ ^1 0.01 0.01 0.01 100 1 force @s
 
 #others view
 tag @s add display_fire
