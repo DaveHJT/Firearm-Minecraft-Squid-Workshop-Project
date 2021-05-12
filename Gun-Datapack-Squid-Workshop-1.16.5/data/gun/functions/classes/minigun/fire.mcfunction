@@ -29,14 +29,14 @@ scoreboard players operation @e[tag=new_b,limit=1,sort=nearest] UID = @s UID
 execute as @a[distance=31..] run playsound minecraft:gun/m4a1/m4a1_distant_01 player @s ~ ~ ~ 10 1
 
 #own view
-execute if entity @s[scores={shift=0}] positioned ~ ~1.6 ~ run particle minecraft:flame ^-0.15 ^ ^0.5 0.01 0.01 0.01 100 1 force @s
+execute if entity @s[scores={shift=0}] positioned ~ ~1.6 ~ run particle minecraft:soul_fire_flame ^-0.15 ^ ^0.5 0.01 0.01 0.01 100 1 force @s
 
-execute if entity @s[scores={shift=1..}] positioned ~ ~1.15 ~ run particle minecraft:flame ^ ^-0.2 ^1.5 0.01 0.01 0.01 100 1 force @s
+execute if entity @s[scores={shift=1..}] positioned ~ ~1.15 ~ run particle minecraft:soul_fire_flame ^ ^-0.2 ^1.5 0.01 0.01 0.01 100 1 force @s
 
 #others view
 tag @s add display_fire
-execute if entity @s[scores={shift=0}] positioned ~ ~1.6 ~ run particle minecraft:flame ^-0.2 ^-0.4 ^1 0.01 0.01 0.01 100 1 force @a[tag=!display_fire]
-execute if entity @s[scores={shift=1..}] positioned ~ ~1.15 ~ run particle minecraft:flame ^-0.2 ^-0.25 ^1 0.01 0.01 0.01 100 1 force @a[tag=!display_fire]
+execute if entity @s[scores={shift=0}] positioned ~ ~1.6 ~ run particle minecraft:soul_fire_flame ^-0.2 ^-0.4 ^1 0.01 0.01 0.01 100 1 force @a[tag=!display_fire]
+execute if entity @s[scores={shift=1..}] positioned ~ ~1.15 ~ run particle minecraft:soul_fire_flame ^-0.2 ^-0.25 ^1 0.01 0.01 0.01 100 1 force @a[tag=!display_fire]
 tag @s remove display_fire
 
 #particle minecraft:poof ^-0.4 ^1.3 ^1.5 0.1 0.1 0.1 0.05 1

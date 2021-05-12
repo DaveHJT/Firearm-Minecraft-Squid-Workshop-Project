@@ -70,7 +70,6 @@ execute if entity @s[tag=bullet] if entity @e[distance=0..3,tag=hit,tag=special]
 execute if entity @s[tag=laser] if entity @e[distance=0..3,tag=hit] run particle minecraft:lava ~ ~ ~ 0.2 0.2 0.2 0.1 1 force
 
 
-#interaction with turret (REQUDT)
-
-#execute as @e[tag=turret_effect,distance=..0.4] at @s run function games:throwable/turret/destruct
+#interaction with turret
+execute as @e[tag=turret_effect,distance=..0.4] at @s run function throwable:classes/turret/destruct
 

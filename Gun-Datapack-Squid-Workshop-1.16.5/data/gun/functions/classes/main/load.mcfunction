@@ -10,6 +10,7 @@ scoreboard players set 1 C 1
 scoreboard players set 2 C 2
 scoreboard players set 5 C 5
 scoreboard players set 10 C 10
+scoreboard players set 20 C 20
 scoreboard players set 100 C 100
 scoreboard players set midprime C 73417
 scoreboard players set bigprime C 2379673
@@ -95,4 +96,4 @@ scoreboard players set tracer gun_setting 1
 scoreboard players set hack gun_setting 0
 
 #message
-tellraw @a {"text":"[Server: Gun-Datapack from Squid-Workshop Loaded]","italic":true,"color":"gray"}
+tellraw @a {"text":"[Server]: Gun-Datapack from Squid-Workshop Loaded","italic":true,"color":"gray"}
