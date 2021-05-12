@@ -1,0 +1,33 @@
+{
+    "parent": "item/handheld_roda",
+    "textures": {
+        "layer0": "item/awm_aim"
+    },
+    "display": {
+        "thirdperson_righthand": {
+            "rotation": [ 0, 90, 35 ],
+            "translation": [ -1.5, 1.5, 8 ],
+            "scale": [ 0.01, 0.01, 0.01 ]
+        },
+        "thirdperson_lefthand": {
+            "rotation": [ 90, 0, 0 ],
+            "translation": [ 0, 0, 0 ],
+            "scale": [ 0.01, 0.01, 0.01 ]
+        },
+        "firstperson_righthand": {
+            "rotation": [ 0, 90, -51 ],
+            "translation": [ -8.95, 6.2, 2.8 ],
+            "scale": [0.1, 0.1, 0.1 ]
+        },
+        "firstperson_lefthand": {
+            "rotation": [ 0, 0, 0 ],
+            "translation": [ -8.85, 8.3, 5],
+            "scale": [ 1.2, 1.2, 0.1 ]
+        },
+        "ground": {
+            "rotation": [ 0, 0, 0 ],
+            "translation": [ 0, 3, 0],
+            "scale": [ 0.1, 0.1, 0.1 ]
+        }
+    }
+}

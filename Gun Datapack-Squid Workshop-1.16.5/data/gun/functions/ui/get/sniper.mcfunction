@@ -1,0 +1,1 @@
+give @s minecraft:carrot_on_a_stick{CustomModelData:516,display:{Name:"{\"text\":\"sniper rifle\"}"},gun:1b,sniper:1b,silenced:0}
