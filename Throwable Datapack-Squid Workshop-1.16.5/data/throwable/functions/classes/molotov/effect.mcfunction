@@ -1,3 +1,6 @@
+
+
+
 playsound minecraft:gun/thrower/molotov_detonate_2 player @a ~ ~ ~ 2 1
 
 particle minecraft:lava ~ ~ ~ 3 0.1 3 0.0001 20 force

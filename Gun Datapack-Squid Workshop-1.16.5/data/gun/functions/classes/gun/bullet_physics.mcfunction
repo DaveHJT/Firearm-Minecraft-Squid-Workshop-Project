@@ -42,15 +42,15 @@ execute if score v0 V matches 1.. positioned ^ ^ ^27 run function gun:classes/gu
 execute if score v0 V matches 1.. positioned ^ ^ ^28 run function gun:classes/gun/bph
 execute if score v0 V matches 1.. positioned ^ ^ ^29 run function gun:classes/gun/bph
 scoreboard players remove @s[scores={damage=1..},tag=bullet] damage 1
-execute if score v0 V matches 0 run tag @s add OutOfRange
-tag @s[scores={damage=..0}] add OutOfRange
+execute if score v0 V matches 0 run tag @s add blocked
+tag @s[scores={damage=..0}] add blocked
 
-tag @e[tag=reflected_b] remove OutOfRange
+tag @e[tag=reflected_b] remove blocked
 
 tag @e[tag=own] remove own
 tag @e[tag=hit] remove hit
 tag @e[tag=cbp] remove cbp
-kill @s[tag=OutOfRange]
+kill @s[tag=blocked]
 kill @s[tag=light,tag=hit]
 tp @s[tag=slow,tag=!reflected_b] ^ ^ ^15.0
 tp @s[tag=!slow,tag=!reflected_b] ^ ^ ^30.0

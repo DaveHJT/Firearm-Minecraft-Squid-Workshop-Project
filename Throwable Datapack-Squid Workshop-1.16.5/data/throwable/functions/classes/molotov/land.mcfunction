@@ -1,4 +1,4 @@
-summon item ~ ~ ~ {Item:{id:"minecraft:snowball",Count:1b,tag:{CustomModelData:502}},PickupDelay:-1s,Tags:["molotov_effect","effect"],Invulnerable:1b,Fire:100s}
+summon item ~ ~ ~ {Item:{id:"minecraft:snowball",Count:1b,tag:{CustomModelData:502}},PickupDelay:32767s,Tags:["molotov_effect","effect"],Invulnerable:1b,Fire:100s}
 
 scoreboard players operation @e[tag=effect,limit=1,sort=nearest] throwable_life = @s throwable_life
 

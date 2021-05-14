@@ -10,8 +10,11 @@ scoreboard players set @e[limit=1,sort=nearest,tag=turret_effect] ammo 50
 
 
 scoreboard players operation @e[tag=effect,limit=1,sort=nearest] UID = @s UID
+scoreboard players operation @e[tag=effect,limit=1,sort=nearest] team = @s team
 
-playsound minecraft:block.anvil.land player @a ~ ~ ~ 2 1.7
+
+execute if entity @s[tag=!land] run playsound minecraft:block.anvil.land player @a ~ ~ ~ 2 1.7
+tag @s add land
 
 execute as @e[limit=1,sort=nearest,tag=turret_effect] at @s as @a if score @s UID = @e[limit=1,sort=nearest,tag=turret_effect] UID run tp @e[limit=1,sort=nearest,tag=turret_effect] ~ ~ ~ facing entity @s
 #execute as @e[limit=1,sort=nearest,tag=turret_effect] at @s run tp @e[limit=1,sort=nearest,tag=turret_effect] ~ ~ ~ facing ^ ^ ^-1

@@ -1,8 +1,8 @@
-#summon item ~ ~ ~ {Item:{id:"minecraft:snowball",Count:1b,tag:{CustomModelData:501}},PickupDelay:-1s,Tags:["grenade_effect","effect"]}
+#summon item ~ ~ ~ {Item:{id:"minecraft:snowball",Count:1b,tag:{CustomModelData:501}},PickupDelay:32767s,Tags:["grenade_effect","effect"]}
 
 summon armor_stand ~ ~ ~ {Tags:["grenade_effect","effect"],Invisible:1b,Marker:1b}
 
-summon item ~ ~ ~ {Item:{id:"minecraft:snowball",Count:1b,tag:{CustomModelData:501}},PickupDelay:-1s,Tags:["display"]}
+summon item ~ ~ ~ {Item:{id:"minecraft:snowball",Count:1b,tag:{CustomModelData:501}},PickupDelay:32767s,Tags:["display"]}
 
 #scoreboard players add @s throwable_life 20
 

@@ -88,7 +88,7 @@ execute as @e[tag=hit,tag=smoke] at @s run function throwable:classes/smoke/land
 execute as @e[tag=thrown,tag=signal,scores={throwable_life=40..}] at @s run kill @s
 execute as @e[tag=hit,tag=signal] at @s run function throwable:classes/signal/land
 #flash
-execute as @e[tag=thrown,tag=flash,scores={throwable_life=55..}] at @s run kill @s
+execute as @e[tag=thrown,tag=flash,scores={throwable_life=40..}] at @s run kill @s
 execute as @e[tag=hit,tag=flash] at @s run function throwable:classes/flash/land
 #>>>>>>>>>>>>>>>land
 
@@ -98,6 +98,11 @@ execute as @e[tag=display] at @s run function throwable:classes/throwable/effect
 #<<<<<<<<<<<<<<<effect
 # grenade
 execute as @e[tag=grenade_effect,scores={throwable_life=50..}] at @s run function throwable:classes/grenade/effect
+
+#smoke
+execute as @e[tag=smoke_effect,scores={throwable_life=..25}] at @s if entity @e[tag=ignited_molotov,distance=..4] run scoreboard players set @s throwable_life 25
+execute as @e[tag=smoke_effect,scores={throwable_life=25..}] at @s run function throwable:classes/smoke/effect
+
 
 #molotov
 execute as @e[tag=molotov_effect,nbt={OnGround:1b}] at @s run function throwable:classes/molotov/effect
@@ -121,8 +126,6 @@ execute as @e[tag=xirang_effect] at @s run function throwable:classes/xirang/eff
 #template
 execute as @e[tag=template_effect] at @s run function throwable:classes/template/effect
 
-#smoke
-execute as @e[tag=smoke_effect,scores={throwable_life=25..}] at @s run function throwable:classes/smoke/effect
 
 #signal
 execute as @e[tag=signal_effect] at @s run function throwable:classes/signal/effect
@@ -139,4 +142,12 @@ execute as @a[scores={throw=1..}] run scoreboard players set @s throw 0
 scoreboard players remove @e[tag=turret_effect,scores={cooldown=1..}] cooldown 1
 
 #signal flare attraction
-execute as @e[type=#damage:mob] if entity @e[tag=signal_effect,distance=..30] at @s run tp @s ~ ~ ~ facing entity @e[limit=1,sort=nearest,tag=signal_effect]
+execute as @e[type=#damage:mob] at @s if entity @e[tag=signal_effect,distance=..10] at @s run tp @s ~ ~ ~ facing entity @e[limit=1,sort=nearest,tag=signal_effect]
+
+#flash blind effect when victim leave flashbang
+execute as @a[tag=flashed] at @s unless entity @e[tag=flashing_effect,distance=..7] run effect give @s blindness 5 10 true
+execute as @a[tag=flashed] at @s unless entity @e[tag=flashing_effect,distance=..7] run tag @s remove flashed
+
+#smoke blind remove when leave smoke
+execute as @a[tag=smoke_blind] at @s unless entity @e[tag=smoke_effect,distance=..4] run effect clear @s blindness
+execute as @a[tag=smoke_blind] at @s unless entity @e[tag=smoke_effect,distance=..4] run tag @s remove smoke_blind

@@ -1,4 +1,4 @@
-execute if entity @s[tag=bullet] if block ~ ~ ~ #minecraft:anvil run playsound minecraft:block.anvil.land ambient @a ~ ~ ~ 3 2
+execute if entity @s[tag=bullet] if block ~ ~ ~ #gun:steel run playsound minecraft:block.anvil.land ambient @a ~ ~ ~ 3 2
 
 execute if entity @s[tag=bullet] if block ~ ~ ~ #minecraft:logs run playsound minecraft:gun/hit/wood1 ambient @a ~ ~ ~ 0.6 1
 execute if entity @s[tag=bullet] if block ~ ~ ~ #minecraft:planks run playsound minecraft:gun/hit/wood1 ambient @a ~ ~ ~ 0.6 1
@@ -11,3 +11,6 @@ execute if entity @s[tag=bullet] if block ~ ~ ~ #gun:ores run playsound minecraf
 
 execute if entity @s[tag=bullet] if block ~ ~ ~ #gun:dirt run playsound minecraft:gun/hit/dirt1 ambient @a ~ ~ ~ 0.6 1.5
 execute if entity @s[tag=bullet] if block ~ ~ ~ #gun:misc run playsound minecraft:gun/hit/dirt1 ambient @a ~ ~ ~ 0.6 1.5
+
+execute if entity @s[tag=bullet] if block ~ ~ ~ #gun:watery run playsound minecraft:gun/hit/flesh1 ambient @a ~ ~ ~ 0.6 1.5
+

@@ -2,12 +2,12 @@
 
 
 # damage
-execute as @e[distance=..6,type=!#damage:notmob] run tag @s add grenade_damage
+execute as @e[distance=..7,type=!#damage:notmob] run tag @s add grenade_damage
 
 effect give @e[tag=grenade_damage] glowing 1 1 true
 
 scoreboard players add @e[tag=grenade_damage] damage 4
-scoreboard players add @e[tag=grenade_damage,distance=..3] damage 62
+scoreboard players add @e[tag=grenade_damage,distance=..5] damage 62
 
 execute as @e[tag=grenade_damage] run scoreboard players operation @s hit_by = @e[limit=1,sort=nearest,tag=grenade_effect] UID
 

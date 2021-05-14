@@ -1,4 +1,4 @@
-summon item ~ ~ ~ {Item:{id:"minecraft:snowball",Count:1b,tag:{CustomModelData:506}},PickupDelay:-1s,Tags:["signal_effect","effect"]}
+summon item ~ ~ ~ {Item:{id:"minecraft:snowball",Count:1b,tag:{CustomModelData:506}},PickupDelay:32767s,Tags:["signal_effect","effect"]}
 
 effect give @e[tag=signal_effect,limit=1,sort=nearest] slow_falling 10000 10 true
 

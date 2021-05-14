@@ -7,8 +7,8 @@ execute if score v15 V matches 0 if block ~ ~ ~ #gun:solid run scoreboard player
 execute if score v15 V matches 2 run scoreboard players set v13 V 0
 
 execute if score v15 V matches 0 run function gun:classes/gun/util/collide
-execute if score v15 V matches 2 run scoreboard players set v0 V 0
 execute if score v15 V matches 1 run scoreboard players remove @s damage 1
+execute if score v15 V matches 2 positioned ^ ^ ^1 run function gun:classes/gun/util/solid_hit
 execute if entity @s[scores={damage=..0}] run scoreboard players set v0 V 0
 
 #hit effect
@@ -71,5 +71,6 @@ execute if entity @s[tag=laser] if entity @e[distance=0..3,tag=hit] run particle
 
 
 #interaction with turret
-execute as @e[tag=turret_effect,distance=..0.4] at @s run function throwable:classes/turret/destruct
+execute as @e[tag=turret_effect,distance=..0.6] at @s run playsound minecraft:block.anvil.land player @a ~ ~ ~ 2 1.7
+execute as @e[tag=turret_effect,distance=..0.6] at @s run function throwable:classes/turret/destruct
 

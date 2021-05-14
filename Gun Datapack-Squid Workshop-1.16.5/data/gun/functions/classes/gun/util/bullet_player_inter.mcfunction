@@ -19,7 +19,7 @@ execute if entity @s[tag=bullet,tag=!grenade] if score v15 V matches 1 run plays
 
 #solid
 execute if entity @s[tag=bullet,tag=!grenade] if score v15 V matches 2 run playsound minecraft:block.sand.hit ambient @a ~ ~ ~ 3 2
-execute if entity @s[tag=bullet,tag=!grenade] positioned ^ ^ ^1 if block ~ ~ ~ #gun:solid run function gun:classes/gun/util/solid_sound
+execute if entity @s[tag=bullet,tag=!grenade] positioned ^ ^ ^1 unless block ~ ~ ~ air run function gun:classes/gun/util/solid_sound
 #execute if entity @s[tag=bullet] if score v15 V matches 1 run say solid
 
 #fly by
