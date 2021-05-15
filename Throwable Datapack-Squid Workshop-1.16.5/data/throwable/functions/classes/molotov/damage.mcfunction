@@ -2,7 +2,7 @@
 
 effect give @s minecraft:slowness 1 1 true
 
-scoreboard players operation @s hit_by = @e[limit=1,sort=nearest,tag= molotov_effect] UID
+scoreboard players operation @s hit_by = @e[limit=1,sort=nearest,tag=ignited_molotov] UID
 
 tag @s add onfire
 
