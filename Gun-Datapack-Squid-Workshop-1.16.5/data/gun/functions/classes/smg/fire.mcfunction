@@ -47,16 +47,22 @@ execute as @e[tag=new_b,limit=1,sort=nearest] run scoreboard players set @s dama
 execute store result entity @e[tag=new_b,limit=1,sort=nearest] Rotation[0] float 0.000001 run data get entity @s Rotation[0] 1000000
 execute store result entity @e[tag=new_b,limit=1,sort=nearest] Rotation[1] float 0.000001 run data get entity @s Rotation[1] 1000000
 
-
+#score spread
+scoreboard players set @s spread 2
+execute if entity @s[scores={walk=1..,spread=..1}] run scoreboard players add @s spread 1
+execute if entity @s[scores={sprint=1..,spread=..1}] run scoreboard players add @s spread 1
+execute if entity @s[scores={jump=1..}] run scoreboard players add @s spread 3
+execute if entity @s[scores={shift=1..}] run scoreboard players remove @s spread 1
 
 
 #recoil
 
-execute if entity @s[scores={recoil=3..5}] as @e[tag=new_b,limit=1,sort=nearest] at @s run tp @s ~ ~ ~ ~0.1 ~-0.3
-execute if entity @s[scores={recoil=6..8}] as @e[tag=new_b,limit=1,sort=nearest] at @s run tp @s ~ ~ ~ ~0.3 ~-0.5
-execute if entity @s[scores={recoil=9..13}] as @e[tag=new_b,limit=1,sort=nearest] at @s run tp @s ~ ~ ~ ~0.6 ~-0.9
-execute if entity @s[scores={recoil=14..17}] as @e[tag=new_b,limit=1,sort=nearest] at @s run tp @s ~ ~ ~ ~0.2 ~-1.5
-execute if entity @s[scores={recoil=18..}] as @e[tag=new_b,limit=1,sort=nearest] at @s run tp @s ~ ~ ~ ~-0.8 ~-3
+execute if entity @s[scores={recoil=3..5}] as @e[tag=new_b,limit=1,sort=nearest] at @s run tp @s ~ ~ ~ ~-0.4 ~-0.5
+execute if entity @s[scores={recoil=3..}] run scoreboard players add @s spread 1
+execute if entity @s[scores={recoil=6..8}] as @e[tag=new_b,limit=1,sort=nearest] at @s run tp @s ~ ~ ~ ~0.8 ~-0.7
+execute if entity @s[scores={recoil=9..13}] as @e[tag=new_b,limit=1,sort=nearest] at @s run tp @s ~ ~ ~ ~-0.3 ~-1.2
+execute if entity @s[scores={recoil=14..17}] as @e[tag=new_b,limit=1,sort=nearest] at @s run tp @s ~ ~ ~ ~0.9 ~-1.7
+execute if entity @s[scores={recoil=18..}] as @e[tag=new_b,limit=1,sort=nearest] at @s run tp @s ~ ~ ~ ~-1.5 ~-3
 
 #cooldown
 execute if entity @s[scores={right_click=1..}] run scoreboard players add @s cooldown 3
@@ -68,12 +74,7 @@ scoreboard players remove @s b_smg 1
 scoreboard players add @s recoil 1
 scoreboard players set @s r_cooldown 5
 
-#score spread
-scoreboard players set @s spread 2
-execute if entity @s[scores={walk=1..}] run scoreboard players add @s spread 1
-execute if entity @s[scores={sprint=1..}] run scoreboard players add @s spread 1
-execute if entity @s[scores={jump=1..}] run scoreboard players add @s spread 3
-execute if entity @s[scores={shift=1..}] run scoreboard players remove @s spread 1
+
 
 
 scoreboard players operation @e[tag=new_b,limit=1,sort=nearest] spread = @s spread
