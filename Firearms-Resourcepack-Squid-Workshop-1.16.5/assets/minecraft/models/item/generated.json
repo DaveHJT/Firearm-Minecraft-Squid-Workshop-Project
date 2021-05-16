@@ -1,4 +1,5 @@
 {
+    "replace": false,
     "parent": "builtin/generated",
     "gui_light": "front",
     "display": {

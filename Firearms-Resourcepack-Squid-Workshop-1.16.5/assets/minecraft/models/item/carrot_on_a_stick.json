@@ -1,4 +1,5 @@
 {
+    "replace": false,
     "parent": "item/handheld_rod",
     "textures": {
         "layer0": "item/carrot_on_a_stick"
