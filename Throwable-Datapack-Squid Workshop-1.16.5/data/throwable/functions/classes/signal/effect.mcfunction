@@ -1,3 +1,6 @@
+#in water
+execute if block ~ ~ ~ water run tag @s add dead
+tag @s[tag=dead] remove signal_effect
 
 #flare
 particle minecraft:lava ~ ~ ~ 0 0 0 0.01 1 force @a

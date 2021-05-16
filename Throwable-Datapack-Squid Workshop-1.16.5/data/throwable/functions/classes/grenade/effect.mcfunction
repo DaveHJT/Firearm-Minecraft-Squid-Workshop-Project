@@ -1,6 +1,4 @@
 
-
-
 # damage
 execute as @e[distance=..7,type=!#damage:notmob] run tag @s add grenade_damage
 
@@ -56,13 +54,6 @@ function throwable:classes/grenade/fire_procedure
 function throwable:classes/grenade/fire_procedure
 
 
-
-
-
-
-
-
-
 #in water
 execute if block ~ ~ ~ minecraft:water run tag @s add water
 execute if entity @s[tag=water] run particle minecraft:splash ~ ~2 ~ 0.6 1 0.6 1 1000 force
@@ -75,7 +66,7 @@ execute if entity @s[tag=!water] run particle minecraft:lava ~ ~1 ~ 3 1 3 1 100 
 
 # sound
 execute if entity @s[tag=!water] run playsound minecraft:gun/thrower/c4_explo player @a[distance=..30] ~ ~ ~ 4 2 0.1
-execute if entity @s[tag=!water] run playsound minecraft:gun/thrower/c4_explo player @a[distance=31..] ~ ~ ~ 10 1 0.1
+execute if entity @s[tag=!water] run playsound minecraft:gun/thrower/grenade_distant player @a[distance=31..] ~ ~ ~ 10 1 0.1
 
 #particle
 execute if entity @s[tag=!water] run particle minecraft:explosion_emitter ~ ~1 ~ 0 0 0 1 3 force

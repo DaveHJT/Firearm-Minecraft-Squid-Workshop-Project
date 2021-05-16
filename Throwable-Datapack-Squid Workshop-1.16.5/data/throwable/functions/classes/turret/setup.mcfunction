@@ -1,3 +1,7 @@
+#in water
+execute if block ~ ~ ~ water run tag @s add dead
+tag @s[tag=dead] remove turret_effect
+
 execute if score @s throwable_life matches 10 run playsound minecraft:block.piston.contract player @a ~ ~ ~ 2 0.5
 execute if score @s throwable_life matches 20 run playsound minecraft:block.piston.extend player @a ~ ~ ~ 2 0.5
 execute if score @s throwable_life matches 25 run playsound minecraft:block.piston.contract player @a ~ ~ ~ 2 1

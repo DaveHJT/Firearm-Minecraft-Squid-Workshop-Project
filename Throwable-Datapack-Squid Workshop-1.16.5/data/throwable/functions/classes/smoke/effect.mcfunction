@@ -1,3 +1,6 @@
+#in water
+execute if block ~ ~ ~ water run tag @s add dead
+tag @s[tag=dead] remove smoke_effect
 
 #smoke
 execute if entity @s[scores={throwable_life=..100}] run particle minecraft:campfire_signal_smoke ~ ~1 ~ 1.5 1 1.5 0.001 20 force @a
@@ -11,7 +14,8 @@ kill @e[tag=extinguished]
 
 # blind
 tag @e[distance=..4] add smoke_blind
-effect give @e[tag=smoke_blind] blindness 2 10 true
+effect give @a[tag=smoke_blind] blindness 2 10 true
+effect give @e[tag=smoke_blind,type=#damage:mob] slowness 1 2 true
 
 # sound
 

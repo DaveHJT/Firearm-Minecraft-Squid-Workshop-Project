@@ -71,6 +71,6 @@ execute if entity @s[tag=laser] if entity @e[distance=0..3,tag=hit] run particle
 
 
 #interaction with turret
-execute as @e[tag=turret_effect,distance=..0.6] at @s run playsound minecraft:block.anvil.land player @a ~ ~ ~ 2 1.7
-execute as @e[tag=turret_effect,distance=..0.6] at @s run function throwable:classes/turret/destruct
+execute if entity @e[tag=turret_effect,distance=..0.6] unless score @e[tag=turret_effect,distance=..0.6,limit=1,sort=nearest] UID = @s UID run tag @e[tag=turret_effect,distance=..0.6,limit=1,sort=nearest] add destruct
+
 

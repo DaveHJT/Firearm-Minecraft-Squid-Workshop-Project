@@ -1,4 +1,5 @@
-
+#hit
+playsound minecraft:block.anvil.land player @a ~ ~ ~ 2 1.7
 
 #execute as @e[distance=..9] run scoreboard players add @s damage 11
 execute as @e[distance=..3,type=!#damage:notmob] run tag @s add turret_exploded

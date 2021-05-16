@@ -97,7 +97,8 @@ execute as @e[tag=display] at @s run function throwable:classes/throwable/effect
 
 #<<<<<<<<<<<<<<<effect
 # grenade
-execute as @e[tag=grenade_effect,scores={throwable_life=50..}] at @s run function throwable:classes/grenade/effect
+execute as @e[tag=grenade_effect,tag=granade_explosion] at @s run function throwable:classes/grenade/effect
+execute as @e[tag=grenade_effect,scores={throwable_life=50..}] at @s run tag @s add granade_explosion
 
 #smoke
 execute as @e[tag=smoke_effect,scores={throwable_life=..25}] at @s if entity @e[tag=ignited_molotov,distance=..4] run scoreboard players set @s throwable_life 25
@@ -108,7 +109,7 @@ execute as @e[tag=smoke_effect,scores={throwable_life=25..}] at @s run function 
 execute as @e[tag=molotov_effect,nbt={OnGround:1b}] at @s run function throwable:classes/molotov/effect
 execute as @e[tag=molotov_effect,scores={throwable_life=200..}] at @s run kill @s
 execute as @e[tag=ignited_molotov] at @s run function throwable:classes/molotov/ignited_effect
-#execute if entity @e[tag=ignited_molotov] as @a at @s if entity @e[limit=1,tag=ignited_molotov,distance=..8,scores={throwable_life=0},sort=nearest] run scoreboard players add @s damage 3
+#execute if entity @e[tag=ignited_molotov] as @a at @s if entity @e[limit=1,tag=ignited_molotov,distance=..6,scores={throwable_life=0},sort=nearest] run scoreboard players add @s damage 3
 execute as @e[tag=onfire] run scoreboard players add @s damage 2
 execute as @e[tag=onfire,nbt={ActiveEffects:[{Id:12b}]}] run scoreboard players remove @s damage 2
 tag @e[tag=onfire] add molotoved
@@ -151,3 +152,6 @@ execute as @a[tag=flashed] at @s unless entity @e[tag=flashing_effect,distance=.
 #smoke blind remove when leave smoke
 execute as @a[tag=smoke_blind] at @s unless entity @e[tag=smoke_effect,distance=..4] run effect clear @s blindness
 execute as @a[tag=smoke_blind] at @s unless entity @e[tag=smoke_effect,distance=..4] run tag @s remove smoke_blind
+
+#max effect life time
+execute as @e[tag=effect,tag=dead,scores={throwable_life=300..}] run kill @s

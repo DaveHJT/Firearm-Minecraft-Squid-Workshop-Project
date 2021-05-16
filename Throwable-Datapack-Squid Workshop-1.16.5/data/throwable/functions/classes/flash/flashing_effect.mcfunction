@@ -1,8 +1,10 @@
 
 # flashing and slowness effects
-effect give @e[distance=..7] minecraft:slowness 5 1 true
-effect give @e[distance=..7] blindness 1 10 true
 tag @e[distance=..7] add flashed
+effect give @a[tag=flashed] minecraft:slowness 5 1 true
+effect give @a[tag=flashed] blindness 1 10 true
+effect give @e[tag=flashed,type=#damage:mob] slowness 5 10 true
+
 
 particle minecraft:flash ~ ~1 ~ 0 0 0 0.1 5 force @a
 
