@@ -82,7 +82,7 @@ execute if entity @s[scores={shift=1..}] run scoreboard players remove @s spread
 scoreboard players operation @e[tag=new_b,limit=1,sort=nearest] spread = @s spread
 
 # random spread
-function gun:classes/gun/util/quick_random
+function gun:classes/gun/quick_random
 
 #spread
 execute as @e[tag=new_b,limit=1,sort=nearest] at @s run function gun:classes/gun/spread/spread

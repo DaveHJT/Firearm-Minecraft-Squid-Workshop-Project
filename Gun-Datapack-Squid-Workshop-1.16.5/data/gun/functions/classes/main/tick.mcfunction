@@ -169,7 +169,7 @@ execute as @a[scores={recoil=2..,r_cooldown=0}] run scoreboard players remove @s
 execute as @a[scores={r_cooldown=1..}] run scoreboard players remove @s r_cooldown 1
 
 #save last pos
-execute as @a[tag=!dead] at @s run function gun:classes/gun/util/last_pos
+execute as @a[tag=!dead] at @s run function gun:classes/gun/last_pos
 
 #reset
 execute as @a[scores={right_click=1..}] run scoreboard players set @s right_click 0

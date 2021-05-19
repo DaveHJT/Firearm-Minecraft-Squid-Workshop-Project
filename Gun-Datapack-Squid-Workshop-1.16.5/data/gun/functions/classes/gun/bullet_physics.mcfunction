@@ -54,6 +54,6 @@ kill @s[tag=blocked]
 kill @s[tag=light,tag=hit]
 tp @s[tag=slow,tag=!reflected_b] ^ ^ ^15.0
 tp @s[tag=!slow,tag=!reflected_b] ^ ^ ^30.0
-execute if entity @s[tag=reflected_b] at @s run function gun:classes/gun/util/reflect
+execute if entity @s[tag=reflected_b] at @s run function gun:classes/gun/reflect
 tag @e[tag=reflected_b] remove reflected_b
 

@@ -79,7 +79,7 @@ tag @a remove logged
 tag @a remove ini
 
 # init Session ID
-function gun:classes/gun/util/random
+function gun:classes/gun/random
 scoreboard objectives add SID dummy
 scoreboard players operation SID C = randraw V
 
@@ -89,11 +89,15 @@ scoreboard objectives add aimbot dummy
 
 # tracer: 0.no tracer   1.yellow dust tracer    2.bright tracer
 # hack: 0.disable hacking for everyone    1.enable
+# blood: 0.disable  1.little  2.a_lot
+# hit_glow: 0.disable  1.enable
 # @s aimbot: 0.disable  1.enable
 
 # default options
 scoreboard players set tracer gun_setting 1
 scoreboard players set hack gun_setting 0
+scoreboard players set blood gun_setting 2
+scoreboard players set hit_glow gun_setting 1
 
 #message
 tellraw @a {"text":"[Server]: Gun-Datapack from Squid-Workshop Loaded","italic":true,"color":"gray"}

@@ -8,7 +8,7 @@ execute store result score v7 V run data get entity @s Pos[0] 1000
 execute store result score v8 V run data get entity @s Pos[1] 1000
 execute store result score v9 V run data get entity @s Pos[2] 1000
 
-function gun:classes/gun/util/hitbox_bare
+function gun:classes/gun/hitbox_bare
 
 execute if score v14 V <= v15 V if score v14 V < v13 V if score v14 V matches 0.. run tag @s add hit
 
@@ -19,7 +19,7 @@ execute if score v14 V <= v15 V if score v14 V < v13 V if score v14 V matches 0.
 execute as @s[tag=hit,distance=..1,tag=shield] at @s as @e[tag=cbp] unless score @s UID = @e[distance=..1,tag=shield,limit=1,sort=nearest] UID run tag @s add reflected_b
 
 #light arrow effects
-execute as @s[tag=hit,distance=..1] at @s if entity @e[tag=cbp,tag=light,limit=1,sort=nearest] run function gun:classes/gun/util/light_hit
+execute as @s[tag=hit,distance=..1] at @s if entity @e[tag=cbp,tag=light,limit=1,sort=nearest] run function gun:classes/gun/light_hit
 
 #bullet effects
 execute as @s[tag=hit,distance=..1,tag=!special] run effect give @s slowness 1 1 true
