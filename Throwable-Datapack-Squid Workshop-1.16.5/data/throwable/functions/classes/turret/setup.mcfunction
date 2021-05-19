@@ -1,5 +1,6 @@
 #in water
 execute if block ~ ~ ~ water run tag @s add dead
+execute if block ~ ~ ~ lava run function throwable:classes/turret/destruct
 tag @s[tag=dead] remove turret_effect
 
 execute if score @s throwable_life matches 10 run playsound minecraft:block.piston.contract player @a ~ ~ ~ 2 0.5

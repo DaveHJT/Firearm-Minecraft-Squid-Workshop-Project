@@ -75,7 +75,6 @@ scoreboard players add time V 0
 
 # reset tags
 tag @a remove uid
-tag @a remove logged
 tag @a remove ini
 
 # init Session ID

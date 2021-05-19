@@ -97,8 +97,8 @@ execute as @e[tag=display] at @s run function throwable:classes/throwable/effect
 
 #<<<<<<<<<<<<<<<effect
 # grenade
-execute as @e[tag=grenade_effect,tag=granade_explosion] at @s run function throwable:classes/grenade/effect
-execute as @e[tag=grenade_effect,scores={throwable_life=50..}] at @s run tag @s add granade_explosion
+execute as @e[tag=grenade_effect,tag=grenade_explosion] at @s run function throwable:classes/grenade/effect
+execute as @e[tag=grenade_effect,scores={throwable_life=50..}] at @s run tag @s add grenade_explosion
 
 #smoke
 execute as @e[tag=smoke_effect,scores={throwable_life=..25}] at @s if entity @e[tag=ignited_molotov,distance=..4] run scoreboard players set @s throwable_life 25
@@ -153,5 +153,5 @@ execute as @a[tag=flashed] at @s unless entity @e[tag=flashing_effect,distance=.
 execute as @a[tag=smoke_blind] at @s unless entity @e[tag=smoke_effect,distance=..4] run effect clear @s blindness
 execute as @a[tag=smoke_blind] at @s unless entity @e[tag=smoke_effect,distance=..4] run tag @s remove smoke_blind
 
-#max effect life time
+#max effect throwable_life time
 execute as @e[tag=effect,tag=dead,scores={throwable_life=300..}] run kill @s

@@ -189,7 +189,7 @@ execute as @a[scores={jump=1..}] run scoreboard players set @s jump 0
 #bullet /from MGS_2.0.1 gun mod/
 execute as @e[tag=fired_b] at @s run function gun:classes/gun/bullet_physics
 
-#ammo display
+#<<<<<<<<<<<<<<<<<<ammo display
 #rifle
 execute as @a[nbt={SelectedItem:{tag:{rifle:1b}}}] run title @s actionbar ["",{"score":{"name":"@s","objective":"b_rifle"},"color":"white"},{"text":"/"},{"score":{"name":"@s","objective":"ammo"},"color":"white"}]
 #smg
@@ -202,10 +202,40 @@ execute as @a[nbt={SelectedItem:{tag:{sniper:1b}}}] run title @s actionbar ["",{
 execute as @a[nbt={SelectedItem:{tag:{laser:1b}}}] run title @s actionbar ["",{"score":{"name":"@s","objective":"b_energy"},"color":"white"},{"text":"/"},{"score":{"name":"@s","objective":"ammo"},"color":"white"}]
 #minigun
 execute as @a[nbt={SelectedItem:{tag:{minigun:1b}}}] run title @s actionbar ["",{"score":{"name":"@s","objective":"b_mini"},"color":"white"},{"text":"/"},{"score":{"name":"@s","objective":"ammo"},"color":"white"}]
+#>>>>>>>>>>>>>>>>>>ammo display
 
 #rand accu
 scoreboard players add rand accu 1
 execute if score rand accu >= 10000 C run scoreboard players set rand accu 0
+
+#other weapons
+#jetpack
+execute as @a[tag=shift_bool,nbt={SelectedItem:{tag:{jetpack:1b}}}] at @s run function gun:classes/jetpack/tick
+execute as @a[tag=shift_bool,scores={lever=160},nbt={SelectedItem:{tag:{jetpack:1b}}}] at @s run playsound minecraft:block.beacon.deactivate ambient @s ~ ~ ~ 1 2
+execute as @a[tag=!shift_bool,scores={lever=1..}] at @s run scoreboard players remove @s lever 1
+
+#shield
+function gun:classes/shield/tick
+execute as @s[tag=shield] at @s unless entity @a[tag=shield_bool,distance=..1] run kill @s
+
+#light arrow
+execute as @e[type=minecraft:arrow,nbt={Color:16449336},tag=!arrow] at @s run function gun:classes/arrow_light/init
+#execute as @e[tag=light,tag=arrow] at @s run function gun:classes/arrow_light/tick
+
+#grenade arrow
+execute as @e[type=minecraft:arrow,nbt={Color:1274392},tag=!arrow] at @s run function gun:classes/arrow_explosive/init
+execute as @e[tag=grenade_effect,tag=arrow] at @s run function gun:classes/arrow_explosive/tick
+
+#mini explosive arrow
+execute as @e[type=minecraft:arrow,nbt={Color:11080735},tag=!arrow] at @s run function gun:classes/arrow_explosive_mini/init
+execute as @e[tag=mini_explosion,tag=arrow] at @s run function gun:classes/arrow_explosive_mini/tick
+execute as @e[tag=mini_explosion,scores={throwable_life=50..}] at @s run function gun:classes/arrow_explosive_mini/effect
+
+#light bow
+execute as @a[tag=bow_bool,nbt={SelectedItem:{tag:{light:1b}}}] at @s as @e[type=minecraft:arrow,tag=!light,limit=1,sort=nearest] at @s run function gun:classes/arrow_light/init
+#light crossbow
+execute as @a[tag=crossbow_bool,nbt={SelectedItem:{tag:{light:1b}}}] at @s as @e[type=minecraft:arrow,tag=!light,limit=1,sort=nearest] at @s run function gun:classes/arrow_light/init
+
 
 
 

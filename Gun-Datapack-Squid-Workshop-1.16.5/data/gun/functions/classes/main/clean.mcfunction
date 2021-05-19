@@ -41,4 +41,3 @@ scoreboard objectives remove V
 
 # remove all tags
 tag @e[tag=ini] remove ini
-tag @a remove logged

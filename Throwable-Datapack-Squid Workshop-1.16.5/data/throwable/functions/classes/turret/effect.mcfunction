@@ -1,5 +1,6 @@
 #in water
 execute if block ~ ~ ~ water run tag @s add dead
+execute if block ~ ~ ~ lava run tag @s add destruct
 tag @s[tag=dead] remove turret_effect
 
 scoreboard players operation turret UID = @s UID
@@ -36,7 +37,7 @@ tag @s[tag=!green,tag=!target_aimed] add green
 # destruct
 execute if entity @e[tag=!ally,distance=..2,type=!#damage:notmob] run tag @s add destruct
 execute positioned ~ ~0.6 ~ if entity @e[type=arrow,distance=..1] run tag @s add destruct
-execute if entity @e[tag=grenade_effect,distance=..7,tag=granade_explosion] run tag @s add destruct
+execute if entity @e[tag=grenade_effect,distance=..7,tag=grenade_explosion] run tag @s add destruct
 execute if entity @e[tag=ignited_molotov,distance=..6] run tag @s add destruct
 execute if score @s ammo matches 0 run tag @s add destruct
 #execute if entity @e[tag=bullet,distance=..2] run function throwable:classes/turret/destruct

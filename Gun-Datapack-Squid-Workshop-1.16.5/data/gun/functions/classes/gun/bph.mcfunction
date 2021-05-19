@@ -32,7 +32,6 @@ execute if entity @s[tag=bullet,tag=!grenade] if score tracer gun_setting matche
 execute if entity @s[tag=bullet] if score tracer gun_setting matches 3 run particle minecraft:dripping_lava ~ ~-0.2 ~ 0 0 0 0.0001 1 force
 #execute if entity @s[tag=laser] run particle minecraft:landing_lava ~ ~-0.2 ~ 0 0 0 0.0001 1
 execute if entity @s[tag=laser] run particle minecraft:dust 1 0 0 0.5 ~ ~-0.15 ~ 0 0 0 0.0001 1 force
-
 #arrow light
 execute if entity @s[tag=light] run particle minecraft:dripping_lava ~ ~-0.15 ~ 0 0 0 0.0001 1 force
 execute if entity @s[tag=light] run tp @e[tag=arrow,tag=light,limit=1,sort=nearest] ^ ^ ^-0.1 facing entity @s
