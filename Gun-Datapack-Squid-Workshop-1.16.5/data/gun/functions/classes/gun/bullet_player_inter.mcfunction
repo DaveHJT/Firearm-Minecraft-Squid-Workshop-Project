@@ -15,7 +15,7 @@ execute if entity @s[tag=bullet,tag=!grenade] if block ~ ~ ~ minecraft:lava run 
 execute if entity @s[tag=bullet,tag=!grenade] if block ~ ~ ~ minecraft:lava run particle minecraft:lava ~ ~0.5 ~ 0 0.2 0 0.01 1
 
 #coral
-execute if entity @s[tag=bullet] if block ~ ~ ~ #minecraft:coral_blocks run playsound minecraft:block.slime_block.break ambient @a ~ ~ ~ 1 1
+execute if entity @s[tag=bullet,tag=!grenade] if block ~ ~ ~ #minecraft:coral_blocks run playsound minecraft:block.slime_block.break ambient @a ~ ~ ~ 1 1
 
 #execute if entity @s[tag=bullet] if score v15 V matches 1 unless block ~ ~ ~ #gun:special_sound run playsound minecraft:block.slime_block.break ambient @s ~ ~ ~ 1 1
 execute if entity @s[tag=bullet,tag=!grenade] if score v15 V matches 1 run playsound minecraft:block.slime_block.break ambient @s ~ ~ ~ 1 1
@@ -36,8 +36,8 @@ execute if entity @s[tag=laser] if score v15 V matches 2 run playsound minecraft
 
 
 #hitbox
-execute if entity @s[tag=!reflected_b] run execute positioned ~ ~-0.975 ~ positioned ^ ^ ^0.5 as @e[tag=lp,distance=0..1.14,tag=!hit,tag=!own,nbt={Age:2}] run function gun:classes/gun/hitbox_p
+execute if entity @s[tag=!reflecting] run execute positioned ~ ~-0.975 ~ positioned ^ ^ ^0.5 as @e[tag=lp,distance=0..1.14,tag=!hit,tag=!own,nbt={Age:2}] run function gun:classes/gun/hitbox_p
 
-execute if entity @s[tag=grenade,tag=!reflected_b] positioned ~ ~-0.975 ~ positioned ^ ^ ^0.5 as @e[tag=lp,distance=0..1.14,tag=!hit,nbt={Age:2}] run function gun:classes/gun/hitbox_p
+execute if entity @s[tag=grenade,tag=!reflecting] positioned ~ ~-0.975 ~ positioned ^ ^ ^0.5 as @e[tag=lp,distance=0..1.14,tag=!hit,nbt={Age:2}] run function gun:classes/gun/hitbox_p
 
-execute if entity @s[tag=turret,tag=!reflected_b] positioned ~ ~-0.975 ~ positioned ^ ^ ^0.5 as @e[tag=lp,distance=0..1.14,tag=!hit,nbt={Age:2}] run function gun:classes/gun/hitbox_p
+execute if entity @s[tag=turret,tag=!reflecting] positioned ~ ~-0.975 ~ positioned ^ ^ ^0.5 as @e[tag=lp,distance=0..1.14,tag=!hit,nbt={Age:2}] run function gun:classes/gun/hitbox_p

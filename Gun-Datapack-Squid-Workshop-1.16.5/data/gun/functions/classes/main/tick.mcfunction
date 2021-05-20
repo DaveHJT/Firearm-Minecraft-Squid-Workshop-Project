@@ -236,6 +236,8 @@ execute as @a[tag=bow_bool,nbt={SelectedItem:{tag:{light:1b}}}] at @s as @e[type
 #light crossbow
 execute as @a[tag=crossbow_bool,nbt={SelectedItem:{tag:{light:1b}}}] at @s as @e[type=minecraft:arrow,tag=!light,limit=1,sort=nearest] at @s run function gun:classes/arrow_light/init
 
-
+#time 
+scoreboard players add time V 1
+execute if score time V matches 1000000.. run scoreboard players set time V 0 
 
 

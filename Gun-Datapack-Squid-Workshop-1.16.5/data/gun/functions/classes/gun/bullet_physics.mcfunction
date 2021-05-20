@@ -45,15 +45,15 @@ scoreboard players remove @s[scores={damage=1..},tag=bullet] damage 1
 execute if score v0 V matches 0 run tag @s add blocked
 tag @s[scores={damage=..0}] add blocked
 
-tag @e[tag=reflected_b] remove blocked
+tag @e[tag=reflecting] remove blocked
 
 tag @e[tag=own] remove own
 tag @e[tag=hit] remove hit
 tag @e[tag=cbp] remove cbp
 kill @s[tag=blocked]
 kill @s[tag=light,tag=hit]
-tp @s[tag=slow,tag=!reflected_b] ^ ^ ^15.0
-tp @s[tag=!slow,tag=!reflected_b] ^ ^ ^30.0
-execute if entity @s[tag=reflected_b] at @s run function gun:classes/gun/reflect
-tag @e[tag=reflected_b] remove reflected_b
+tp @s[tag=slow,tag=!reflecting] ^ ^ ^15.0
+tp @s[tag=!slow,tag=!reflecting] ^ ^ ^30.0
+execute if entity @s[tag=reflecting] at @s run function gun:classes/gun/reflect
+tag @e[tag=reflecting] remove reflecting
 

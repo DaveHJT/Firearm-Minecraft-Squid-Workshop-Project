@@ -1,5 +1,6 @@
 tag @e[tag=cbp,tag=light,limit=1,sort=nearest] add hit
 tp @e[tag=cbp,tag=light,limit=1,sort=nearest] ~ ~ ~ facing entity @s
+scoreboard players operation @e[tag=cbp,tag=light,limit=1,sort=nearest] UID = @s UID
 playsound minecraft:entity.arrow.hit_player player @a ~ ~ ~ 3 0.5 0.1
 
 scoreboard players set @s dx 0

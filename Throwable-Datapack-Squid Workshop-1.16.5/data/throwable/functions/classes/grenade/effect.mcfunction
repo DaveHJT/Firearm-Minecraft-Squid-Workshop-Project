@@ -16,6 +16,7 @@ tag @e[tag=grenade_damage] remove grenade_damage
 tp @s ~ ~ ~ facing entity @p
 
 function throwable:classes/grenade/fire
+tag @e[tag=grenade] add accurate
 
 function throwable:classes/grenade/fire_procedure
 function throwable:classes/grenade/fire_procedure

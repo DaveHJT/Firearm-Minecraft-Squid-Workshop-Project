@@ -32,6 +32,8 @@ execute if entity @s[tag=bullet,tag=!grenade] if score tracer gun_setting matche
 execute if entity @s[tag=bullet] if score tracer gun_setting matches 3 run particle minecraft:dripping_lava ~ ~-0.2 ~ 0 0 0 0.0001 1 force
 #execute if entity @s[tag=laser] run particle minecraft:landing_lava ~ ~-0.2 ~ 0 0 0 0.0001 1
 execute if entity @s[tag=laser] run particle minecraft:dust 1 0 0 0.5 ~ ~-0.15 ~ 0 0 0 0.0001 1 force
+#reflected
+execute if entity @s[tag=reflected] run particle minecraft:dripping_lava ~ ~-0.2 ~ 0 0 0 0.0001 1 force
 #arrow light
 execute if entity @s[tag=light] run particle minecraft:dripping_lava ~ ~-0.15 ~ 0 0 0 0.0001 1 force
 execute if entity @s[tag=light] run tp @e[tag=arrow,tag=light,limit=1,sort=nearest] ^ ^ ^-0.1 facing entity @s
@@ -47,11 +49,11 @@ execute if entity @s[tag=grenade,tag=lava] run particle minecraft:falling_lava ~
 
 
 #execute if entity @p[distance=..] run 
-#execute positioned ~ ~-0.975 ~ positioned ^ ^ ^0.5 as @e[distance=0..4,tag=shield] unless score @s UID = @e[tag=cbp,limit=1,sort=nearest] UID run function gun:classes/gun/hitbox
+execute positioned ~ ~-0.975 ~ positioned ^ ^ ^0.5 as @e[distance=0..4,tag=shield] unless score @s UID = @e[tag=cbp,limit=1,sort=nearest] UID run function gun:classes/gun/hitbox
 function gun:classes/gun/bullet_player_inter
 execute positioned ~ ~-0.975 ~ positioned ^ ^ ^0.5 as @e[distance=0..4,type=#gun:supported,tag=!hit] run function gun:classes/gun/hitbox
 execute as @e[type=giant,tag=!hit,distance=0..16] run function gun:classes/gun/hitbox
-execute if entity @s[tag=reflected_b] run function gun:classes/gun/hit_shield
+execute if entity @s[tag=reflecting] run function gun:classes/gun/shield_hit
 
 #light hit
 execute if entity @s[tag=light,tag=hit] run kill @s

@@ -2,11 +2,19 @@
 
 #execute as @e[distance=..9] run scoreboard players add @s damage 11
 
-execute as @e[distance=..3] run scoreboard players add @s damage 2
 
-execute as @e[distance=..3] run scoreboard players operation @s hit_by = @e[limit=1,sort=nearest,tag=effect] UID
+execute as @e[distance=..7,type=!#damage:notmob] run tag @s add mini_explosion_damage
 
-execute as @e[distance=..3] run tag @s add exploded
+effect give @e[tag=mini_explosion_damage] glowing 1 1 true
+
+scoreboard players add @e[tag=mini_explosion_damage] damage 2
+
+execute as @e[tag=mini_explosion_damage] run scoreboard players operation @s hit_by = @e[limit=1,sort=nearest,tag=mini_explosion] UID
+
+execute as @e[tag=mini_explosion_damage] run tag @s add exploded
+
+tag @e[tag=mini_explosion_damage] remove mini_explosion_damage
+
 
 tp @s ~ ~ ~ facing entity @p
 

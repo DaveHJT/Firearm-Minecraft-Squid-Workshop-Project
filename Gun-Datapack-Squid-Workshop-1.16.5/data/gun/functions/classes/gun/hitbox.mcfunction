@@ -16,7 +16,7 @@ execute if score v14 V <= v15 V if score v14 V < v13 V if score v14 V matches 0.
 #execute if entity @s[tag=hit,distance=..1] run particle minecraft:block redstone_block ~ ~ ~ 0.2 0.4 0.2 1 20
 
 #shield effects
-execute as @s[tag=hit,distance=..1,tag=shield] at @s as @e[tag=cbp] unless score @s UID = @e[distance=..1,tag=shield,limit=1,sort=nearest] UID run tag @s add reflected_b
+execute as @s[tag=hit,distance=..1,tag=shield] at @s as @e[tag=cbp] unless score @s UID = @e[distance=..1,tag=shield,limit=1,sort=nearest] UID run tag @s add reflecting
 
 #light arrow effects
 execute as @s[tag=hit,distance=..1] at @s if entity @e[tag=cbp,tag=light,limit=1,sort=nearest] run function gun:classes/gun/light_hit

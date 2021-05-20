@@ -1,1 +1,0 @@
-give @s minecraft:tipped_arrow{CustomPotionColor:16449336,display:{Name:"\"Light Arrow\""}} 1

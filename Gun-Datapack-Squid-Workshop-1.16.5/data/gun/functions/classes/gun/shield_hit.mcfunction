@@ -9,7 +9,6 @@ scoreboard players operation @s UID = @e[tag=shield,limit=1,sort=nearest] UID
 
 
 tp @s ~ ~ ~
-#tag @s remove reflected_b
 tag @s add reflected
 
 

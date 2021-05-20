@@ -8,7 +8,8 @@ execute at @e[tag=new_b,limit=1,sort=nearest] run tp @e[tag=new_b,limit=1,sort=n
 
 execute as @p[tag=!shift_bool] as @e[tag=new_b,limit=1,sort=nearest] at @s run tp @s ~ ~1.6 ~
 
-execute as @p[tag=shift_bool] if entity @s[scores={shift=1..}] as @e[tag=new_b,limit=1,sort=nearest] at @s run tp @s ~ ~1.25 ~
+execute as @p[tag=shift_bool] as @e[tag=new_b,limit=1,sort=nearest] at @s run tp @s ~ ~-0.35 ~
+execute as @p[tag=shift_bool] as @e[tag=new_b,limit=1,sort=nearest] at @s run tp @s ^ ^ ^0.5
 
 #damage
 execute as @e[tag=new_b,limit=1,sort=nearest] run scoreboard players set @s damage 5

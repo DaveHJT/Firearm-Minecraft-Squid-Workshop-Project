@@ -78,7 +78,7 @@ tag @a remove uid
 tag @a remove ini
 
 # init Session ID
-function gun:classes/gun/random
+function gun:classes/gun/quick_random
 scoreboard objectives add SID dummy
 scoreboard players operation SID C = randraw V
 
