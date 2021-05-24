@@ -9,7 +9,7 @@ effect give @e[tag=mini_explosion_damage] glowing 1 1 true
 
 scoreboard players add @e[tag=mini_explosion_damage] damage 2
 
-execute as @e[tag=mini_explosion_damage] run scoreboard players operation @s hit_by = @e[limit=1,sort=nearest,tag=mini_explosion] UID
+execute as @e[tag=mini_explosion_damage] at @s run scoreboard players operation @s hit_by = @e[limit=1,sort=nearest,tag=mini_explosion] UID
 
 execute as @e[tag=mini_explosion_damage] run tag @s add exploded
 

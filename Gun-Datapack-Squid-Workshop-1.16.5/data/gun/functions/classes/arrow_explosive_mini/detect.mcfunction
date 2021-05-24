@@ -5,3 +5,4 @@ tag @s remove mini_explosion
 scoreboard players add @e[tag=mini_explosion,limit=1,sort=nearest] throwable_life 100
 scoreboard players operation @e[tag=mini_explosion,limit=1,sort=nearest] UID = @s UID
 kill @s
+tag @s add detected

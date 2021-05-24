@@ -3,6 +3,7 @@ tag @s add arrow
 
 execute at @p run summon minecraft:area_effect_cloud ~ ~ ~ {Duration:20,Tags:["light","new_b","slow"]}
 scoreboard players operation @e[tag=new_b,limit=1,sort=nearest] UID = @s UID
+scoreboard players operation @s UID = @p UID
 
 execute at @e[tag=new_b,limit=1,sort=nearest] run tp @e[tag=new_b,limit=1,sort=nearest] ~ ~ ~ facing entity @p
 

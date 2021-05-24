@@ -223,8 +223,21 @@ execute as @e[type=minecraft:arrow,nbt={Color:16449336},tag=!arrow] at @s run fu
 #execute as @e[tag=light,tag=arrow] at @s run function gun:classes/arrow_light/tick
 
 #grenade arrow
-execute as @e[type=minecraft:arrow,nbt={Color:1274392},tag=!arrow] at @s run function gun:classes/arrow_explosive/init
-execute as @e[tag=grenade_effect,tag=arrow] at @s run function gun:classes/arrow_explosive/tick
+execute as @e[type=minecraft:arrow,nbt={Color:1274392},tag=!arrow] at @s run function gun:classes/arrow_grenade/init
+execute as @e[tag=grenade_effect,tag=arrow] at @s run function gun:classes/arrow_grenade/tick
+
+#molotov arrow
+execute as @e[type=minecraft:arrow,nbt={Color:11298561},tag=!arrow] at @s run function gun:classes/arrow_molotov/init
+execute as @e[tag=molotov_effect,tag=arrow] at @s run function gun:classes/arrow_molotov/tick
+
+#smoke arrow
+execute as @e[type=minecraft:arrow,nbt={Color:1656347},tag=!arrow] at @s run function gun:classes/arrow_smoke/init
+execute as @e[tag=smoke_effect,tag=arrow] at @s run function gun:classes/arrow_smoke/tick
+
+#signal arrow
+execute as @e[type=minecraft:arrow,nbt={Color:16754176},tag=!arrow] at @s run function gun:classes/arrow_signal/init
+execute as @e[tag=signal_effect,tag=arrow] at @s run function gun:classes/arrow_signal/tick
+
 
 #mini explosive arrow
 execute as @e[type=minecraft:arrow,nbt={Color:11080735},tag=!arrow] at @s run function gun:classes/arrow_explosive_mini/init
