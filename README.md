@@ -19,7 +19,7 @@ After a huge number of testing, there should be no bug that can greatly damage y
 
 
 # Installation
-Before installation, install [damage system](https://github.com/DaveHJT/Damage-Minecraft-Squid-Workshop-Project) first.
+Before installation, install our [damage datapack](https://github.com/DaveHJT/Damage-Minecraft-Squid-Workshop-Project) first.
 
 - Step 1 Download this repository as a zip and unpack, you will get three folders: 2 datapack folders + 1 resourcepack folder.
 	- **Firearms-Resourcepack-Squid-Workshop-1.16.5**
