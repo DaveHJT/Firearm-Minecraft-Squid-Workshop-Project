@@ -19,21 +19,20 @@ After a huge number of testing, there should be no bug that can greatly damage y
 
 
 # Installation
-**Before installation, install my [damage datapack](https://github.com/DaveHJT/Damage-Minecraft-Squid-Workshop-Project) first.**
+- Step 1 **Before installation, install my [damage datapack](https://github.com/DaveHJT/Damage-Minecraft-Squid-Workshop-Project) first.**
 
-- Step 1 Download this repository as a zip and unpack, you will get three folders: 2 datapack folders + 1 resourcepack folder.
+- Step 2 Download this repository as a zip and unpack, you will get three folders: 2 datapack folders + 1 resourcepack folder.
 	- **Firearms-Resourcepack-Squid-Workshop-1.16.5**
 	- **Gun-Datapack-Squid-Workshop-1.16.5**
 	- **Throwable-Datapack-Squid Workshop-1.16.5**
-- Step 2 Find  your **.minecraft** directory, usually under
+- Step 3 Find  your **.minecraft** directory, usually under
 	- **C:/Users/youUserName/AppData/Roaming/.minecraft.**
-- Step 3 Find the **resourcepacks** folder and drop the folder
+- Step 4 Find the **resourcepacks** folder and drop the folder
 	- **Firearms-Resourcepack-Squid-Workshop-1.16.5**
 	
 	under the **resourcepacks** folder.
-- Step 4 Go back to **.minecraft** directory and go to the **saves** directory.
-- Step 5 Choose the save which you want to install the datapack.
-- Step 6 Go to ./world/datapacks folder.
+- Step 5 Go back to **.minecraft** directory and go to the **saves** directory.
+- Step 6 Choose the save which you want to install the datapack and go to it's ./world/datapacks folder.
 - Step 7 Move these folders
 	- **Gun-Datapack-Squid-Workshop-1.16.5**
 	- **Throwable-Datapack-Squid Workshop-1.16.5**
