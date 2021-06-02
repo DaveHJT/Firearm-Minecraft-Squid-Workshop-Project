@@ -11,9 +11,9 @@ A [minecraft datapack](https://minecraft.fandom.com/wiki/Data_Pack) that introdu
 - [More About Squid Workshop](#More-About-Squid-Workshop)
 
 # Abstract
-This datapack used only the [minecraft commands](https://minecraft.fandom.com/wiki/Commands) to build a raycasting system, a hitbox detection system, a throwable hit detection system that does not exist in Minecraft. It depends on the [damage system](https://github.com/DaveHJT/Damage-Minecraft-Squid-Workshop-Project) I completed earlier.
+This datapack used only the [minecraft commands](https://minecraft.fandom.com/wiki/Commands) to build a raycasting system, a hitbox detection system and a throwable hit detection system. This datapack depends on the [damage system](https://github.com/DaveHJT/Damage-Minecraft-Squid-Workshop-Project) I completed earlier.
 
-It provides a number of guns, grenades, arrows and equipments (explosive arrows, jetpacks, turrets, etc.) that have vastly different  properties and usages. The newly added weapons also have the pvp death count and death message functionalities embedded in the original systems in Minecraft.
+This datapack provides a number of guns, grenades, arrows and equipments (explosive arrows, jetpacks, turrets, etc.) that have vastly different properties and usages. The newly added weapons also have the pvp death count and death message functionalities embedded in the original systems in Minecraft.
 
 After a huge number of testing, there should be no bug that can greatly damage your game experience. High level API of getting the new items and settings are included. So it's suitable to be used in pvp or pve maps and datapacks.
 
