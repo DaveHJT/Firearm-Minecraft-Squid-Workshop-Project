@@ -1,6 +1,10 @@
 # _Squid Workshop's_ Firearm Data Pack
 A [minecraft datapack](https://minecraft.fandom.com/wiki/Data_Pack) that introduces ray-casting, guns and throwables into this game.
 
+<p>
+<img src="https://github.com/DaveHJT/Firearm-Minecraft-Squid-Workshop-Project/blob/main/Media/firearms_collection.jpg?raw=true" width="900">
+</p>
+
 - [Abstract](#Abstract)
 - [Installation](#installation)
 - [Instruction](#Instruction)
