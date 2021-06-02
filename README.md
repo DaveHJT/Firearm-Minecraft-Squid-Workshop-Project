@@ -66,13 +66,13 @@ Enable it by:
 
 				function app:get/ammo/2500
 
-3. Reload the gun by press **F** then wait for the reload! 
+3. Reload the gun by pressing **F** then wait for the reload! 
 4. **Right Click** to shoot! (hold the right button for minigun)
 5. When the gun is reloaded, press **F** again to switch gun type!(add/remove silencer; swap between slug and buck ammo..)
 6. Hold **Shift** to aim!
 7. Similar to CSGO, the accuracy is affected by two factors:
 	* **Recoil**: The gun bounces upward when firing for too long, use tap fire or small bursts to avoid recoil.
-	*  **Spread**: The random inaccuracy introduced by movement, **aiming<standing<walking<running<<jumping**. (walking while aiming is also not very accurate)
+	* **Spread**: The random inaccuracy introduced by movement, **aiming<standing<walking<running<<jumping**. (walking while aiming is also not very accurate)
 
 
 
