@@ -1,8 +1,9 @@
+
 # _Squid Workshop's_ Firearm Data Pack
 A [minecraft datapack](https://minecraft.fandom.com/wiki/Data_Pack) that introduces ray-casting, guns and throwables into this game.
 
 <p>
-<img src="https://github.com/DaveHJT/Firearm-Minecraft-Squid-Workshop-Project/blob/main/Media/firearms_collection.jpg?raw=true" width="900">
+<img src="https://github.com/DaveHJT/Firearm-Minecraft-Squid-Workshop-Project/blob/main/Media/firearms_collection.jpg?raw=true" width="700">
 </p>
 
 - [Abstract](#Abstract)
@@ -60,7 +61,7 @@ Enable it by:
 	*	**get all guns:**			
 
 			function app:get/allguns
-	*	**get gun by it's name in the table; for example, silenced_rifle:**			
+	*	**get gun by it's name; for example, silenced_rifle:**			
 
 			function app:get/silenced_rifle
 
@@ -78,6 +79,24 @@ Enable it by:
 	* **Recoil**: The gun bounces upward when firing for too long, use tap fire or small bursts to avoid recoil.
 	* **Spread**: The random inaccuracy introduced by movement, **aiming<standing<walking<running<<jumping**. (walking while aiming is also not very accurate)
 
+## Throwables
+1. Get the throwables by the following command:
+	*	**get all throwables (or 16x all throwables at one time):**			
 
+			function app:get/allthrowables
+			function app:get/16/allthrowables
+	*	**get throwable by it's name; for example, grenade (or 16x grenades at one time):**			
+
+			function app:get/grenade
+			function app:get/16/grenade
+2. **Right-click** to throw it.
+
+## Jetpack
+1. Get the jetpack by the following command:
+
+			function app:get/jetpack
+
+2. Click **Shift** to launch, there are cooldowns between consecutive launches;
+3. Hold **Shift** any time for slow falling.
 
 **TO BE CONTINUED**
