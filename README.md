@@ -20,15 +20,15 @@ A [minecraft datapack](https://minecraft.fandom.com/wiki/Data_Pack) that introdu
 # Abstract
 This datapack used only the [minecraft commands](https://minecraft.fandom.com/wiki/Commands) to build a raycasting system, a hitbox detection system and a throwable hit detection system. This datapack depends on the [damage system](https://github.com/DaveHJT/Damage-Minecraft-Squid-Workshop-Project) I completed earlier.
 
-This datapack provides a number of guns, grenades, arrows and equipments (explosive arrows, jetpacks, turrets, etc.) that have vastly different properties and usages. The newly added weapons also have the pvp death count and death message functionalities embedded in the original systems in Minecraft.
+This datapack provides a number of guns, grenades, arrows and equipment (explosive arrows, jetpacks, turrets, etc.) that have vastly different properties and usages. The newly added weapons also have the PVP death count and death message functionalities embedded in the original systems in Minecraft.
 
-After a huge number of testing, there should be no bug that can greatly damage your game experience. High level API of getting the new items and settings are included. So it's suitable to be used in pvp or pve maps and datapacks.
+After a huge number of testing, there should be no bug that can greatly damage your game experience. High-level API of getting the new items and settings are included. So it's suitable to be used in PVP or PvE maps and datapacks.
 
 
 # Installation
 - Step 1 **Before installation, install my [damage datapack](https://github.com/DaveHJT/Damage-Minecraft-Squid-Workshop-Project) first.**
 
-- Step 2 Download this repository as a zip and unpack, you will get three folders: 2 datapack folders + 1 resourcepack folder.
+- Step 2 Download this repository as .zip and unpack, you will get three folders: 2 datapack folders + 1 resourcepack folder.
 	- **Firearms-Resourcepack-Squid-Workshop-1.16.5**
 	- **Gun-Datapack-Squid-Workshop-1.16.5**
 	- **Throwable-Datapack-Squid Workshop-1.16.5**
@@ -38,7 +38,7 @@ After a huge number of testing, there should be no bug that can greatly damage y
 	- **Firearms-Resourcepack-Squid-Workshop-1.16.5**  >>   **.minecraft/resourcepacks**
 	
 	under the **resourcepacks** folder.
-- Step 5 Go back to **.minecraft** directory and choose the save which you want to install the datapack in the **saves** directory, call it's name "worldName".
+- Step 5 Go back to **.minecraft** directory and choose the save which you want to install the datapack in the **saves** directory, call its name "worldName".
 - Step 6 Drop these folders
 	- **Gun-Datapack-Squid-Workshop-1.16.5**  >>  ./"worldName"/world/datapacks
 	- **Throwable-Datapack-Squid Workshop-1.16.5**  >>  ./"worldName"/world/datapacks
@@ -105,13 +105,13 @@ Enable it by:
 | Name| Icon | [Swap To](#swap) | Damage | Recoil | Spread | Scope | Bullet Speed |Description |
 | --- | --- | --- | --- | --- | --- | --- | --- | :--------- |
 | rifle | | silenced_rifle | 5 | high | medium | Iron Sight | fast | Capable of  engagements from all ranges. Suitable for shooting while standing still.
-| silenced_rifle | | rifle | 4 | medium| medium | Iron Sight | fast | Same as rifle, except for lower sound, recoil and damage.
+| silenced_rifle | | rifle | 4 | medium| medium | Iron Sight | fast | Same as the rifle, except for lower sound, recoil and damage.
 | smg| | silenced_smg | 4| medium| low| Iron Sight | slow | Good at short range engagements; suitable for shooting while running.
-| silenced_smg | | smg| 3| low| low | slow | Iron Sight | Same as rifle, except for lower sound, recoil and damage.
+| silenced_smg | | smg| 3| low| low | slow | Iron Sight | Same as the rifle, except for lower sound, recoil and damage.
 | shotgun_buck | | shotgun_slug | 3x10| high| high| Iron Sight | slow | One hit kill in short range; not accurate while moving; fire 10 bullets at one time.
 | shotgun_slug | | shotgun_buck | 17| high| high| slow | Iron Sight | Shoots a large and powerful bullet at one time. But only contains two bullets, not very accurate.
 | sniper | | NONE | 22 | high | low | 8xScope| fast | One hit kill; extremely inaccurate without scope or moving.
-| laser| | NONE | 2 | no | low | 8xScope| fast | Shoot out laser that has no recoil; hard to target the laser when moving. Charged slowly by hand so doesn't cost ammo, dont' charge for too long or it will...
+| laser| | NONE | 2 | no | low | 8xScope| fast | Shoot out a laser beam that has no recoil; hard to target the laser when moving. Charged slowly by hand so doesn't cost ammo, don't charge for too long or it will...
 | minigun| | NONE | 6 | no | low | reddot | fast | Most powerful gun for fire suppression and fast rate of fire; contains 500 bullets; slow reloading.
 
 ## Throwables & Arrows
