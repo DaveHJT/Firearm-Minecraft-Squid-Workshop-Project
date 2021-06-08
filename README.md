@@ -112,7 +112,7 @@ After a huge number of testing, there should be no bug that can greatly damage y
 ## Throwables & Arrows
 Arrow Name: there is an arrow type that has the same effect as the throwable.
 | Name | Icon | Effect | Arrow Name| Damage | Interact \w Mobs | Interact \w Turret |Description |
-| --- | --- | --- | --- | --- | --- | --- | :--------- |
+| --- | --- | ----- | --- | --- | --- | --- | :--------- |
 | grenade|<img src="https://github.com/DaveHJT/Firearm-Minecraft-Squid-Workshop-Project/blob/main/Media/grenade2.png?raw=true" width="100">  | <img src="https://github.com/DaveHJT/Firearm-Minecraft-Squid-Workshop-Project/blob/main/Media/grenade_effect.png?raw=true" width="300">| arrow_grenade| high | deal damage| destroy | Just grenade, even works in water.|
 | smoke|<img src="https://github.com/DaveHJT/Firearm-Minecraft-Squid-Workshop-Project/blob/main/Media/smoke.png?raw=true" width="200">  |<img src="https://github.com/DaveHJT/Firearm-Minecraft-Squid-Workshop-Project/blob/main/Media/smoke_effect.png?raw=true" width="300"> | arrow_smoke| no | slowness in smoke| disable in smoke | Used for blocking sights. Player, mobs and even turrets get blind in smoke. Can be used to put out fire introduced by molotov.|
 | flash|<img src="https://github.com/DaveHJT/Firearm-Minecraft-Squid-Workshop-Project/blob/main/Media/flash.png?raw=true" width="200">  | <img src="https://github.com/DaveHJT/Firearm-Minecraft-Squid-Workshop-Project/blob/main/Media/flash_effect.png?raw=true" width="300">| no, flash is too annoying| no | slowness| none | Gain temporary slowness and blindness if get flashed.|
