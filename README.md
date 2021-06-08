@@ -120,9 +120,11 @@ Arrow Name: there is an arrow type that has the same effect as the throwable.
 | Name | Icon | Effect | Arrow Name| Damage | Interact \w Mobs | Interact \w Turret |Description |
 | --- | --- | --- | --- | --- | --- | --- | :--------- |
 | grenade|<img src="https://github.com/DaveHJT/Firearm-Minecraft-Squid-Workshop-Project/blob/main/Media/grenade2.png?raw=true" width="200">  | | arrow_grenade| high | deal damage| destroy | Just grenade, even works in water.|
-| smoke|<img src="https://github.com/DaveHJT/Firearm-Minecraft-Squid-Workshop-Project/blob/main/Media/smoke.png?raw=true" width="200">  | | arrow_smoke| no | slowness in smoke| disable in smoke | Used for blocking sights. Player, mobs and even turrets get blind in smoke.|
+| smoke|<img src="https://github.com/DaveHJT/Firearm-Minecraft-Squid-Workshop-Project/blob/main/Media/smoke.png?raw=true" width="200">  | | arrow_smoke| no | slowness in smoke| disable in smoke | Used for blocking sights. Player, mobs and even turrets get blind in smoke. Can be used to put out fire introduced by molotov.|
 | flash|<img src="https://github.com/DaveHJT/Firearm-Minecraft-Squid-Workshop-Project/blob/main/Media/flash.png?raw=true" width="200">  | | no, flash is too annoying| no | slowness| none | Gain temporary slowness and blindness if get flashed.|
-| xirang|<img src="https://github.com/DaveHJT/Firearm-Minecraft-Squid-Workshop-Project/blob/main/Media/xirang.png?raw=true" width="200">  |  | no| no | none| none | From an ancient Chinese tale called ShangHaiJing, it means breathing dirt. Grows to a tall wall immediately when landing on the ground.|
+| molotov|<img src="https://github.com/DaveHJT/Firearm-Minecraft-Squid-Workshop-Project/blob/main/Media/molotov.png?raw=true" width="200">  | | arrow_molotov| 2/few ticks | slowness and damage| destroy | The fire can be put out by smoke. Molotov will not be ignited in water or smoke.|
+| xirang|<img src="https://github.com/DaveHJT/Firearm-Minecraft-Squid-Workshop-Project/blob/main/Media/xirang.png?raw=true" width="200">  |  | no| no | none| none | The name Xirang is from an ancient Chinese tale called ShangHaiJing, it means breathing dirt. Grows to a tall wall immediately when landing on the ground.|
+| turret|<img src="https://github.com/DaveHJT/Firearm-Minecraft-Squid-Workshop-Project/blob/main/Media/turret.png?raw=true" width="200">  |  | no| 3 per bullet | automatically aim enemy(any mob that score team != team score of turret's creater) and shoot| none | Each turret has 50 ammo. Turrets are not able to work in water and will explode in lava. Turrets destroy itself if: 1. enemy get too close. 2. Being shot by bullet or arrow. 3. By grenade, molotov. 4. Used up ammo. 5. It gets blind in smoke.|
 
 **TO BE CONTINUED**
 
@@ -140,5 +142,5 @@ But you **must** add the link to this GitHub page! \
 See more datapacks developed by us [here](https://github.com/Squid-Workshop/MinecraftDatapacksProject) \
 Watch our videos on bilibili [here](https://space.bilibili.com/649645265?from=search&seid=778816111336987286) \
 Join our QQ group: 74681732 \
-Subscribe on wechat: 鱿鱼MC工作室 
+Subscribe on Wechat: 鱿鱼MC工作室 
 
