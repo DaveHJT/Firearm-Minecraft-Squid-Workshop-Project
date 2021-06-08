@@ -12,9 +12,6 @@ A [minecraft datapack](https://minecraft.fandom.com/wiki/Data_Pack) that introdu
 - [Abstract](#Abstract)
 - [Installation](#installation)
 - [Property List](#Property-List)
-- [How It Works](#How-It-Works)
-- [Project Tree](#Project-Tree)
-- [Incompactibility](#Incompactibility)
 - [Terms of Use](#Terms-of-Use)
 - [More About Squid Workshop](#More-About-Squid-Workshop)
 
@@ -100,6 +97,17 @@ Enable it by:
 2. Click **Shift** to launch, there are cooldowns between consecutive launches;
 3. Hold **Shift** any time for slow falling.
 
+## Bow of Light Beam
+1. Get the bow by the following command:
+
+			function app:get/bow_of_light_beam
+
+2. The bow shoots any arrow in a form of light beam, which means the arrow travels in a **straight line** like bullets.
+
+## Shield
+1. Hold a common shield, then any bullets that come from the direction you are facing will be **reflected** by the shield.
+
+
 
 # Property List
 ## Guns
@@ -124,7 +132,9 @@ Arrow Name: there is an arrow type that has the same effect as the throwable.
 | flash|<img src="https://github.com/DaveHJT/Firearm-Minecraft-Squid-Workshop-Project/blob/main/Media/flash.png?raw=true" width="200">  | | no, flash is too annoying| no | slowness| none | Gain temporary slowness and blindness if get flashed.|
 | molotov|<img src="https://github.com/DaveHJT/Firearm-Minecraft-Squid-Workshop-Project/blob/main/Media/molotov.png?raw=true" width="200">  | | arrow_molotov| 2/few ticks | slowness and damage| destroy | The fire can be put out by smoke. Molotov will not be ignited in water or smoke.|
 | xirang|<img src="https://github.com/DaveHJT/Firearm-Minecraft-Squid-Workshop-Project/blob/main/Media/xirang.png?raw=true" width="200">  |  | no| no | none| none | The name Xirang is from an ancient Chinese tale called ShangHaiJing, it means breathing dirt. Grows to a tall wall immediately when landing on the ground.|
-| turret|<img src="https://github.com/DaveHJT/Firearm-Minecraft-Squid-Workshop-Project/blob/main/Media/turret.png?raw=true" width="200">  |  | no| 3 per bullet | automatically aim enemy(any mob that score team != team score of turret's creater) and shoot| none | Each turret has 50 ammo. Turrets are not able to work in water and will explode in lava. Turrets destroy itself if: 1. enemy get too close. 2. Being shot by bullet or arrow. 3. By grenade, molotov. 4. Used up ammo. 5. It gets blind in smoke.|
+| turret|<img src="https://github.com/DaveHJT/Firearm-Minecraft-Squid-Workshop-Project/blob/main/Media/turret.png?raw=true" width="200">  |  | no| 3 per bullet; 11 on self explosion | automatically aim enemy(any mob that score team != team score of turret's creater) and shoot| none | Each turret has 50 ammo. Turrets are not able to work in water and will explode in lava. Turrets destroy itself if: 1. Enemy get too close. 2. Being shot by bullet or arrow. 3. By grenade, Molotov. 4. Used up ammo. 5. It gets blind in smoke.|
+| arrow_explosive|  |  | no| 3 per bullet; 2 by explosion | damage| destroy | Explode, smaller radius and damage than the grenade.|
+| arrow_light_beam|  |  | no| 5 | damage| destroy | An arrow that travels in straight line like a light beam.|
 
 **TO BE CONTINUED**
 
@@ -139,7 +149,7 @@ But you **must** add the link to this GitHub page! \
 [Mozilla Public License 2.0](https://github.com/DaveHJT/Damage-Datapack-Minecraft-Squid-Workshop/blob/main/LICENSE)
 
 # More About Squid Workshop
-See more datapacks developed by us [here](https://github.com/Squid-Workshop/MinecraftDatapacksProject) \
+Check out **more datapacks** developed by us [here](https://github.com/Squid-Workshop/MinecraftDatapacksProject) \
 Watch our videos on bilibili [here](https://space.bilibili.com/649645265?from=search&seid=778816111336987286) \
 Join our QQ group: 74681732 \
 Subscribe on Wechat: 鱿鱼MC工作室 
