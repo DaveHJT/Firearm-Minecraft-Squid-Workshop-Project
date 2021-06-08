@@ -30,7 +30,7 @@ playsound minecraft:gun/m4a1/m4a1_silencer_01 player @a ~ ~ ~ 0.5 1
 # fire supressed
 
 #damage
-execute as @e[tag=new_b,limit=1,sort=nearest] run scoreboard players set @s damage 5
+execute as @e[tag=new_b,limit=1,sort=nearest] run scoreboard players set @s damage 4
 
 #msg
 #execute store result score v10 V run data get entity @s Rotation[0] 1000000

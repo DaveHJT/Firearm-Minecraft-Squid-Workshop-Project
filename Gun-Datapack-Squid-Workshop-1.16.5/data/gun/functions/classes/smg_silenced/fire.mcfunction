@@ -31,7 +31,7 @@ execute as @a[distance=31..] run playsound minecraft:gun/m4a1/m4a1_1_distant pla
 # fire supressed
 
 #damage
-execute as @e[tag=new_b,limit=1,sort=nearest] run scoreboard players set @s damage 4
+execute as @e[tag=new_b,limit=1,sort=nearest] run scoreboard players set @s damage 3
 
 #msg
 #execute store result score v10 V run data get entity @s Rotation[0] 1000000
