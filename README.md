@@ -30,28 +30,14 @@ After a huge number of testing, there should be no bug that can greatly damage y
 	- **Firearms-Resourcepack-Squid-Workshop-1.16.5**
 	- **Gun-Datapack-Squid-Workshop-1.16.5**
 	- **Throwable-Datapack-Squid Workshop-1.16.5**
-- Step 3 Find  your **.minecraft** directory, usually under
-	- **C:/Users/youUserName/AppData/Roaming/.minecraft**
-- Step 4 Find the **resourcepacks** folder and drop the folder
-	- **Firearms-Resourcepack-Squid-Workshop-1.16.5**  >>   **.minecraft/resourcepacks**
-	
-	under the **resourcepacks** folder.
-- Step 5 Go back to **.minecraft** directory and choose the save which you want to install the datapack in the **saves** directory, call its name "worldName".
-- Step 6 Drop these folders
-	- **Gun-Datapack-Squid-Workshop-1.16.5**  >>  ./"worldName"/world/datapacks
-	- **Throwable-Datapack-Squid Workshop-1.16.5**  >>  ./"worldName"/world/datapacks
+- Step 3 Install the two datapacks together, if you don't know how to install datapacks, see [Tutorials/Installing a data pack](https://minecraft.fandom.com/wiki/Tutorials/Installing_a_data_pack)
+	- **Gun-Datapack-Squid-Workshop-1.16.5**
+	- **Throwable-Datapack-Squid Workshop-1.16.5**
+- Step 4 Install the two datapacks together, if you don't know how to install datapacks, see [Tutorials/Loading a resource pack](https://minecraft.fandom.com/wiki/Tutorials/Loading_a_resource_pack)
+	- **Firearms-Resourcepack-Squid-Workshop-1.16.5**
+- Step 5 If successfully installed, you will see the messages: 
 
-- Step 7 Open Minecraft and open the save you just installed the datapack in.
-- Step 8 In **Options -> Video Settings -> Resource Packs**, add the firearm resourcepack into **selected** window and click **Done**.
-- Step 9 In game, type "/reload" command then press enter.
-- Step 10 If successfully installed, you will see the messages: 
 
-PS: If not working, check whether the datapack is enabled by:
-
-	/datapack list
-Enable it by:
-
-	/datapack enable "datapackname"
   
 # Instruction
 ## Guns
