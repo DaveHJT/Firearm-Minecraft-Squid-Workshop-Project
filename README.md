@@ -1,5 +1,6 @@
 
 
+
 # _Squid Workshop's_ Firearm Data Pack
 A [minecraft datapack](https://minecraft.fandom.com/wiki/Data_Pack) that introduces ray-casting, guns and throwables into this game.
 
@@ -16,7 +17,7 @@ A [minecraft datapack](https://minecraft.fandom.com/wiki/Data_Pack) that introdu
 - [More About Squid Workshop](#More-About-Squid-Workshop)
 
 # Abstract
-This datapack used only the [minecraft commands](https://minecraft.fandom.com/wiki/Commands) to build a raycasting system, a hitbox detection system and a throwable hit detection system. This datapack depends on the [damage system](https://github.com/DaveHJT/Damage-Minecraft-Squid-Workshop-Project) I completed earlier.
+This datapack is solely developed under the [minecraft commands](https://minecraft.fandom.com/wiki/Commands) to build a raycasting system, a hitbox detection system and a throwable hit detection system. This datapack depends on the [damage system](https://github.com/DaveHJT/Damage-Minecraft-Squid-Workshop-Project) I completed earlier.
 
 This datapack provides a number of guns, grenades, arrows and equipment (explosive arrows, jetpacks, turrets, etc.) that have vastly different properties and usages. The newly added weapons also have the PVP death count and death message functionalities embedded in the original systems in Minecraft.
 
@@ -111,16 +112,16 @@ After a huge number of testing, there should be no bug that can greatly damage y
 
 ## Throwables & Arrows
 Arrow Name: there is an arrow type that has the same effect as the throwable.
-| Name | Icon | Effect | Arrow Name| Damage | Interact \w Mobs | Interact \w Turret |Description |
-| --- | --- | --- | --- | --- | --- | --- | :--------- |
-| grenade|<img src="https://github.com/DaveHJT/Firearm-Minecraft-Squid-Workshop-Project/blob/main/Media/grenade2.png?raw=true" width="200">  | | arrow_grenade| high | deal damage| destroy | Just grenade, even works in water.|
-| smoke|<img src="https://github.com/DaveHJT/Firearm-Minecraft-Squid-Workshop-Project/blob/main/Media/smoke.png?raw=true" width="200">  | | arrow_smoke| no | slowness in smoke| disable in smoke | Used for blocking sights. Player, mobs and even turrets get blind in smoke. Can be used to put out fire introduced by molotov.|
-| flash|<img src="https://github.com/DaveHJT/Firearm-Minecraft-Squid-Workshop-Project/blob/main/Media/flash.png?raw=true" width="200">  | | no, flash is too annoying| no | slowness| none | Gain temporary slowness and blindness if get flashed.|
-| molotov|<img src="https://github.com/DaveHJT/Firearm-Minecraft-Squid-Workshop-Project/blob/main/Media/molotov.png?raw=true" width="200">  | | arrow_molotov| 2/few ticks | slowness and damage| destroy | The fire can be put out by smoke. Molotov will not be ignited in water or smoke.|
-| xirang|<img src="https://github.com/DaveHJT/Firearm-Minecraft-Squid-Workshop-Project/blob/main/Media/xirang.png?raw=true" width="200">  |  | no| no | none| none | The name Xirang is from an ancient Chinese tale called ShangHaiJing, it means breathing dirt. Grows to a tall wall immediately when landing on the ground.|
-| turret|<img src="https://github.com/DaveHJT/Firearm-Minecraft-Squid-Workshop-Project/blob/main/Media/turret.png?raw=true" width="200">  |  | no| 3 per bullet; 11 on self explosion | automatically aim enemy(any mob that score team != team score of turret's creater) and shoot| none | Each turret has 50 ammo. Turrets are not able to work in water and will explode in lava. Turrets destroy itself if: 1. Enemy get too close. 2. Being shot by bullet or arrow. 3. By grenade, Molotov. 4. Used up ammo. 5. It gets blind in smoke.|
-| arrow_explosive|  |  | no| 3 per bullet; 2 by explosion | damage| destroy | Explode, smaller radius and damage than the grenade.|
-| arrow_light_beam|  |  | no| 5 | damage| destroy | An arrow that travels in straight line like a light beam.|
+| Name | Icon | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Effect&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Arrow Name| Damage | Interact \w Mobs | Interact \w Turret |Description |
+| --- | --- | ------------------- | - | - | --- | --- | :--------- |
+| grenade|<img src="https://github.com/DaveHJT/Firearm-Minecraft-Squid-Workshop-Project/blob/main/Media/grenade2.png?raw=true" width="100">  | <img src="https://github.com/DaveHJT/Firearm-Minecraft-Squid-Workshop-Project/blob/main/Media/grenade_effect.png?raw=true" width="300">| arrow_grenade| high | deal damage| destroy | Just grenade, even works in water.|
+| smoke|<img src="https://github.com/DaveHJT/Firearm-Minecraft-Squid-Workshop-Project/blob/main/Media/smoke.png?raw=true" width="200">  |<img src="https://github.com/DaveHJT/Firearm-Minecraft-Squid-Workshop-Project/blob/main/Media/smoke_effect.png?raw=true" width="300"> | arrow_smoke| no | slowness in smoke| disable in smoke | Used for blocking sights. Player, mobs and even turrets get blind in smoke. Can be used to put out fire introduced by molotov.|
+| flash|<img src="https://github.com/DaveHJT/Firearm-Minecraft-Squid-Workshop-Project/blob/main/Media/flash.png?raw=true" width="200">  | <img src="https://github.com/DaveHJT/Firearm-Minecraft-Squid-Workshop-Project/blob/main/Media/flash_effect.png?raw=true" width="300">| no, flash is too annoying| no | slowness| none | Gain temporary slowness and blindness if get flashed.|
+| molotov|<img src="https://github.com/DaveHJT/Firearm-Minecraft-Squid-Workshop-Project/blob/main/Media/molotov.png?raw=true" width="200">  | <img src="https://github.com/DaveHJT/Firearm-Minecraft-Squid-Workshop-Project/blob/main/Media/molotov_effect.png?raw=true" width="300">| arrow_molotov| 2/few ticks | slowness and damage| destroy | The fire can be put out by smoke. Molotov will not be ignited in water or smoke.|
+| xirang|<img src="https://github.com/DaveHJT/Firearm-Minecraft-Squid-Workshop-Project/blob/main/Media/xirang.png?raw=true" width="200">  | <img src="https://github.com/DaveHJT/Firearm-Minecraft-Squid-Workshop-Project/blob/main/Media/xirang_effect.png?raw=true" width="300"> | no| no | none| none | The name Xirang is from an ancient Chinese tale called ShangHaiJing, it means breathing dirt. Grows to a tall wall immediately when landing on the ground.|
+| turret|<img src="https://github.com/DaveHJT/Firearm-Minecraft-Squid-Workshop-Project/blob/main/Media/turret.png?raw=true" width="200">  | <img src="https://github.com/DaveHJT/Firearm-Minecraft-Squid-Workshop-Project/blob/main/Media/turret_effect.png?raw=true" width="300"> | no| 3 per bullet; 11 on self explosion | automatically aim enemy(any mob that score team != team score of turret's creater) and shoot| none | Each turret has 50 ammo. Turrets are not able to work in water and will explode in lava. Turrets destroy itself if: 1. Enemy get too close. 2. Being shot by bullet or arrow. 3. By grenade, Molotov. 4. Used up ammo. 5. It gets blind in smoke.|
+| arrow_explosive|  | <img src="https://github.com/DaveHJT/Firearm-Minecraft-Squid-Workshop-Project/blob/main/Media/arrow_explosive_effect.png?raw=true" width="300"> | no| 3 per bullet; 2 by explosion | damage| destroy | Explode, smaller radius and damage than the grenade.|
+| arrow_light_beam|  | <img src="https://github.com/DaveHJT/Firearm-Minecraft-Squid-Workshop-Project/blob/main/Media/arrow_light_beam_effect.png?raw=true" width="300"> | no| 5 | damage| destroy | An arrow that travels in straight line like a light beam.|
 
 **TO BE CONTINUED**
 
