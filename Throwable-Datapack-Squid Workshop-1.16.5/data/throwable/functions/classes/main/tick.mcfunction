@@ -65,7 +65,12 @@ execute as @e[tag=tracer,tag=signal] at @s run particle minecraft:end_rod ~ ~ ~ 
 #>>>>>>>>>>>>>>>trace
 
 #hit detection
+# if hit
 execute as @e[tag=tracer] at @s unless entity @e[distance=..0.1,tag=thrown] run tag @s add hit
+# if arrow onground
+#execute as @e[tag=tracer] at @s as @e[tag=thrown,limit=1,sort=nearest,type=arrow] if entity @s[nbt={OnGround:1b}] run tag @e[tag=tracer,limit=1,sort=nearest] add hit
+# kill arrows on onground
+kill @e[tag=thrown,type=arrow,nbt={inGround:1b}]
 #<<<<<<<<<<<<<<<land
 #grenade
 execute as @e[tag=thrown,tag=grenade,scores={throwable_life=70..}] at @s run kill @s
@@ -85,7 +90,7 @@ execute as @e[tag=hit,tag=template] at @s run function throwable:classes/templat
 #smoke
 execute as @e[tag=hit,tag=smoke] at @s run function throwable:classes/smoke/land
 #signal
-execute as @e[tag=thrown,tag=signal,scores={throwable_life=40..}] at @s run kill @s
+#execute as @e[tag=thrown,tag=signal,scores={throwable_life=40..}] at @s run kill @s
 execute as @e[tag=hit,tag=signal] at @s run function throwable:classes/signal/land
 #flash
 execute as @e[tag=thrown,tag=flash,scores={throwable_life=40..}] at @s run kill @s

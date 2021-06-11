@@ -210,33 +210,29 @@ execute if score rand accu >= 10000 C run scoreboard players set rand accu 0
 
 #other weapons
 #jetpack
-execute as @a[tag=shift_bool,nbt={SelectedItem:{tag:{jetpack:1b}}}] at @s run function gun:classes/jetpack/tick
-execute as @a[tag=shift_bool,scores={lever=160},nbt={SelectedItem:{tag:{jetpack:1b}}}] at @s run playsound minecraft:block.beacon.deactivate ambient @s ~ ~ ~ 1 2
-execute as @a[tag=!shift_bool,scores={lever=1..}] at @s run scoreboard players remove @s lever 1
+execute as @a[scores={shift_bool=1},nbt={SelectedItem:{tag:{jetpack:1b}}}] at @s run function gun:classes/jetpack/tick
+execute as @a[scores={shift_bool=1,lever=160},nbt={SelectedItem:{tag:{jetpack:1b}}}] at @s run playsound minecraft:block.beacon.deactivate ambient @s ~ ~ ~ 1 2
+execute as @a[scores={shift_bool=0,lever=1..}] at @s run scoreboard players remove @s lever 1
 
 #shield
 function gun:classes/shield/tick
-execute as @s[tag=shield] at @s unless entity @a[tag=shield_bool,distance=..1] run kill @s
+execute as @s[tag=shield] at @s unless entity @a[scores={shield_bool=1},distance=..1] run kill @s
 
 #light arrow
 execute as @e[type=minecraft:arrow,nbt={Color:16449336},tag=!arrow] at @s run function gun:classes/arrow_light/init
 #execute as @e[tag=light,tag=arrow] at @s run function gun:classes/arrow_light/tick
 
 #grenade arrow
-execute as @e[type=minecraft:arrow,nbt={Color:1274392},tag=!arrow] at @s run function gun:classes/arrow_grenade/init
-execute as @e[tag=grenade_effect,tag=arrow] at @s run function gun:classes/arrow_grenade/tick
+execute as @e[type=minecraft:arrow,nbt={Color:1274392},tag=!thrown] at @s run function throwable:classes/grenade/init
 
 #molotov arrow
-execute as @e[type=minecraft:arrow,nbt={Color:11298561},tag=!arrow] at @s run function gun:classes/arrow_molotov/init
-execute as @e[tag=molotov_effect,tag=arrow] at @s run function gun:classes/arrow_molotov/tick
+execute as @e[type=minecraft:arrow,nbt={Color:11298561},tag=!thrown] at @s run function throwable:classes/molotov/init
 
 #smoke arrow
-execute as @e[type=minecraft:arrow,nbt={Color:1656347},tag=!arrow] at @s run function gun:classes/arrow_smoke/init
-execute as @e[tag=smoke_effect,tag=arrow] at @s run function gun:classes/arrow_smoke/tick
+execute as @e[type=minecraft:arrow,nbt={Color:1656347},tag=!thrown] at @s run function throwable:classes/smoke/init
 
 #signal arrow
-execute as @e[type=minecraft:arrow,nbt={Color:16754176},tag=!arrow] at @s run function gun:classes/arrow_signal/init
-execute as @e[tag=signal_effect,tag=arrow] at @s run function gun:classes/arrow_signal/tick
+execute as @e[type=minecraft:arrow,nbt={Color:16754176},tag=!thrown] at @s run function throwable:classes/signal/init
 
 
 #mini explosive arrow
@@ -245,9 +241,10 @@ execute as @e[tag=mini_explosion,tag=arrow] at @s run function gun:classes/arrow
 execute as @e[tag=mini_explosion,scores={throwable_life=50..}] at @s run function gun:classes/arrow_explosive_mini/effect
 
 #light bow
-execute as @a[tag=bow_bool,nbt={SelectedItem:{tag:{light:1b}}}] at @s as @e[type=minecraft:arrow,tag=!light,limit=1,sort=nearest] at @s run function gun:classes/arrow_light/init
+execute as @a[scores={bow_bool=1},nbt={SelectedItem:{tag:{light:1b}}}] at @s as @e[type=minecraft:arrow,tag=!light,limit=1,sort=nearest] at @s run function gun:classes/arrow_light/init
 #light crossbow
-execute as @a[tag=crossbow_bool,nbt={SelectedItem:{tag:{light:1b}}}] at @s as @e[type=minecraft:arrow,tag=!light,limit=1,sort=nearest] at @s run function gun:classes/arrow_light/init
+execute as @a[scores={crossbow_bool=1},nbt={SelectedItem:{tag:{light:1b}}}] at @s as @e[type=minecraft:arrow,tag=!light,limit=1,sort=nearest] at @s run function gun:classes/arrow_light/init
+execute as @a[scores={crossbow_bool=1},nbt={SelectedItem:{tag:{light:1b}}}] at @s as @e[type=minecraft:firework_rocket,tag=!light,limit=1,sort=nearest] at @s run function gun:classes/arrow_light/init
 
 #time 
 scoreboard players add time V 1

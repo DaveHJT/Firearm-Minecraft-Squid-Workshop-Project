@@ -7,10 +7,10 @@ scoreboard players operation @s UID = @p UID
 
 execute at @e[tag=new_b,limit=1,sort=nearest] run tp @e[tag=new_b,limit=1,sort=nearest] ~ ~ ~ facing entity @p
 
-execute as @p[tag=!shift_bool] as @e[tag=new_b,limit=1,sort=nearest] at @s run tp @s ~ ~1.6 ~
+execute as @p[scores={shift_bool=0}] as @e[tag=new_b,limit=1,sort=nearest] at @s run tp @s ~ ~1.6 ~
 
-execute as @p[tag=shift_bool] as @e[tag=new_b,limit=1,sort=nearest] at @s run tp @s ~ ~-0.35 ~
-execute as @p[tag=shift_bool] as @e[tag=new_b,limit=1,sort=nearest] at @s run tp @s ^ ^ ^0.5
+execute as @p[scores={shift_bool=1}] as @e[tag=new_b,limit=1,sort=nearest] at @s run tp @s ~ ~-0.35 ~
+execute as @p[scores={shift_bool=1}] as @e[tag=new_b,limit=1,sort=nearest] at @s run tp @s ^ ^ ^0.5
 
 #damage
 execute as @e[tag=new_b,limit=1,sort=nearest] run scoreboard players set @s damage 5

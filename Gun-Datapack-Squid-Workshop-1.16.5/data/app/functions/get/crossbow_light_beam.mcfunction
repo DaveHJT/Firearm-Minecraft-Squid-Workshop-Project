@@ -1,0 +1,1 @@
+give @s crossbow{private:1b,light:1b,display:{Name:"\"Crowssbow of Light Beam\"",Lore:["A holy crowssbow with a bow string made of light and shoots out light arrows"]},Enchantments:[{id:unbreaking,lvl:3},{id:power,lvl:1},{id:punch,lvl:2},{id:infinity,lvl:1},{id:vanishing_curse,lvl:1}]} 1

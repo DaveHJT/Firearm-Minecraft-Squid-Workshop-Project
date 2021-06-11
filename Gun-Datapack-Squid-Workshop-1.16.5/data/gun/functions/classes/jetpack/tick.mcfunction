@@ -44,11 +44,4 @@ execute if entity @s[scores={lever=81..}] at @s run particle minecraft:smoke ~ ~
 #sound
 execute if entity @s[scores={lever=81..}] at @s run playsound minecraft:entity.enderman.teleport ambient @a ~ ~ ~ 1 0.5
 
-#sound
-#execute if entity @s[scores={shif entityt_bool=0,lever=0}] at @s run playsound minecraft:block.beacon.activate ambient @s ~ ~ ~ 1 2
-
-
-#score
-#execute if entity @s[scores={shif entityt_bool=0,lever=0}] at @s run scoreboard players set D_HJT lever -1
-
 ##############################################

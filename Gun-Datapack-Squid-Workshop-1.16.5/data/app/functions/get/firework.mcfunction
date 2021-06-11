@@ -1,0 +1,1 @@
+give @s firework_rocket{Fireworks:{Explosions:[{Type:4,Flicker:1,Trail:1,Colors:[I;11743532,11250603,14188952,15790320],FadeColors:[I;2437522,8073150,2651799,6719955,12801229]}],Flight:2}} 5
