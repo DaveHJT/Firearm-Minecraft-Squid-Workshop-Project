@@ -5,3 +5,4 @@ function app:get/16/xirang
 function app:get/16/flash
 function app:get/16/smoke
 function app:get/16/signal
+function app:get/16/firecracker

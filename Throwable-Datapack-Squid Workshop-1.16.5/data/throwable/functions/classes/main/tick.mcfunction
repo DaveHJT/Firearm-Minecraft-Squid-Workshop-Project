@@ -7,6 +7,8 @@
 #6:smoke
 #7:signal
 #8:flash
+#9:firecracker
+#10:ninjasmoke
 
 # cooldown
 execute as @a[scores={r_cooldown=0}] run scoreboard players set @s throwable 0
@@ -23,6 +25,8 @@ execute as @a[nbt={SelectedItem:{tag:{template:1b}}}] run scoreboard players set
 execute as @a[nbt={SelectedItem:{tag:{smoke:1b}}}] run scoreboard players set @s throwable 6
 execute as @a[nbt={SelectedItem:{tag:{signal:1b}}}] run scoreboard players set @s throwable 7
 execute as @a[nbt={SelectedItem:{tag:{flash:1b}}}] run scoreboard players set @s throwable 8
+execute as @a[nbt={SelectedItem:{tag:{firecracker:1b}}}] run scoreboard players set @s throwable 9
+execute as @a[nbt={SelectedItem:{tag:{ninjasmoke:1b}}}] run scoreboard players set @s throwable 10
 
 #<<<<<<<<<<<<<<<throw init
 #grenade
@@ -49,10 +53,16 @@ execute as @a[scores={throw=1..,throwable=7}] at @s as @e[limit=1,sort=nearest,t
 #flash
 execute as @a[scores={throw=1..,throwable=8}] at @s as @e[limit=1,sort=nearest,type=snowball] at @s run function throwable:classes/flash/init
 
+#firecracker
+execute as @a[scores={throw=1..,throwable=9}] at @s as @e[limit=1,sort=nearest,type=snowball] at @s run function throwable:classes/firecracker/init
+
+#ninjasmoke
+execute as @a[scores={throw=1..,throwable=10}] at @s as @e[limit=1,sort=nearest,type=snowball] at @s run function throwable:classes/ninjasmoke/init
+
 #>>>>>>>>>>>>>>>throw init
 
 #add throwable_life
-execute as @e[tag=thrown] run scoreboard players add @s throwable_life 1
+execute as @e[tag=thrown,tag=!effect] run scoreboard players add @s throwable_life 1
 execute as @e[tag=effect] run scoreboard players add @s throwable_life 1
 
 #throw physics
@@ -95,6 +105,12 @@ execute as @e[tag=hit,tag=signal] at @s run function throwable:classes/signal/la
 #flash
 execute as @e[tag=thrown,tag=flash,scores={throwable_life=40..}] at @s run kill @s
 execute as @e[tag=hit,tag=flash] at @s run function throwable:classes/flash/land
+#firecracker
+execute as @e[tag=thrown,tag=firecracker,scores={throwable_life=30..}] at @s run kill @s
+execute as @e[tag=hit,tag=firecracker] at @s run function throwable:classes/firecracker/land
+#flash
+execute as @e[tag=thrown,tag=ninjasmoke,scores={throwable_life=15..}] at @s run kill @s
+execute as @e[tag=hit,tag=ninjasmoke] at @s run function throwable:classes/ninjasmoke/land
 #>>>>>>>>>>>>>>>land
 
 execute as @e[tag=effect] at @s run function throwable:classes/throwable/effect
@@ -139,6 +155,13 @@ execute as @e[tag=signal_effect] at @s run function throwable:classes/signal/eff
 #flash
 execute as @e[tag=flash_effect] at @s run function throwable:classes/flash/effect
 execute as @e[tag=flashing_effect] at @s run function throwable:classes/flash/flashing_effect
+
+#firecracker
+execute as @e[tag=firecracker_effect] at @s run function throwable:classes/firecracker/effect
+
+#ninjasmoke
+execute as @e[tag=ninjasmoke_effect] at @s run function throwable:classes/ninjasmoke/effect
+
 #<<<<<<<<<<<<<<<effect
 
 #reset throw

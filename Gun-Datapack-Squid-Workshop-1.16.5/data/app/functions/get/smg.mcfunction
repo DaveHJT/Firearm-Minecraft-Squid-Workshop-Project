@@ -1,1 +1,1 @@
-give @s minecraft:carrot_on_a_stick{CustomModelData:512,display:{Name:"{\"text\":\"smg\"}"},gun:1b,smg:1b,silenced:0}
+give @s minecraft:carrot_on_a_stick{private:1b,CustomModelData:512,display:{Name:"{\"text\":\"smg\"}"},gun:1b,smg:1b,silenced:0}

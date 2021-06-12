@@ -18,39 +18,39 @@ tag @e[tag=mini_explosion_damage] remove mini_explosion_damage
 
 tp @s ~ ~ ~ facing entity @p
 
-function gun:classes/arrow_explosive_mini/fire
+function throwable:classes/firecracker/fire
 
-function gun:classes/arrow_explosive_mini/fire_procedure
-function gun:classes/arrow_explosive_mini/fire_procedure
-function gun:classes/arrow_explosive_mini/fire_procedure
-function gun:classes/arrow_explosive_mini/fire_procedure
-function gun:classes/arrow_explosive_mini/fire_procedure
-function gun:classes/arrow_explosive_mini/fire_procedure
-function gun:classes/arrow_explosive_mini/fire_procedure
-function gun:classes/arrow_explosive_mini/fire_procedure
-function gun:classes/arrow_explosive_mini/fire_procedure
-function gun:classes/arrow_explosive_mini/fire_procedure
-function gun:classes/arrow_explosive_mini/fire_procedure
-function gun:classes/arrow_explosive_mini/fire_procedure
-function gun:classes/arrow_explosive_mini/fire_procedure
-function gun:classes/arrow_explosive_mini/fire_procedure
-function gun:classes/arrow_explosive_mini/fire_procedure
-function gun:classes/arrow_explosive_mini/fire_procedure
-function gun:classes/arrow_explosive_mini/fire_procedure
-function gun:classes/arrow_explosive_mini/fire_procedure
-function gun:classes/arrow_explosive_mini/fire_procedure
-function gun:classes/arrow_explosive_mini/fire_procedure
-function gun:classes/arrow_explosive_mini/fire_procedure
-function gun:classes/arrow_explosive_mini/fire_procedure
-function gun:classes/arrow_explosive_mini/fire_procedure
-function gun:classes/arrow_explosive_mini/fire_procedure
-function gun:classes/arrow_explosive_mini/fire_procedure
-function gun:classes/arrow_explosive_mini/fire_procedure
-function gun:classes/arrow_explosive_mini/fire_procedure
-function gun:classes/arrow_explosive_mini/fire_procedure
-function gun:classes/arrow_explosive_mini/fire_procedure
-function gun:classes/arrow_explosive_mini/fire_procedure
-function gun:classes/arrow_explosive_mini/fire_procedure
+function throwable:classes/firecracker/fire_procedure
+function throwable:classes/firecracker/fire_procedure
+function throwable:classes/firecracker/fire_procedure
+function throwable:classes/firecracker/fire_procedure
+function throwable:classes/firecracker/fire_procedure
+function throwable:classes/firecracker/fire_procedure
+function throwable:classes/firecracker/fire_procedure
+function throwable:classes/firecracker/fire_procedure
+function throwable:classes/firecracker/fire_procedure
+function throwable:classes/firecracker/fire_procedure
+function throwable:classes/firecracker/fire_procedure
+function throwable:classes/firecracker/fire_procedure
+function throwable:classes/firecracker/fire_procedure
+function throwable:classes/firecracker/fire_procedure
+function throwable:classes/firecracker/fire_procedure
+function throwable:classes/firecracker/fire_procedure
+function throwable:classes/firecracker/fire_procedure
+function throwable:classes/firecracker/fire_procedure
+function throwable:classes/firecracker/fire_procedure
+function throwable:classes/firecracker/fire_procedure
+function throwable:classes/firecracker/fire_procedure
+function throwable:classes/firecracker/fire_procedure
+function throwable:classes/firecracker/fire_procedure
+function throwable:classes/firecracker/fire_procedure
+function throwable:classes/firecracker/fire_procedure
+function throwable:classes/firecracker/fire_procedure
+function throwable:classes/firecracker/fire_procedure
+function throwable:classes/firecracker/fire_procedure
+function throwable:classes/firecracker/fire_procedure
+function throwable:classes/firecracker/fire_procedure
+function throwable:classes/firecracker/fire_procedure
 
 
 

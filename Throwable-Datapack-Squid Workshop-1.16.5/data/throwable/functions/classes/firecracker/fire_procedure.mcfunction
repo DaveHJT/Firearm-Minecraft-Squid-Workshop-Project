@@ -1,4 +1,4 @@
-function gun:classes/arrow_explosive_mini/fire
+function throwable:classes/firecracker/fire
 
 scoreboard players set @s spread 6
 scoreboard players operation @e[tag=grenade,distance=..2] spread = @s spread

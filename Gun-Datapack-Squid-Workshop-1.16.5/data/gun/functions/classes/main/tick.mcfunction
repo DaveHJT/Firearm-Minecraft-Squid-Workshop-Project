@@ -236,9 +236,8 @@ execute as @e[type=minecraft:arrow,nbt={Color:16754176},tag=!thrown] at @s run f
 
 
 #mini explosive arrow
-execute as @e[type=minecraft:arrow,nbt={Color:11080735},tag=!arrow] at @s run function gun:classes/arrow_explosive_mini/init
-execute as @e[tag=mini_explosion,tag=arrow] at @s run function gun:classes/arrow_explosive_mini/tick
-execute as @e[tag=mini_explosion,scores={throwable_life=50..}] at @s run function gun:classes/arrow_explosive_mini/effect
+execute as @e[type=minecraft:arrow,nbt={Color:11080735},tag=!thrown] at @s run function throwable:classes/firecracker/init
+
 
 #light bow
 execute as @a[scores={bow_bool=1},nbt={SelectedItem:{tag:{light:1b}}}] at @s as @e[type=minecraft:arrow,tag=!light,limit=1,sort=nearest] at @s run function gun:classes/arrow_light/init
