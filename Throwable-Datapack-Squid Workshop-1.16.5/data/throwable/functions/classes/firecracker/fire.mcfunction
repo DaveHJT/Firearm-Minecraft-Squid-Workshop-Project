@@ -1,6 +1,6 @@
 
 #summon bullet and sky
-summon minecraft:area_effect_cloud ~ ~ ~ {Duration:1,Tags:["bullet","new_b","grenade","slow"]}
+summon minecraft:area_effect_cloud ~ ~ ~ {Duration:2,Tags:["bullet","new_b","grenade","slow"]}
 
 execute at @e[tag=new_b,limit=1,sort=nearest] run tp @e[tag=new_b,limit=1,sort=nearest] ~ ~ ~ facing entity @s
 

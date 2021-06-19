@@ -7,13 +7,13 @@ scoreboard objectives add throwable dummy
 scoreboard objectives add throwable_life dummy
 
 
-# init settings
-scoreboard objectives add thr_setting dummy
+# init settingss
+scoreboard objectives add thr_settings dummy
 
 # turret_target: 0.only player   1.player and mobs
 
 # default options
-scoreboard players set turret_target thr_setting 1
+scoreboard players set turret_target thr_settings 1
 
 # constants
 scoreboard players set 10 throwable_life 10

@@ -83,7 +83,7 @@ scoreboard objectives add SID dummy
 scoreboard players operation SID C = randraw V
 
 # init settings
-scoreboard objectives add gun_setting dummy
+scoreboard objectives add gun_settings dummy
 scoreboard objectives add aimbot dummy
 
 # tracer: 0.no tracer   1.yellow dust tracer    2.bright tracer
@@ -93,10 +93,11 @@ scoreboard objectives add aimbot dummy
 # @s aimbot: 0.disable  1.enable
 
 # default options
-scoreboard players set tracer gun_setting 1
-scoreboard players set hack gun_setting 0
-scoreboard players set blood gun_setting 2
-scoreboard players set hit_glow gun_setting 1
+scoreboard players set tracer gun_settings 1
+scoreboard players set hack gun_settings 0
+scoreboard players set blood gun_settings 2
+scoreboard players set hit_glow gun_settings 1
+scoreboard players set hit_mark gun_settings 0
 
 #message
 tellraw @a {"text":"[Server]: Gun-Datapack from Squid-Workshop Loaded","italic":true,"color":"gray"}

@@ -16,3 +16,4 @@ scoreboard players operation @s UID = @p UID
 
 
 tag @s add thrown
+tag @e[tag=tracer_new] remove traver_new

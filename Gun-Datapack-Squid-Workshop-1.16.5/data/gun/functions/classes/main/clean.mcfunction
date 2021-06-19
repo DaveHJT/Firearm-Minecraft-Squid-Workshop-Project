@@ -28,7 +28,7 @@ scoreboard objectives remove recoil
 scoreboard objectives remove r_cooldown 
 scoreboard objectives remove spread 
 scoreboard objectives remove spread_id 
-#scoreboard objectives remove gun_setting 
+#scoreboard objectives remove gun_settings 
 scoreboard objectives remove aimbot
 
 scoreboard objectives remove r 

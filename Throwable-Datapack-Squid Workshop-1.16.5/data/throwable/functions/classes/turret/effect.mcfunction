@@ -10,12 +10,15 @@ scoreboard players set 0 team 0
 execute as @a if score @s UID = turret UID run tag @s add ally
 execute as @e[type=!#damage:notmob] if score @s team > 0 team if score @s team = turret team run tag @s add ally
 
+
+#invisibility
+#execute if entity @s[nbt=!{ActiveEffects:[{Id:14b}]}] run 
 #aim
 scoreboard players add @s cooldown 0
-execute if score turret_target thr_setting matches 0 if entity @a[tag=!ally,distance=..20] run tag @s add target_aimed
-execute if score turret_target thr_setting matches 0 if entity @s[tag=target_aimed] run tp @s ~ ~ ~ facing entity @p[tag=!ally,distance=..20]
-execute if score turret_target thr_setting matches 1 if entity @e[distance=..20,tag=!ally,type=!#damage:notmob,limit=1,sort=nearest] run tag @s add target_aimed
-execute if score turret_target thr_setting matches 1 if entity @s[tag=target_aimed] run tp @s ~ ~ ~ facing entity @e[distance=..20,tag=!ally,type=!#damage:notmob,limit=1,sort=nearest]
+execute if score turret_target thr_settings matches 0 if entity @a[tag=!ally,distance=..20,nbt=!{ActiveEffects:[{Id:14b}]}] run tag @s add target_aimed
+execute if score turret_target thr_settings matches 0 if entity @s[tag=target_aimed] run tp @s ~ ~ ~ facing entity @p[tag=!ally,distance=..20]
+execute if score turret_target thr_settings matches 1 if entity @e[distance=..20,tag=!ally,type=!#damage:notmob,limit=1,sort=nearest,nbt=!{ActiveEffects:[{Id:14b}]}] run tag @s add target_aimed
+execute if score turret_target thr_settings matches 1 if entity @s[tag=target_aimed] run tp @s ~ ~ ~ facing entity @e[distance=..20,tag=!ally,type=!#damage:notmob,limit=1,sort=nearest]
 
 #smoked
 execute if entity @e[tag=smoke_effect,distance=..4] run tag @s remove target_aimed
@@ -36,7 +39,8 @@ tag @s[tag=!green,tag=!target_aimed] add green
 
 # destruct
 execute if entity @e[tag=!ally,distance=..2,type=!#damage:notmob] run tag @s add destruct
-execute positioned ~ ~0.6 ~ if entity @e[type=arrow,distance=..1] run tag @s add destruct
+execute positioned ~ ~0.6 ~ if entity @e[type=arrow,distance=..2] run tag @s add destruct
+execute positioned ~ ~0.6 ~ if entity @e[type=firework_rocket,distance=..4] run tag @s add destruct
 execute if entity @e[tag=grenade_effect,distance=..7,tag=grenade_explosion] run tag @s add destruct
 execute if entity @e[tag=ignited_molotov,distance=..6] run tag @s add destruct
 execute if score @s ammo matches 0 run tag @s add destruct

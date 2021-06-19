@@ -6,6 +6,9 @@ tag @s[tag=dead] remove signal_effect
 particle minecraft:lava ~ ~ ~ 0 0 0 0.01 1 force @a
 particle minecraft:end_rod ~ ~1 ~ 0 0 0 0.2 2 force @a
 
+# mark players
+effect give @e[type=#damage:mob,distance=..10] glowing 1 1 true
+
 # sound
 scoreboard players set sound_interval throwable_life 5
 scoreboard players operation sound_time throwable_life = @s throwable_life

@@ -223,20 +223,20 @@ execute as @e[type=minecraft:arrow,nbt={Color:16449336},tag=!arrow] at @s run fu
 #execute as @e[tag=light,tag=arrow] at @s run function gun:classes/arrow_light/tick
 
 #grenade arrow
-execute as @e[type=minecraft:arrow,nbt={Color:1274392},tag=!thrown] at @s run function throwable:classes/grenade/init
+execute as @e[type=minecraft:arrow,nbt={Color:1274392},tag=!throw] at @s run function throwable:classes/grenade/init
 
 #molotov arrow
-execute as @e[type=minecraft:arrow,nbt={Color:11298561},tag=!thrown] at @s run function throwable:classes/molotov/init
+execute as @e[type=minecraft:arrow,nbt={Color:11298561},tag=!throw] at @s run function throwable:classes/molotov/init
 
 #smoke arrow
-execute as @e[type=minecraft:arrow,nbt={Color:1656347},tag=!thrown] at @s run function throwable:classes/smoke/init
+execute as @e[type=minecraft:arrow,nbt={Color:1656347},tag=!throw] at @s run function throwable:classes/smoke/init
 
 #signal arrow
-execute as @e[type=minecraft:arrow,nbt={Color:16754176},tag=!thrown] at @s run function throwable:classes/signal/init
+execute as @e[type=minecraft:arrow,nbt={Color:16754176},tag=!throw] at @s run function throwable:classes/signal/init
 
 
 #mini explosive arrow
-execute as @e[type=minecraft:arrow,nbt={Color:11080735},tag=!thrown] at @s run function throwable:classes/firecracker/init
+execute as @e[type=minecraft:arrow,nbt={Color:11080735},tag=!throw] at @s run function throwable:classes/firecracker/init
 
 
 #light bow
@@ -248,5 +248,9 @@ execute as @a[scores={crossbow_bool=1},nbt={SelectedItem:{tag:{light:1b}}}] at @
 #time 
 scoreboard players add time V 1
 execute if score time V matches 1000000.. run scoreboard players set time V 0 
+
+# hit mark
+execute if score hit_mark gun_settings matches 1 as @e[tag=hit_mark] at @s run particle composter ~ ~ ~ 0 0 0 1 1 force 
+
 
 

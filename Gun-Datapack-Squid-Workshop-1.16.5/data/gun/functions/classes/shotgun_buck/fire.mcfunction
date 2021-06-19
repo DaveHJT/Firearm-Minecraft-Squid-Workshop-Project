@@ -1,7 +1,7 @@
 
 #aimbot hack
 tag @s add me
-execute if score hack gun_setting matches 1 if score @s aimbot matches 1 run tp @s ~ ~ ~ facing entity @p[tag=!me]
+execute if score hack gun_settings matches 1 if score @s aimbot matches 1 run tp @s ~ ~ ~ facing entity @p[tag=!me]
 tag @s remove me
 
 playsound minecraft:gun/shotgun/xm1014-1 player @a ~ ~ ~ 2 1

@@ -29,7 +29,7 @@ execute as @s[tag=hit,distance=..3] at @s if entity @e[tag=cbp,tag=light,limit=1
 
 #bullet effects
 execute as @p[tag=hit,tag=clp,gamemode=!creative,gamemode=!spectator] run effect give @s slowness 1 1 true
-execute if score hit_glow gun_setting matches 1 as @p[tag=hit,tag=clp] run effect give @s glowing 1 1 true
+execute if score hit_glow gun_settings matches 1 as @p[tag=hit,tag=clp] run effect give @s glowing 1 1 true
 scoreboard players operation @p[tag=hit,tag=clp,gamemode=!creative,gamemode=!spectator,tag=!protected,tag=!invulnerable] damage += @e[tag=cbp,tag=!light] damage
 #hit flesh sound
 execute if entity @e[tag=cbp,limit=1,sort=nearest,tag=bullet,tag=b_sniper] if entity @p[tag=hit,tag=clp,gamemode=!creative,gamemode=!spectator] at @s run playsound minecraft:gun/hit/flesh1 player @a ~ ~ ~ 0.7 1

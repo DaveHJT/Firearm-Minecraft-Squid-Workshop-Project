@@ -1,6 +1,6 @@
 #aimbot hack
 tag @s add me
-execute if score hack gun_setting matches 1 if score @s aimbot matches 1 run tp @s ~ ~ ~ facing entity @p[tag=!me]
+execute if score hack gun_settings matches 1 if score @s aimbot matches 1 run tp @s ~ ~ ~ facing entity @p[tag=!me]
 tag @s remove me
 
 #summon bullet and face player

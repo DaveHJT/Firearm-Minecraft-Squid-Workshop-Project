@@ -12,5 +12,6 @@ execute if entity @s[tag=bullet] if block ~ ~ ~ #gun:ores run playsound minecraf
 execute if entity @s[tag=bullet] if block ~ ~ ~ #gun:dirt run playsound minecraft:gun/hit/dirt1 ambient @a ~ ~ ~ 0.6 2
 execute if entity @s[tag=bullet] if block ~ ~ ~ #gun:misc run playsound minecraft:gun/hit/dirt1 ambient @a ~ ~ ~ 0.6 1.5
 
-execute if entity @s[tag=bullet] if block ~ ~ ~ #gun:watery run playsound minecraft:gun/hit/flesh1 ambient @a ~ ~ ~ 0.6 1.5
+execute if entity @s[tag=bullet] if block ~ ~ ~ #gun:watery run playsound minecraft:block.honey_block.step ambient @a ~ ~ ~ 1 1.6
+execute if entity @s[tag=bullet] if block ~ ~ ~ #gun:watery run particle minecraft:block slime_block ~ ~ ~ 0.1 0.1 0.1 0.3 8 force
 

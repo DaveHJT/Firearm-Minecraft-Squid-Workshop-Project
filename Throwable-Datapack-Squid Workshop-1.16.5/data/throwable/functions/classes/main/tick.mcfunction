@@ -67,6 +67,7 @@ execute as @e[tag=effect] run scoreboard players add @s throwable_life 1
 
 #throw physics
 execute as @e[tag=thrown] at @s run function throwable:classes/throwable/physics
+tag @e[tag=traced] remove traced
 
 #<<<<<<<<<<<<<<<trace
 #execute as @e[tag=tracer,tag=grenade] at @s run particle minecraft:composter ~ ~ ~ 0 0 0 1 1
@@ -80,7 +81,7 @@ execute as @e[tag=tracer] at @s unless entity @e[distance=..0.1,tag=thrown] run 
 # if arrow onground
 #execute as @e[tag=tracer] at @s as @e[tag=thrown,limit=1,sort=nearest,type=arrow] if entity @s[nbt={OnGround:1b}] run tag @e[tag=tracer,limit=1,sort=nearest] add hit
 # kill arrows on onground
-kill @e[tag=thrown,type=arrow,nbt={inGround:1b}]
+execute as @e[tag=thrown,type=arrow,nbt={inGround:1b}] at @s run function throwable:classes/throwable/dead_arrow
 #<<<<<<<<<<<<<<<land
 #grenade
 execute as @e[tag=thrown,tag=grenade,scores={throwable_life=70..}] at @s run kill @s
