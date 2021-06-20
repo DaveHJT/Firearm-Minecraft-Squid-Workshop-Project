@@ -82,3 +82,6 @@ tag @s[scores={damage=..0}] add blocked
 execute if score hit_mark gun_settings matches 1 if entity @s[tag=blocked] run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["hit_mark"],Duration:200}
 execute if score hit_mark gun_settings matches 1 if entity @s[tag=hit] run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["hit_mark"],Duration:200}
 execute if score hit_mark gun_settings matches 1 if entity @s[tag=penetrate] run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["hit_mark"],Duration:200}
+
+
+tag @s[tag=penetrate] remove penetrate
