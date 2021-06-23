@@ -32,6 +32,7 @@ execute if entity @s[tag=bullet,tag=!grenade] if score tracer gun_settings match
 execute if entity @s[tag=bullet] if score tracer gun_settings matches 3 run particle minecraft:dripping_lava ~ ~-0.2 ~ 0 0 0 0.0001 1 force
 #execute if entity @s[tag=laser] run particle minecraft:landing_lava ~ ~-0.2 ~ 0 0 0 0.0001 1
 execute if entity @s[tag=laser] run particle minecraft:dust 1 0 0 0.5 ~ ~-0.15 ~ 0 0 0 0.0001 1 force
+execute if entity @s[tag=cannon] run particle minecraft:poof ~ ~ ~ 0 0 0 0.0001 1 force
 #reflected
 execute if entity @s[tag=reflected] run particle minecraft:dripping_lava ~ ~-0.2 ~ 0 0 0 0.0001 1 force
 #arrow light
@@ -69,6 +70,8 @@ execute if score blood gun_settings matches 2 if entity @s[tag=bullet] if entity
 execute if score blood gun_settings matches 1 if entity @s[tag=bullet] if entity @e[distance=0..3,tag=hit,tag=!special] run particle minecraft:item redstone ~ ~ ~ 0.2 0.2 0.2 0.1 5 force
 execute if entity @s[tag=bullet] if entity @e[distance=0..3,tag=hit,tag=special] run particle minecraft:item gunpowder ~ ~ ~ 0.1 0.1 0.1 0.3 8 force
 execute if entity @s[tag=laser] if entity @e[distance=0..3,tag=hit] run particle minecraft:lava ~ ~ ~ 0.2 0.2 0.2 0.1 1 force
+execute if score blood gun_settings matches 2 if entity @s[tag=cannon] if entity @e[distance=0..3,tag=hit,tag=!special] run particle minecraft:item redstone ~ ~ ~ 0.2 0.2 0.2 0.1 70 force
+execute if score blood gun_settings matches 1 if entity @s[tag=cannon] if entity @e[distance=0..3,tag=hit,tag=!special] run particle minecraft:item redstone ~ ~ ~ 0.2 0.2 0.2 0.1 5 force
 
 
 #interaction with turret
@@ -78,10 +81,17 @@ execute if entity @e[tag=turret_effect,distance=..0.6] unless score @e[tag=turre
 execute if score v0 V matches 0 run tag @s add blocked
 tag @s[scores={damage=..0}] add blocked
 
+
 # hit mark
 execute if score hit_mark gun_settings matches 1 if entity @s[tag=blocked] run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["hit_mark"],Duration:200}
 execute if score hit_mark gun_settings matches 1 if entity @s[tag=hit] run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["hit_mark"],Duration:200}
 execute if score hit_mark gun_settings matches 1 if entity @s[tag=penetrate] run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["hit_mark"],Duration:200}
 
+# cannon
+tag @s[tag=cannon,tag=hit] add blocked
+tag @s[tag=cannon,tag=blocked] add grenade_effect
+execute if entity @s[tag=grenade_effect] run playsound minecraft:gun/thrower/he_bounce-1 player @a ~ ~ ~ 2 0.6
+scoreboard players add @s[tag=grenade_effect] throwable_life 1000
+execute if entity @s[tag=grenade_effect] run function throwable:classes/grenade/effect
 
 tag @s[tag=penetrate] remove penetrate

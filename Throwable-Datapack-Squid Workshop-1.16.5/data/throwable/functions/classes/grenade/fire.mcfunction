@@ -26,7 +26,7 @@ execute as @e[tag=bullet_new,limit=1,sort=nearest] at @s run function gun:classe
 
 
 #update bullet status
-tag @e[tag=bullet_new,limit=1,sort=nearest] add fired_b
+tag @e[tag=bullet_new,limit=1,sort=nearest] add bullet_fired
 
 tag @e[tag=bullet_new,limit=1,sort=nearest] remove bullet_new
 

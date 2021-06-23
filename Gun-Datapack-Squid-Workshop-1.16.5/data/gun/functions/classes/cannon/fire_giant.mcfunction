@@ -1,21 +1,17 @@
 
 #summon bullet and face player
-summon minecraft:area_effect_cloud ^ ^ ^0.4 {Duration:20,Tags:["cannon","bullet_new","bullet","slow"]}
+summon minecraft:area_effect_cloud ^-1.5 ^ ^6.2 {Duration:20,Tags:["cannon","bullet_new","bullet","slow"]}
+
 
 #aimbot hack
-tag @s add me
-execute if score hack gun_settings matches 1 if score @s aimbot matches 1 run tp @s ~ ~ ~ facing entity @p[tag=!me]
-tag @s remove me
+execute at @p run summon area_effect_cloud ~ ~-8.7 ~ {Duration:1,Tags:["aim_anchor"]}
+tp @s ~ ~ ~ facing entity @e[limit=1,tag=aim_anchor,sort=nearest]
+kill @e[tag=aim_anchor]
 
-execute at @e[tag=bullet_new,limit=1,sort=nearest] run tp @e[tag=bullet_new,limit=1,sort=nearest] ~ ~ ~ facing entity @s
-
-execute if entity @s[scores={shift=0}] as @e[tag=bullet_new,limit=1,sort=nearest] at @s run tp @s ~ ~1.6 ~
-
-execute if entity @s[scores={shift=1..}] as @e[tag=bullet_new,limit=1,sort=nearest] at @s run tp @s ~ ~1.25 ~
-
+execute at @e[tag=bullet_new,limit=1,sort=nearest] run tp @e[tag=bullet_new,limit=1,sort=nearest] ~ ~8.7 ~
 
 #giant
-#execute as @e[limit=1,type=giant,sort=nearest] at @s positioned ^-1.5 ^ ^6.2 positioned ~ ~8.7 ~ run particle minecraft:flame ~ ~ ~ 0.1 0.1 0.1 0.1 100 force
+#execute as @e[limit=1,type=giant,sort=nearest] at @s positioned ^ ^ ^ positioned ~ ~ ~ run particle minecraft:flame ~ ~ ~ 0.1 0.1 0.1 0.1 100 force
 
 
 #sign name
@@ -24,16 +20,9 @@ scoreboard players operation @e[tag=bullet_new,limit=1,sort=nearest] UID = @s UI
 #sound & effects
 playsound minecraft:gun/awp/awp_distant player @a ~ ~ ~ 1 0.5
 
-#own view
-execute if entity @s[scores={shift=0}] positioned ~ ~1.6 ~ run particle minecraft:flame ^-0.2 ^-0.05 ^0.7 0 0 0 0.05 50 force @s
 
-execute if entity @s[scores={shift=1..}] positioned ~ ~1.3 ~ run particle minecraft:flame ^ ^-0.2 ^1.5 0 0 0 0.05 50 force @s
+execute positioned ~ ~8.7 ~ run particle minecraft:flame ^-1.5 ^ ^6.2 0.1 0.1 0.1 0.1 100 force @a
 
-#others view
-tag @s add display_fire
-execute if entity @s[scores={shift=0}] positioned ~ ~1.6 ~ run particle minecraft:flame ^-0.2 ^-0.4 ^1 0 0 0 0.05 50 force @a[tag=!display_fire]
-execute if entity @s[scores={shift=1..}] positioned ~ ~1.3 ~ run particle minecraft:flame ^-0.2 ^-0.4 ^1 0 0 0 0.05 50 force @a[tag=!display_fire]
-tag @s remove display_fire
 
 #damage
 execute as @e[tag=bullet_new,limit=1,sort=nearest] run scoreboard players set @s damage 50

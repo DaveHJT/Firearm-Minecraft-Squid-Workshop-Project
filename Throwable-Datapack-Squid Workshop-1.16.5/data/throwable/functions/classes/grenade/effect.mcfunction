@@ -59,7 +59,7 @@ function throwable:classes/grenade/fire_procedure
 execute if block ~ ~ ~ minecraft:water run tag @s add water
 execute if entity @s[tag=water] run particle minecraft:splash ~ ~2 ~ 0.6 1 0.6 1 1000 force
 execute if entity @s[tag=water] run playsound minecraft:gun/thrower/water_explo player @a ~ ~ ~ 4 1.5
-execute if entity @s[tag=water] run tag @e[tag=fired_b,distance=..0.5] add water
+execute if entity @s[tag=water] run tag @e[tag=bullet_fired,distance=..0.5] add water
 
 #in lava
 execute if block ~ ~ ~ minecraft:lava run tag @s add water
@@ -67,7 +67,7 @@ execute if block ~ ~ ~ minecraft:lava run tag @s add lava
 execute if entity @s[tag=lava] run particle minecraft:lava ~ ~2 ~ 0.6 1 0.6 1 80 force
 execute if entity @s[tag=lava] run particle minecraft:falling_lava ~ ~2 ~ 0.6 1 0.6 1 180 force
 execute if entity @s[tag=lava] run playsound minecraft:gun/thrower/water_explo player @a ~ ~ ~ 4 0.7
-execute if entity @s[tag=lava] run tag @e[tag=fired_b,distance=..0.5] add lava
+execute if entity @s[tag=lava] run tag @e[tag=bullet_fired,distance=..0.5] add lava
 
 #in air
 #execute if entity @s[tag=water] run particle minecraft:lava ~ ~1 ~ 3 1 3 1 30 force

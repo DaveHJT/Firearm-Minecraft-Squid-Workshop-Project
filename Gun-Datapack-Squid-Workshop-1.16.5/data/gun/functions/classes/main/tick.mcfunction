@@ -73,7 +73,7 @@ execute as @a[scores={spin=75..},nbt={SelectedItem:{tag:{minigun:1b,silenced:0}}
 
 #cannon
 execute as @a[scores={right_click=1..,cooldown=0},nbt={SelectedItem:{tag:{cannon:1b}}}] at @s run function gun:classes/cannon/fire
-
+execute as @e[type=minecraft:giant,scores={cooldown=0},tag=war_machine] at @s run function gun:classes/cannon/fire_giant
 #>>>>>>>>>>>>>>>>>>detect fire
 
 #lowammo
@@ -103,7 +103,7 @@ execute as @a unless entity @s[nbt={Inventory:[{Slot:-106b,tag:{gun:1b}}]},score
 
 
 #cooldown
-scoreboard players remove @a[scores={cooldown=1..}] cooldown 1
+scoreboard players remove @e[scores={cooldown=1..}] cooldown 1
 
 
 #<<<<<<<<<<<<<<<<<<detect aim
@@ -184,14 +184,14 @@ execute as @a[scores={jump=1..}] run scoreboard players set @s jump 0
 
 
 #debug bullet
-#execute as @e[tag=fired_b] at @s run particle minecraft:crit ~ ~ ~ 0.1 0.1 0.1 1 0
-#execute as @e[tag=fired_b] at @s run tp @s ^ ^ ^0.1
+#execute as @e[tag=bullet_fired] at @s run particle minecraft:crit ~ ~ ~ 0.1 0.1 0.1 1 0
+#execute as @e[tag=bullet_fired] at @s run tp @s ^ ^ ^0.1
 #execute as @e[tag=spread] at @s run tp @s ~ ~ ~ ~ ~2
 #execute as @e[tag=spread] at @s run function gun:classes/gun/spread/spread
 #execute as @e[tag=spread] run tag @s remove spread
 
 #bullet /from MGS_2.0.1 gun mod/
-execute as @e[tag=fired_b] at @s run function gun:classes/gun/bullet_physics
+execute as @e[tag=bullet_fired] at @s run function gun:classes/gun/bullet_physics
 
 #<<<<<<<<<<<<<<<<<<ammo display
 #rifle
@@ -255,6 +255,9 @@ execute if score time V matches 1000000.. run scoreboard players set time V 0
 
 # hit mark
 execute if score hit_mark gun_settings matches 1 as @e[tag=hit_mark] at @s run particle composter ~ ~ ~ 0 0 0 1 1 force 
+
+# war war_machine
+execute as @e[type=minecraft:giant,tag=war_machine] at @s run tp @s ~ ~ ~ facing entity @p
 
 
 
