@@ -1,0 +1,1 @@
+give @s minecraft:carrot_on_a_stick{private:1b,CustomModelData:526,display:{Name:"{\"text\":\"hand cannon\"}"},gun:1b,cannon:1b,silenced:0}

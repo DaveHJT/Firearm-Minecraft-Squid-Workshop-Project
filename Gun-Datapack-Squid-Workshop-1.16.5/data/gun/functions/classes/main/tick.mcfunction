@@ -70,6 +70,10 @@ execute as @a[scores={b_mini=1..,spin=75..},nbt={SelectedItem:{tag:{minigun:1b,s
 execute as @a[scores={spin=1..},nbt={SelectedItem:{tag:{minigun:1b,silenced:0}}}] at @s run scoreboard players add @s spin 1
 
 execute as @a[scores={spin=75..},nbt={SelectedItem:{tag:{minigun:1b,silenced:0}}}] at @s run playsound minecraft:entity.enderman.death player @a ~ ~ ~ 0.1 1.6
+
+#cannon
+execute as @a[scores={right_click=1..,cooldown=0},nbt={SelectedItem:{tag:{cannon:1b}}}] at @s run function gun:classes/cannon/fire
+
 #>>>>>>>>>>>>>>>>>>detect fire
 
 #lowammo
