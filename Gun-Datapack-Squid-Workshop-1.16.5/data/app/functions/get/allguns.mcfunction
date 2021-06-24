@@ -4,5 +4,6 @@ function app:get/shotgun_buck
 function app:get/sniper
 function app:get/laser
 function app:get/minigun
+function app:get/cannon
 
 function app:hack/infinite_ammo

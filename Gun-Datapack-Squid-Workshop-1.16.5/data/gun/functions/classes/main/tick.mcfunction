@@ -257,7 +257,7 @@ execute if score time V matches 1000000.. run scoreboard players set time V 0
 execute if score hit_mark gun_settings matches 1 as @e[tag=hit_mark] at @s run particle composter ~ ~ ~ 0 0 0 1 1 force 
 
 # war war_machine
-execute as @e[type=minecraft:giant,tag=war_machine] at @s run tp @s ~ ~ ~ facing entity @p
+execute as @e[type=minecraft:giant,tag=war_machine] at @s if entity @p[distance=..100] run tp @s ~ ~ ~ facing entity @p[tag=!protected] 
 
 
 

@@ -172,7 +172,7 @@ execute as @a[scores={throw=1..}] run scoreboard players set @s throw 0
 scoreboard players remove @e[tag=turret_effect,scores={cooldown=1..}] cooldown 1
 
 #signal flare attraction
-execute as @e[type=#damage:mob] at @s if entity @e[tag=signal_effect,distance=..10] at @s run tp @s ~ ~ ~ facing entity @e[limit=1,sort=nearest,tag=signal_effect]
+execute as @e[tag=signal_effect] at @s as @e[type=#damage:mob,distance=..10] at @s run tp @s ~ ~ ~ facing entity @e[limit=1,sort=nearest,tag=signal_effect]
 
 #flash blind effect when victim leave flashbang
 execute as @a[tag=flashed] at @s unless entity @e[tag=flashing_effect,distance=..7] run effect give @s blindness 5 10 true

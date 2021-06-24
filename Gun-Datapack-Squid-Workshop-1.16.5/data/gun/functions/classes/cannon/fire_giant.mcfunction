@@ -4,7 +4,7 @@ summon minecraft:area_effect_cloud ^-1.5 ^ ^6.2 {Duration:20,Tags:["cannon","bul
 
 
 #aimbot hack
-execute at @p run summon area_effect_cloud ~ ~-8.7 ~ {Duration:1,Tags:["aim_anchor"]}
+execute at @p[tag=!protected] run summon area_effect_cloud ~ ~-11 ~ {Duration:1,Tags:["aim_anchor"]}
 tp @s ~ ~ ~ facing entity @e[limit=1,tag=aim_anchor,sort=nearest]
 kill @e[tag=aim_anchor]
 
@@ -51,7 +51,7 @@ execute if entity @s[scores={recoil=8..9}] as @e[tag=bullet_new,limit=1,sort=nea
 execute if entity @s[scores={recoil=10..}] as @e[tag=bullet_new,limit=1,sort=nearest] at @s run tp @s ~ ~ ~ ~0.8 ~-4
 
 #cooldown
-scoreboard players add @s cooldown 40
+scoreboard players add @s cooldown 100
 
 #remove ammo
 #scoreboard players remove @s b_rifle 1
