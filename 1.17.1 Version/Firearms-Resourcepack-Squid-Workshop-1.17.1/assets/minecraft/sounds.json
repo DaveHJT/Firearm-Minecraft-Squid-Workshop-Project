@@ -1,0 +1,317 @@
+{
+	"gun/clipempty": {
+		"sounds": [
+			"gun/clipempty"
+		]
+	},
+	"gun/lowammo": {
+		"sounds": [
+			"gun/lowammo"
+		]
+	},
+	"gun/hit/dirt1": {
+		"sounds": [
+			"gun/hit/dirt1"
+		]
+	},
+	"gun/hit/quartz1": {
+		"sounds": [
+			"gun/hit/quartz1"
+		]
+	},
+	"gun/hit/quartz2": {
+		"sounds": [
+			"gun/hit/quartz2"
+		]
+	},
+	"gun/hit/wood1": {
+		"sounds": [
+			"gun/hit/wood1"
+		]
+	},
+	"gun/hit/water1": {
+		"sounds": [
+			"gun/hit/water1"
+		]
+	},
+	"gun/hit/flesh1": {
+		"sounds": [
+			"gun/hit/flesh1"
+		]
+	},
+	"gun/hit/kevlar1": {
+		"sounds": [
+			"gun/hit/kevlar1"
+		]
+	},
+	"gun/fly/bullet01": {
+		"sounds": [
+			"gun/fly/bullet01"
+		]
+	},
+	"gun/fly/bullet02": {
+		"sounds": [
+			"gun/fly/bullet02"
+		]
+	},
+	"gun/fly/bullet03": {
+		"sounds": [
+			"gun/fly/bullet03"
+		]
+	},
+	"gun/fly/bullet04": {
+		"sounds": [
+			"gun/fly/bullet04"
+		]
+	},
+	"gun/fly/rocket01": {
+		"sounds": [
+			"gun/fly/rocket01"
+		]
+	},
+	"gun/m4a1/m4a1_us_distant": {
+		"sounds": [
+			"gun/m4a1/m4a1_us_distant"
+		]
+	},
+	"gun/m4a1/m4a1_1_distant": {
+		"sounds": [
+			"gun/m4a1/m4a1_1_distant"
+		]
+	},
+	"gun/player/jump": {
+		"sounds": [
+			"gun/player/jump"
+		]
+	},
+	"gun/player/movement1": {
+		"sounds": [
+			"gun/player/movement1"
+		]
+	},
+	"gun/player/bassdrop": {
+		"sounds": [
+			"gun/player/bassdrop"
+		]
+	},
+	"gun/thrower/c4_explo": {
+		"sounds": [
+			"gun/thrower/c4_explo"
+		]
+	},
+	"gun/thrower/water_explo": {
+		"sounds": [
+			"gun/thrower/water_explo"
+		]
+	},
+	"gun/thrower/explode2": {
+		"sounds": [
+			"gun/thrower/explode2"
+		]
+	},
+	"gun/taser/taser_hit": {
+		"sounds": [
+			"gun/taser/taser_hit"
+		]
+	},
+	"gun/taser/taser_shoot": {
+		"sounds": [
+			"gun/taser/taser_shoot"
+		]
+	},
+	"gun/usp/usp_": {
+		"sounds": [
+			"gun/usp/usp_01"
+		]
+	},
+	"gun/usp/usp_clipin": {
+		"sounds": [
+			"gun/usp/usp_clipin"
+		]
+	},
+	"gun/m4a1/m4a1_01": {
+		"sounds": [
+			"gun/m4a1/m4a1_01"
+		]
+	},
+	"gun/m4a1/m4a1_cliphit": {
+		"sounds": [
+			"gun/m4a1/m4a1_cliphit"
+		]
+	},
+	"gun/m4a1/m4a1_clipin": {
+		"sounds": [
+			"gun/m4a1/m4a1_clipin"
+		]
+	},
+	"gun/m4a1/m4a1_clipout": {
+		"sounds": [
+			"gun/m4a1/m4a1_clipout"
+		]
+	},
+	"gun/m4a1/m4a1_silencer_01": {
+		"sounds": [
+			"gun/m4a1/m4a1_silencer_01"
+		]
+	},
+	"gun/m4a1/m4a1_silencer_on": {
+		"sounds": [
+			"gun/m4a1/m4a1_silencer_on"
+		]
+	},
+	"gun/m4a1/m4a1_silencer_screw_1": {
+		"sounds": [
+			"gun/m4a1/m4a1_silencer_screw_1"
+		]
+	},
+	"gun/m4a1/m4a1_silencer_screw_on_start": {
+		"sounds": [
+			"gun/m4a1/m4a1_silencer_screw_on_start"
+		]
+	},
+	"gun/m4a1/m4a1_distant_01": {
+		"sounds": [
+			"gun/m4a1/m4a1_distant_01"
+		]
+	},
+	"gun/thrower/explode": {
+		"sounds": [
+			"gun/thrower/explode5"
+		]
+	},
+	"gun/thrower/molotov_detonate_2": {
+		"sounds": [
+			"gun/thrower/molotov_detonate_2"
+		]
+	},
+	"gun/thrower/flash_hit": {
+		"sounds": [
+			"gun/thrower/flash_hit"
+		]
+	},
+	"gun/thrower/flashbang_explode1": {
+		"sounds": [
+			"gun/thrower/flashbang_explode1"
+		]
+	},
+	"gun/thrower/flashbang_explode1_distant": {
+		"sounds": [
+			"gun/thrower/flashbang_explode1_distant"
+		]
+	},
+	"gun/thrower/grenade_distant": {
+		"sounds": [
+			"gun/thrower/grenade_distant"
+		]
+	},
+	"gun/thrower/sg_explode_distant": {
+		"sounds": [
+			"gun/thrower/sg_explode_distant"
+		]
+	},
+	"gun/thrower/grenade_throw": {
+		"sounds": [
+			"gun/thrower/grenade_throw"
+		]
+	},
+	"gun/thrower/he_bounce-1": {
+		"sounds": [
+			"gun/thrower/he_bounce-1"
+		]
+	},
+	"gun/thrower/smoke_emit": {
+		"sounds": [
+			"gun/thrower/smoke_emit"
+		]
+	},
+	"gun/awp/awp_02": {
+		"sounds": [
+			"gun/awp/awp_02"
+		]
+	},
+	"gun/awp/awp_distant": {
+		"sounds": [
+			"gun/awp/awp_distant"
+		]
+	},
+	"gun/awp/zoom": {
+		"sounds": [
+			"gun/awp/zoom"
+		]
+	},
+	"gun/p90/p90_01": {
+		"sounds": [
+			"gun/p90/p90_01"
+		]
+	},
+	"gun/p90/p90-1-distant": {
+		"sounds": [
+			"gun/p90/p90-1-distant"
+		]
+	},
+	"gun/shotgun/xm1014_insertshell_02": {
+		"sounds": [
+			"gun/shotgun/xm1014_insertshell_02"
+		]
+	},
+	"gun/shotgun/xm1014-1-distant": {
+		"sounds": [
+			"gun/shotgun/xm1014-1-distant"
+		]
+	},
+	"gun/shotgun/xm1014-1": {
+		"sounds": [
+			"gun/shotgun/xm1014-1"
+		]
+	},
+	"gun/p90/p90_boltforward": {
+		"sounds": [
+			"gun/p90/p90_boltforward"
+		]
+	},
+	"gun/p90/p90_cliphit": {
+		"sounds": [
+			"gun/p90/p90_cliphit"
+		]
+	},
+	"gun/p90/p90_clipin": {
+		"sounds": [
+			"gun/p90/p90_clipin"
+		]
+	},
+	"gun/p90/p90_clipout": {
+		"sounds": [
+			"gun/p90/p90_clipout"
+		]
+	},
+	"gun/p90/p90_cliprelease": {
+		"sounds": [
+			"gun/p90/p90_cliprelease"
+		]
+	},
+	"gun/p90/p90_draw": {
+		"sounds": [
+			"gun/p90/p90_draw"
+		]
+	},
+	"gun/minigun/minigun": {
+		"sounds": [
+			"gun/minigun/minigun"
+		]
+	},
+	"gun/minigun/chain": {
+		"sounds": [
+			"gun/minigun/chain"
+		]
+	},
+	"gun/minigun/spin_end": {
+		"sounds": [
+			"gun/minigun/spin_end"
+		]
+	},
+	"gun/minigun/spin_up": {
+		"sounds": [
+			"gun/minigun/spin_up"
+		]
+	}
+}

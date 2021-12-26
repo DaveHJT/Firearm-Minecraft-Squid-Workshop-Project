@@ -1,0 +1,17 @@
+{
+    "replace": false,
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "item/snowball"
+    },
+    "overrides":[
+	{"predicate":{"custom_model_data":501},"model":"item/throwable/grenade"},
+	{"predicate":{"custom_model_data":502},"model":"item/throwable/molotov"},
+	{"predicate":{"custom_model_data":503},"model":"item/throwable/turret_folded"},
+	{"predicate":{"custom_model_data":504},"model":"item/throwable/xirang"},
+    	{"predicate":{"custom_model_data":505},"model":"item/throwable/flash"},
+   	{"predicate":{"custom_model_data":506},"model":"item/throwable/signal"},
+	{"predicate":{"custom_model_data":507},"model":"item/throwable/smoke"}
+    ]
+
+}

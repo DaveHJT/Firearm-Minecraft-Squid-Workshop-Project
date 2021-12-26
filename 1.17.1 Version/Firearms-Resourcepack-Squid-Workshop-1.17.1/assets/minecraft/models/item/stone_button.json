@@ -1,0 +1,14 @@
+{
+    "replace": false,
+    "parent": "block/stone_button_inventory",
+
+    "overrides":[
+	{"predicate":{"custom_model_data":510},"model":"item/throwable/turret_head_g"},
+	{"predicate":{"custom_model_data":511},"model":"item/throwable/turret_head_r"},
+	{"predicate":{"custom_model_data":512},"model":"item/throwable/turret_body"},
+	{"predicate":{"custom_model_data":513},"model":"item/throwable/turret_body_folded"},
+	{"predicate":{"custom_model_data":520},"model":"item/throwable/turret_head_g_mob"},
+	{"predicate":{"custom_model_data":521},"model":"item/throwable/turret_head_r_mob"},
+	{"predicate":{"custom_model_data":522},"model":"item/throwable/turret_body_mob"}
+    ]
+}
