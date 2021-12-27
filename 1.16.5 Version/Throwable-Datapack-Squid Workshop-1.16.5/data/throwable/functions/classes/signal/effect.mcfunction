@@ -8,6 +8,8 @@ particle minecraft:end_rod ~ ~1 ~ 0 0 0 0.2 2 force @a
 
 # mark players
 effect give @e[type=#damage:mob,distance=..10] glowing 1 1 true
+effect give @a[distance=..10] glowing 1 1 true
+
 
 # sound
 scoreboard players set sound_interval throwable_life 5

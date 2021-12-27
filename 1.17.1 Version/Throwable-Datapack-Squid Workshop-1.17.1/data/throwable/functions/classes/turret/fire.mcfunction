@@ -25,7 +25,7 @@ execute if entity @s[type=!armor_stand] positioned ~ ~1.7 ~ run particle minecra
 #particle minecraft:poof ^-0.4 ^1.3 ^1.5 0.1 0.1 0.1 0.05 1
 
 #damage
-execute as @e[tag=bullet_new,limit=1,sort=nearest] run scoreboard players set @s damage 3
+execute as @e[tag=bullet_new,limit=1,sort=nearest] run scoreboard players set @s damage 2
 
 #msg
 #execute store result score v10 V run data get entity @s Rotation[0] 1000000
@@ -34,7 +34,7 @@ execute store result entity @e[tag=bullet_new,limit=1,sort=nearest] Rotation[0] 
 execute store result entity @e[tag=bullet_new,limit=1,sort=nearest] Rotation[1] float 0.000001 run data get entity @s Rotation[1] 1000000
 
 #cooldown
-scoreboard players add @s cooldown 8
+scoreboard players add @s cooldown 36
 
 #score spread
 scoreboard players set @s spread 3
