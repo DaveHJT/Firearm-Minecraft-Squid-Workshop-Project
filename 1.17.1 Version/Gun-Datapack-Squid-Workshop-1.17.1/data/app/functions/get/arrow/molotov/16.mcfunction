@@ -1,0 +1,1 @@
+give @s minecraft:tipped_arrow{CustomPotionColor:11298561,display:{Name:"\"Molotov Arrow\""}} 16
