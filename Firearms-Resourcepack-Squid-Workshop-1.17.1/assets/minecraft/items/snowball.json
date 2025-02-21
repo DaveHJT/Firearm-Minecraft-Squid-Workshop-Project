@@ -1,0 +1,17 @@
+{
+    "model": {
+        "type": "select",
+        "property": "custom_model_data",
+        "fallback": {"type": "model", "model": "item/snowball"},
+        "cases": [
+            {"when": "grenade",       "model": {"type": "model", "model": "item/throwable/grenade"}},
+            {"when": "molotov",       "model": {"type": "model", "model": "item/throwable/molotov"}},
+            {"when": "turret_folded", "model": {"type": "model", "model": "item/throwable/turret_folded"}},
+            {"when": "xirang",        "model": {"type": "model", "model": "item/throwable/xirang"}},
+            {"when": "flash",         "model": {"type": "model", "model": "item/throwable/flash"}},
+            {"when": "signal",        "model": {"type": "model", "model": "item/throwable/signal"}},
+            {"when": "smoke",         "model": {"type": "model", "model": "item/throwable/smoke"}},
+            {"when": "firecracker",   "model": {"type": "model", "model": "item/throwable/firecracker"}}
+        ]
+    }
+}
