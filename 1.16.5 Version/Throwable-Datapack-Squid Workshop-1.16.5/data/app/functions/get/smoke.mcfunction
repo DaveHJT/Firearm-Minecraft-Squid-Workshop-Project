@@ -1,1 +1,0 @@
-give @s minecraft:snowball{throw:1b,smoke:1b,CustomModelData:507,display:{Name:"{\"text\":\"smoke\"}"}}
