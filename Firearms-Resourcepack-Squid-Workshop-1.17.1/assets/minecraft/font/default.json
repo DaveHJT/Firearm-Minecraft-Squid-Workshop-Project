@@ -1,0 +1,337 @@
+{
+    "providers": [
+        {
+            "type": "bitmap",
+            "file": "minecraft:book/spaces.png",
+            "ascent": 10,
+            "height": 10,
+            "chars": [
+               "\u2002\u2003\u2004\u2005\u2006\u2007"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:map/map256.png",
+            "ascent": 8,
+            "height": 120,
+            "chars": [
+               "\u2800"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:map/row-1-col-1.png",
+            "ascent": 8,
+            "height": 27,
+            "chars": [
+               "\u2801"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:map/row-1-col-2.png",
+            "ascent": 8,
+            "height": 27,
+            "chars": [
+               "\u2802"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:map/row-1-col-3.png",
+            "ascent": 8,
+            "height": 27,
+            "chars": [
+               "\u2803"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:map/row-1-col-4.png",
+            "ascent": 8,
+            "height": 27,
+            "chars": [
+               "\u2804"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:map/row-1-col-5.png",
+            "ascent": 8,
+            "height": 27,
+            "chars": [
+               "\u2805"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:map/row-2-col-1.png",
+            "ascent": 8,
+            "height": 27,
+            "chars": [
+               "\u2806"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:map/row-2-col-2.png",
+            "ascent": 8,
+            "height": 27,
+            "chars": [
+               "\u2807"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:map/row-2-col-3.png",
+            "ascent": 8,
+            "height": 27,
+            "chars": [
+               "\u2808"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:map/row-2-col-4.png",
+            "ascent": 8,
+            "height": 27,
+            "chars": [
+               "\u2809"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:map/row-2-col-5.png",
+            "ascent": 8,
+            "height": 27,
+            "chars": [
+               "\u2810"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:map/row-3-col-1.png",
+            "ascent": 8,
+            "height": 27,
+            "chars": [
+               "\u2811"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:map/row-3-col-2.png",
+            "ascent": 8,
+            "height": 27,
+            "chars": [
+               "\u2812"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:map/row-3-col-3.png",
+            "ascent": 8,
+            "height": 27,
+            "chars": [
+               "\u2813"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:map/row-3-col-4.png",
+            "ascent": 8,
+            "height": 27,
+            "chars": [
+               "\u2814"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:map/row-3-col-5.png",
+            "ascent": 8,
+            "height": 27,
+            "chars": [
+               "\u2815"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:map/row-4-col-1.png",
+            "ascent": 8,
+            "height": 27,
+            "chars": [
+               "\u2816"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:map/row-4-col-2.png",
+            "ascent": 8,
+            "height": 27,
+            "chars": [
+               "\u2817"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:map/row-4-col-3.png",
+            "ascent": 8,
+            "height": 27,
+            "chars": [
+               "\u2818"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:map/row-4-col-4.png",
+            "ascent": 8,
+            "height": 27,
+            "chars": [
+               "\u2819"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:map/row-4-col-5.png",
+            "ascent": 8,
+            "height": 27,
+            "chars": [
+               "\u2820"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:map/row-5-col-1.png",
+            "ascent": 8,
+            "height": 27,
+            "chars": [
+               "\u2821"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:map/row-5-col-2.png",
+            "ascent": 8,
+            "height": 27,
+            "chars": [
+               "\u2822"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:map/row-5-col-3.png",
+            "ascent": 8,
+            "height": 27,
+            "chars": [
+               "\u2823"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:map/row-5-col-4.png",
+            "ascent": 8,
+            "height": 27,
+            "chars": [
+               "\u2824"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:map/row-5-col-5.png",
+            "ascent": 8,
+            "height": 27,
+            "chars": [
+               "\u2825"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:map/row-5-col-5.png",
+            "ascent": 8,
+            "height": 27,
+            "chars": [
+               "\u200d"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:book/space.png",
+            "ascent": -32768,
+            "height": -1,
+            "chars": [
+                "\uF801"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:book/space.png",
+            "ascent": -32768,
+            "height": -2,
+            "chars": [
+                "\uF802"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:book/space.png",
+            "ascent": -32768,
+            "height": -3.5,
+            "chars": [
+                "\uF803"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:book/space.png",
+            "ascent": -32768,
+            "height": -4,
+            "chars": [
+                "\uF804"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:book/space.png",
+            "ascent": -32768,
+            "height": -7,
+            "chars": [
+                "\uF805"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:book/space.png",
+            "ascent": -32768,
+            "height": -8,
+            "chars": [
+                "\uF806"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:book/space.png",
+            "ascent": -32768,
+            "height": -9,
+            "chars": [
+                "\uF807"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:book/space.png",
+            "ascent": -32768,
+            "height": -10,
+            "chars": [
+                "\uF808"
+            ]
+        },
+        {
+            "type": "bitmap",
+            "file": "minecraft:book/empty.png",
+            "ascent": 0,
+            "height": 55,
+            "chars": [
+               "\uef01"
+            ]
+        }
+     ]
+}

@@ -1,0 +1,30 @@
+{
+    "replace": false,
+    "parent": "item/handheld_rod",
+    "textures": {
+        "layer0": "item/carrot_on_a_stick"
+    },
+    "overrides":[
+	{"predicate":{"custom_model_data":505},"model":"item/guns/double_barrel_shotgun"},
+	{"predicate":{"custom_model_data":506},"model":"item/guns/double_barrel_shotgun_copper"},
+	{"predicate":{"custom_model_data":507},"model":"item/guns/double_barrel_shotgun_aim"},
+	{"predicate":{"custom_model_data":508},"model":"item/guns/double_barrel_shotgun_copper_aim"},
+	{"predicate":{"custom_model_data":510},"model":"item/guns/rifle_aim"},
+	{"predicate":{"custom_model_data":511},"model":"item/guns/rifle_silenced"},
+	{"predicate":{"custom_model_data":512},"model":"item/guns/smg"},
+	{"predicate":{"custom_model_data":513},"model":"item/guns/smg_silenced"},
+	{"predicate":{"custom_model_data":514},"model":"item/guns/smg_aim"},
+	{"predicate":{"custom_model_data":515},"model":"item/guns/rifle"},
+	{"predicate":{"custom_model_data":516},"model":"item/guns/awm"},
+	{"predicate":{"custom_model_data":517},"model":"item/guns/scope"},
+	{"predicate":{"custom_model_data":518},"model":"item/guns/awm_aim"},
+	{"predicate":{"custom_model_data":519},"model":"item/guns/laser"},
+	{"predicate":{"custom_model_data":520},"model":"item/guns/laser_aim"},
+	{"predicate":{"custom_model_data":521},"model":"item/guns/laser_powered"},
+	{"predicate":{"custom_model_data":522},"model":"item/guns/laser_aim_powered"},
+	{"predicate":{"custom_model_data":523},"model":"item/guns/minigun"},
+	{"predicate":{"custom_model_data":524},"model":"item/guns/minigun_aim"},
+	{"predicate":{"custom_model_data":525},"model":"item/guns/awm"},
+	{"predicate":{"custom_model_data":526},"model":"item/throwable/turret_cannon"}
+    ]
+}

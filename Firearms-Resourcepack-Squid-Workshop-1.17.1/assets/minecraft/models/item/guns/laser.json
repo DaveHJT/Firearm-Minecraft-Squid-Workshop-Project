@@ -1,0 +1,33 @@
+{
+    "parent": "item/handheld_roda",
+    "textures": {
+        "layer0": "item/laser_rifle"
+    },
+    "display": {
+        "thirdperson_righthand": {
+            "rotation": [ 0, 90, 35 ],
+            "translation": [ -1.5, 3.5, 2.5 ],
+            "scale": [ 1.5, 1.5, 1.5 ]
+        },
+        "thirdperson_lefthand": {
+            "rotation": [ 90, 0, 45 ],
+            "translation": [ -7, -1, 2 ],
+            "scale": [ 1.5, 1.5, 1.5 ]
+        },
+        "firstperson_righthand": {
+            "rotation": [ 0, 100, -40 ],
+            "translation": [ -3, 3, 0],
+            "scale": [ 1.5, 1.5, 1.5 ]
+        },
+        "firstperson_lefthand": {
+            "rotation": [ 0, 0, 45 ],
+            "translation": [ -8, 5, 0],
+            "scale": [ 1.5, 1.5, 1.5 ]
+        },
+        "ground": {
+            "rotation": [ 0, 0, 0 ],
+            "translation": [ 0, 3.2, 0],
+            "scale": [ 0.8, 0.8, 0.8 ]
+        }
+    }
+}
