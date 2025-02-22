@@ -1,1 +1,0 @@
-give @s crossbow[item_name='{"text":"Crowssbow of Light Beam"}', lore=['{"text":"A holy crowssbow with a bow string made of light and shoots out light arrows."}'], custom_data={private:1b,light:1b}, enchantments={unbreaking:3,power:1,punch:2,infinity:1,vanishing_curse:1}]
