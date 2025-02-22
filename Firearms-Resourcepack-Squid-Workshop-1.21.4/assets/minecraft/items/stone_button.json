@@ -2,7 +2,7 @@
     "model": {
         "type": "select",
         "property": "custom_model_data",
-        "fallback": {"type": "model", "model": "block/stone_button"},
+        "fallback": {"type": "model", "model": "item/stone_button"},
         "cases": [
             {"when": "turret_head_g",      "model": {"type": "model", "model": "item/throwable/turret_head_g"}},
             {"when": "turret_head_r",      "model": {"type": "model", "model": "item/throwable/turret_head_r"}},
