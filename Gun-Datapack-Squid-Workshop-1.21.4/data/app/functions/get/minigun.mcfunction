@@ -1,1 +1,1 @@
-give @s minecraft:carrot_on_a_stick{private:1b,CustomModelData:523,display:{Name:"{\"text\":\"minigun\"}"},gun:1b,minigun:1b,silenced:0}
+give @s minecraft:carrot_on_a_stick[custom_model_data={strings:["minigun"]}, item_name='{"text":"minigun"}', custom_data={private:1b,gun:1b,minigun:1b,silenced:0}]

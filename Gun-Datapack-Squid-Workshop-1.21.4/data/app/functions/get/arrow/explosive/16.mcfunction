@@ -1,1 +1,1 @@
-give @s minecraft:tipped_arrow{CustomPotionColor:11080735,display:{Name:"\"Mini Explosive Arrow\""},pickup:-1b} 16
+give @s minecraft:tipped_arrow[potion_contents={custom_color:11080735}, item_name='{"text":"Mini Explosive Arrow"}', intangible_projectile={}] 16

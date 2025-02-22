@@ -1,1 +1,1 @@
-give @s minecraft:crossbow{private:1b,display:{Name:"{\"text\":\"Zhuge Repeating Crossbow\"}",Lore:["{\"text\":\"designed by Zhuge Liang\"}","{\"text\":\"a war crossbow that can shoot repeatedly\"}"]},Unbreakable:1,Enchantments:[{id:"minecraft:quick_charge",lvl:3}],HideFlags:4} 1
+give @s crossbow[item_name='{"text":"Zhuge Repeating Crossbow"}', lore=['{"text":"a war crossbow that can shoot repeatedly"}', '{"text":"designed by Zhuge Liang"}'], unbreakable={show_in_tooltip:false}, enchantments={multishot:1,quick_charge:3}, hide_additional_tooltip={}, custom_data={private:1b}]

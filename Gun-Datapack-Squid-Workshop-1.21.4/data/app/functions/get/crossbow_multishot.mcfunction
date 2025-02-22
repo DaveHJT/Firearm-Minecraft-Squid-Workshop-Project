@@ -1,1 +1,1 @@
-give @s minecraft:crossbow{private:1b,display:{Name:"{\"text\":\"Handcrafted Crossbow\"}",Lore:["{\"text\":\"handcrafted by outlaw ranger\"}","{\"text\":\"with experimantal tech\"}"]},Unbreakable:1,Enchantments:[{id:"minecraft:multishot",lvl:1},{id:"minecraft:quick_charge",lvl:2}],HideFlags:4} 1
+give @s crossbow[item_name='{"text":"Handcrafted Crowssbow"}', lore=['{"text":"handcrafted by outlaw ranger"}', '{"text":"with experimantal tech"}'], unbreakable={show_in_tooltip:false}, enchantments={multishot:1,quick_charge: 2}, hide_additional_tooltip={}, custom_data={private:1b}]

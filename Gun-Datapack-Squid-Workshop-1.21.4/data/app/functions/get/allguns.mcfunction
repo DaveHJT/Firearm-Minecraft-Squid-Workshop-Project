@@ -6,4 +6,4 @@ function app:get/laser
 function app:get/minigun
 function app:get/cannon
 
-function app:hack/infinite_ammo
+function app:settings/hack/infinite_ammo

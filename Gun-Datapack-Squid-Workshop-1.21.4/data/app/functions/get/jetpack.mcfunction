@@ -1,1 +1,1 @@
-give @s minecraft:lever{private:1b,display:{Name:"{\"text\":\"jetpack lever\"}"},jetpack:1b}
+give @s lever[item_name='{"text":"jetpack lever"}', custom_data={private:1b, jetpack:1b}]

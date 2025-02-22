@@ -1,1 +1,1 @@
-give @s minecraft:tipped_arrow{CustomPotionColor:1656347,display:{Name:"\"Smoke Arrow\""}} 16
+give @s minecraft:tipped_arrow[potion_contents={custom_color:1656347}, item_name='{"text":"Smoke Arrow"}'] 16
