@@ -22,7 +22,6 @@
 			{"when": "laser_aim_powered",                "model": {"type": "model", "model": "item/guns/laser_aim_powered"}},
 			{"when": "minigun",                          "model": {"type": "model", "model": "item/guns/minigun"}},
 			{"when": "minigun_aim",                      "model": {"type": "model", "model": "item/guns/minigun_aim"}},
-
 			{"when": "scope",                            "model": {"type": "model", "model": "item/guns/scope"}},
 			{"when": "turret_cannon",                    "model": {"type": "model", "model": "item/throwable/turret_cannon"}}
 		]
