@@ -214,9 +214,9 @@ execute if score rand accu >= 10000 C run scoreboard players set rand accu 0
 
 #other weapons
 #jetpack
-execute as @a[scores={shift_bool=1},nbt={SelectedItem:{tag:{jetpack:1b}}}] at @s run function gun:classes/jetpack/tick
-execute as @a[scores={shift_bool=1,lever=160},nbt={SelectedItem:{tag:{jetpack:1b}}}] at @s run playsound minecraft:block.beacon.deactivate ambient @s ~ ~ ~ 1 2
-execute as @a[scores={shift_bool=0,lever=1..}] at @s run scoreboard players remove @s lever 1
+execute as @a[scores={shift=1},nbt={SelectedItem:{tag:{jetpack:1b}}}] at @s run function gun:classes/jetpack/tick
+execute as @a[scores={shift=1,lever=160},nbt={SelectedItem:{tag:{jetpack:1b}}}] at @s run playsound minecraft:block.beacon.deactivate ambient @s ~ ~ ~ 1 2
+execute as @a[scores={shift=0,lever=1..}] at @s run scoreboard players remove @s lever 1
 
 #shield
 function gun:classes/shield/tick
