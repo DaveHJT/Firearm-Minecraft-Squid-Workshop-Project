@@ -1,6 +1,6 @@
 #extinguished
 execute if entity @e[tag=smoke_effect,distance=..5] run tag @s add extinguished
-execute if entity @s[tag=extinguished] run playsound minecraft:gun/thrower/smoke_emit player @a[distance=..30] ~ ~ ~ 4 2 
+execute if entity @s[tag=extinguished] run playsound minecraft:gun/thrower/smoke_emit player @a[distance=..30] ~ ~ ~ 4 2
 kill @s[tag=extinguished]
 
 # particle

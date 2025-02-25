@@ -8,6 +8,6 @@ effect give @s slowness 4 2 true
 
 title @s actionbar ["",{"text":"reloading..."}]
 
-clear @s minecraft:carrot_on_a_stick{CustomModelData:517,display:{Name:"{\"text\":\"scope\"}"}}
+clear @s minecraft:carrot_on_a_stick[CustomModelData:517,display:{Name:"{\"text\":\"scope\"}"}]
 
 

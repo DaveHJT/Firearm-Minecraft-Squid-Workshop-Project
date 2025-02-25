@@ -12,9 +12,9 @@ execute if score v15 V matches 2 positioned ^ ^ ^1 run function gun:classes/gun/
 execute if entity @s[scores={damage=..0}] run scoreboard players set v0 V 0
 
 #hit effect
-execute if entity @s[tag=bullet] if score v15 V matches 2 run particle minecraft:item gunpowder ~ ~ ~ 0.1 0.1 0.1 0.3 8 force
+execute if entity @s[tag=bullet] if score v15 V matches 2 run particle minecraft:item{item:{id:"gunpowder"}} ~ ~ ~ 0.1 0.1 0.1 0.3 8 force
 execute if entity @s[tag=bullet] if score v15 V matches 2 run particle minecraft:white_ash ~ ~ ~ 0.05 0.05 0.05 10 20
-execute if entity @s[tag=bullet] if score v15 V matches 2 run particle minecraft:dust 0 0 0 1 ~ ~ ~ 0.05 0.05 0.05 1 1 force
+execute if entity @s[tag=bullet] if score v15 V matches 2 run particle minecraft:dust{color:[0,0,0], scale:1} ~ ~ ~ 0.05 0.05 0.05 1 1 force
 execute if score v15 V matches 2 run particle minecraft:smoke ~ ~ ~ 0.1 0.1 0.1 0.3 2 force
 
 
@@ -26,12 +26,12 @@ execute if entity @s[tag=laser] if score v15 V matches 2 run particle minecraft:
 
 
 #tracing
-execute if entity @s[tag=bullet] if score tracer gun_settings matches 1 run particle minecraft:dust 1 0.8 0 0.07 ~ ~ ~ 0 0 0 1 1 force
+execute if entity @s[tag=bullet] if score tracer gun_settings matches 1 run particle minecraft:dust{color:[10,8,0], scale:0.07} ~ ~ ~ 0 0 0 1 1 force
 execute if entity @s[tag=bullet] if score tracer gun_settings matches 2 run particle minecraft:composter ~ ~ ~ 0 0 0 1 1 force
 execute if entity @s[tag=bullet,tag=!grenade] if score tracer gun_settings matches 2 run particle minecraft:dripping_water ~ ~-0.2 ~ 0 0 0 0.0001 1 force
 execute if entity @s[tag=bullet] if score tracer gun_settings matches 3 run particle minecraft:dripping_lava ~ ~-0.2 ~ 0 0 0 0.0001 1 force
 #execute if entity @s[tag=laser] run particle minecraft:landing_lava ~ ~-0.2 ~ 0 0 0 0.0001 1
-execute if entity @s[tag=laser] run particle minecraft:dust 1 0 0 0.5 ~ ~-0.15 ~ 0 0 0 0.0001 1 force
+execute if entity @s[tag=laser] run particle minecraft:dust{color:[1,0,0], scale:0.5} ~ ~-0.15 ~ 0 0 0 0.0001 1 force
 execute if entity @s[tag=cannon] run particle minecraft:poof ~ ~ ~ 0 0 0 0.0001 1 force
 #reflected
 execute if entity @s[tag=reflected] run particle minecraft:dripping_lava ~ ~-0.2 ~ 0 0 0 0.0001 1 force
@@ -44,7 +44,7 @@ execute if entity @s[tag=light] run tp @e[tag=arrow,tag=light,limit=1,sort=neare
 #execute if entity @s[tag=grenade] run particle minecraft:falling_dust granite ~ ~-0.2 ~ 0 0 0 0.0001 1
 #execute if entity @s[tag=grenade] run particle minecraft:block bricks ~ ~-0.2 ~ 0 0 0 1 1
 #execute if entity @s[tag=grenade,tag=!water] run particle minecraft:cloud ~ ~-0.2 ~ 0 0 0 0.0001 1
-execute if entity @s[tag=grenade,tag=!water,tag=!lava] run particle minecraft:falling_dust quartz_block ~ ~ ~ 0 0 0 1 1 force
+execute if entity @s[tag=grenade,tag=!water,tag=!lava] run particle minecraft:falling_dust{block_state:{Name:"quartz_block"}} ~ ~ ~ 0 0 0 1 1 force
 execute if entity @s[tag=grenade,tag=water,tag=!lava] run particle minecraft:splash ~ ~ ~ 0 0 0 0.0001 1 force
 execute if entity @s[tag=grenade,tag=lava] run particle minecraft:falling_lava ~ ~ ~ 0 0 0 0.0001 1 force
 
@@ -66,12 +66,12 @@ scoreboard players operation v5 V += v2 V
 scoreboard players operation v6 V += v3 V
 
 # hit on entity
-execute if score blood gun_settings matches 2 if entity @s[tag=bullet] if entity @e[distance=0..3,tag=hit,tag=!special] run particle minecraft:item redstone ~ ~ ~ 0.2 0.2 0.2 0.1 30 force
-execute if score blood gun_settings matches 1 if entity @s[tag=bullet] if entity @e[distance=0..3,tag=hit,tag=!special] run particle minecraft:item redstone ~ ~ ~ 0.2 0.2 0.2 0.1 5 force
-execute if entity @s[tag=bullet] if entity @e[distance=0..3,tag=hit,tag=special] run particle minecraft:item gunpowder ~ ~ ~ 0.1 0.1 0.1 0.3 8 force
+execute if score blood gun_settings matches 2 if entity @s[tag=bullet] if entity @e[distance=0..3,tag=hit,tag=!special] run particle minecraft:item{item:{id:"redstone"}} ~ ~ ~ 0.2 0.2 0.2 0.1 30 force
+execute if score blood gun_settings matches 1 if entity @s[tag=bullet] if entity @e[distance=0..3,tag=hit,tag=!special] run particle minecraft:item{item:{id:"redstone"}} ~ ~ ~ 0.2 0.2 0.2 0.1 5 force
+execute if entity @s[tag=bullet] if entity @e[distance=0..3,tag=hit,tag=special] run particle minecraft:item{item:{id:"gunpowder"}} ~ ~ ~ 0.1 0.1 0.1 0.3 8 force
 execute if entity @s[tag=laser] if entity @e[distance=0..3,tag=hit] run particle minecraft:lava ~ ~ ~ 0.2 0.2 0.2 0.1 1 force
-execute if score blood gun_settings matches 2 if entity @s[tag=cannon] if entity @e[distance=0..3,tag=hit,tag=!special] run particle minecraft:item redstone ~ ~ ~ 0.2 0.2 0.2 0.1 70 force
-execute if score blood gun_settings matches 1 if entity @s[tag=cannon] if entity @e[distance=0..3,tag=hit,tag=!special] run particle minecraft:item redstone ~ ~ ~ 0.2 0.2 0.2 0.1 5 force
+execute if score blood gun_settings matches 2 if entity @s[tag=cannon] if entity @e[distance=0..3,tag=hit,tag=!special] run particle minecraft:item{item:{id:"redstone"}} ~ ~ ~ 0.2 0.2 0.2 0.1 70 force
+execute if score blood gun_settings matches 1 if entity @s[tag=cannon] if entity @e[distance=0..3,tag=hit,tag=!special] run particle minecraft:item{item:{id:"redstone"}} ~ ~ ~ 0.2 0.2 0.2 0.1 5 force
 
 
 #interaction with turret

@@ -45,7 +45,7 @@ execute as @a[scores={right_click=0,b_energy=1..,cooldown=1},nbt={SelectedItem:{
 execute as @a[scores={right_click=0,b_energy=1..,cooldown=2},nbt={SelectedItem:{tag:{laser:1b}}}] at @s run function gun:classes/laser/fire
 execute as @a[scores={right_click=0,b_energy=1..,cooldown=3},nbt={SelectedItem:{tag:{laser:1b}}}] at @s run function gun:classes/laser/fire
 
-execute as @a[scores={right_click=0,cooldown=0,aim=0,shift=0,r_cooldown=0},nbt={SelectedItem:{tag:{laser:1b,CustomModelData:521}}}] at @s run item replace entity @s weapon.mainhand with minecraft:carrot_on_a_stick{CustomModelData:519,display:{Name:"{\"text\":\"laser rifle\"}"},gun:1b,laser:1b,silenced:0}
+execute as @a[scores={right_click=0,cooldown=0,aim=0,shift=0,r_cooldown=0},nbt={SelectedItem:{tag:{laser:1b,CustomModelData:521}}}] at @s run item replace entity @s weapon.mainhand with minecraft:carrot_on_a_stick[CustomModelData:519,display:{Name:"{\"text\":\"laser rifle\"}"},gun:1b,laser:1b,silenced:0]
 
 #minigun
 #execute as @a[nbt={SelectedItem:{tag:{minigun:1b,silenced:0}}}] at @s run effect give @s minecraft:slowness 1 1 true
@@ -164,7 +164,7 @@ execute as @a[scores={shift=0,aim=1..},nbt={SelectedItem:{tag:{laser:1b}}}] at @
 execute as @a[scores={shift=0,aim=1..},nbt={SelectedItem:{tag:{minigun:1b,silenced:0}}}] at @s run function gun:classes/minigun/clear_aim
 
 #clear scope
-execute as @a[scores={shift=0,aim=2}] at @s run clear @s minecraft:carrot_on_a_stick{scope:1b}
+execute as @a[scores={shift=0,aim=2}] at @s run clear @s minecraft:carrot_on_a_stick[custom_data={scope:1b}]
 #>>>>>>>>>>>>>>>>>>clear aim
 
 
@@ -254,7 +254,7 @@ scoreboard players add time V 1
 execute if score time V matches 1000000.. run scoreboard players set time V 0 
 
 # hit mark
-execute if score hit_mark gun_settings matches 1 as @e[tag=hit_mark] at @s run particle composter ~ ~ ~ 0 0 0 1 1 force 
+execute if score hit_mark gun_settings matches 1 as @e[tag=hit_mark] at @s run particle composter ~ ~ ~ 0 0 0 1 1 force
 
 # war war_machine
 execute as @e[type=minecraft:giant,tag=war_machine] at @s if entity @p[distance=..100] run tp @s ~ ~ ~ facing entity @p[tag=!protected]

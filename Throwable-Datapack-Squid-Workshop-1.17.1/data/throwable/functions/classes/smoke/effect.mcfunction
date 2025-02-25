@@ -9,7 +9,7 @@ execute if entity @s[scores={throwable_life=101..420}] run particle minecraft:ca
 #kill molotov
 
 execute as @e[tag=molotov_effect,distance=..4] run tag @s add extinguished
-execute if entity @e[tag=extinguished,distance=..4] run playsound minecraft:gun/thrower/smoke_emit player @a[distance=..30] ~ ~ ~ 4 2 
+execute if entity @e[tag=extinguished,distance=..4] run playsound minecraft:gun/thrower/smoke_emit player @a[distance=..30] ~ ~ ~ 4 2
 kill @e[tag=extinguished]
 
 # blind

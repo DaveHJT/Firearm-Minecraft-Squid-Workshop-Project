@@ -15,9 +15,9 @@ execute if score @s throwable_life matches 50 run playsound minecraft:block.pist
 execute if score @s throwable_life matches 60 run playsound minecraft:block.piston.contract player @a ~ ~ ~ 2 1.5
 
 #model
-execute if score @s throwable_life matches 10 run item replace entity @s[type=armor_stand] weapon.mainhand with minecraft:stone_button{CustomModelData:512}
-item replace entity @e[limit=1,sort=nearest,tag=turret_effect,type=!armor_stand] armor.head with minecraft:stone_button{CustomModelData:520}
-#execute if score @s throwable_life matches 10 run item replace entity @s[type=zombie] weapon.mainhand with minecraft:stone_button{CustomModelData:522}
+execute if score @s throwable_life matches 10 run item replace entity @s[type=armor_stand] weapon.mainhand with minecraft:iron_nugget{CustomModelData:512}
+item replace entity @e[limit=1,sort=nearest,tag=turret_effect,type=!armor_stand] armor.head with minecraft:iron_nugget{CustomModelData:520}
+#execute if score @s throwable_life matches 10 run item replace entity @s[type=zombie] weapon.mainhand with minecraft:iron_nugget{CustomModelData:522}
 
 
 execute if score @s throwable_life matches 20 run data merge entity @s {Pose:{Head:[180f,0f,0f],LeftLeg:[182f,0f,0f]}}

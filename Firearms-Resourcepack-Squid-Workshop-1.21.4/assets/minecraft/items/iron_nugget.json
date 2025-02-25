@@ -1,0 +1,16 @@
+{
+    "model": {
+        "type": "select",
+        "property": "custom_model_data",
+        "fallback": {"type": "model", "model": "item/iron_nugget"},
+        "cases": [
+            {"when": "turret_head_g",      "model": {"type": "model", "model": "item/throwable/turret_head_g"}},
+            {"when": "turret_head_r",      "model": {"type": "model", "model": "item/throwable/turret_head_r"}},
+            {"when": "turret_body",        "model": {"type": "model", "model": "item/throwable/turret_body"}},
+            {"when": "turret_body_folded", "model": {"type": "model", "model": "item/throwable/turret_body_folded"}},
+            {"when": "turret_head_g_mob",  "model": {"type": "model", "model": "item/throwable/turret_head_g_mob"}},
+            {"when": "turret_head_r_mob",  "model": {"type": "model", "model": "item/throwable/turret_head_r_mob"}},
+            {"when": "turret_body_mob",    "model": {"type": "model", "model": "item/throwable/turret_body_mob"}}
+        ]
+    }
+}

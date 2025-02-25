@@ -1,6 +1,6 @@
 # turn red
-item replace entity @s[type=armor_stand] armor.head with minecraft:stone_button{CustomModelData:511}
-item replace entity @s[type=!armor_stand] armor.head with minecraft:stone_button{CustomModelData:521}
+item replace entity @s[type=armor_stand] armor.head with minecraft:iron_nugget{CustomModelData:511}
+item replace entity @s[type=!armor_stand] armor.head with minecraft:iron_nugget{CustomModelData:521}
 tag @s remove green
 #summon bullet and face player
 summon minecraft:area_effect_cloud ^ ^ ^0.2 {Duration:20,Tags:["bullet","turret","bullet_new"]}
