@@ -6,7 +6,7 @@ execute if entity @s[scores={b_energy=20..}] run playsound minecraft:entity.cree
 
 execute if entity @s[scores={b_energy=23..}] run playsound minecraft:block.note_block.didgeridoo player @a ~ ~ ~ 2 1
 
-execute if entity @s[scores={b_energy=20..}] run item replace entity @s weapon.offhand with minecraft:carrot_on_a_stick{CustomModelData:521,display:{Name:"{\"text\":\"laser rifle\"}"},gun:1b,laser:1b,silenced:0}
+execute if entity @s[scores={b_energy=20..}] run item replace entity @s weapon.offhand with minecraft:carrot_on_a_stick[CustomModelData:521,display:{Name:"{\"text\":\"laser rifle\"}"},custom_data={gun:1b,laser:1b,silenced:0}]
 
 
 playsound minecraft:block.beehive.work player @a ~ ~ ~ 1 0.5
@@ -16,7 +16,7 @@ execute if entity @s[scores={b_energy=..22}] run playsound minecraft:item.chorus
 # self explode when charged too much power
 execute if entity @s[scores={b_energy=36..}] run playsound minecraft:gun/awp/awp_02 player @a ~ ~ ~ 4 2
 
-execute if entity @s[scores={b_energy=36..}] run clear @s minecraft:carrot_on_a_stick{gun:1b,laser:1b,silenced:0} 1
+execute if entity @s[scores={b_energy=36..}] run clear @s minecraft:carrot_on_a_stick[custom_data={gun:1b,laser:1b,silenced:0}] 1
 
 execute if entity @s[scores={b_energy=36..}] run scoreboard players add @s damage 19
 
@@ -37,7 +37,7 @@ execute if entity @s[scores={b_energy=..20}] run title @s actionbar ["",{"score"
 execute if entity @s[scores={b_energy=21..}] run title @s actionbar ["",{"score":{"name":"@s","objective":"b_energy"},"color":"red"},{"text":"/"},{"score":{"name":"@s","objective":"ammo"},"color":"white"}]
 
 # clear scope
-clear @s minecraft:carrot_on_a_stick{CustomModelData:517,display:{Name:"{\"text\":\"scope\"}"}}
+clear @s minecraft:carrot_on_a_stick[CustomModelData:517,display:{Name:"{\"text\":\"scope\"}"}]
 
 # reload ammo
 scoreboard players add @s b_energy 1

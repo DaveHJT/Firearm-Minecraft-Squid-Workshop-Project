@@ -1,8 +1,8 @@
 effect give @s minecraft:slowness 1 10 true
 scoreboard players add @s aim 1
-execute if score @s aim matches 2 run item replace entity @s weapon.offhand with minecraft:carrot_on_a_stick{CustomModelData:517,display:{Name:"{\"text\":\"scope\"}"},scope:1b}
+execute if score @s aim matches 2 run item replace entity @s weapon.offhand with minecraft:carrot_on_a_stick[CustomModelData:517,display:{Name:"{\"text\":\"scope\"}"},custom_data={scope:1b}]
 
-execute if score @s aim matches 2 run item replace entity @s weapon.mainhand with minecraft:carrot_on_a_stick{CustomModelData:520,display:{Name:"{\"text\":\"laser rifle aiming\"}"},gun:1b,laser:1b,silenced:0}
+execute if score @s aim matches 2 run item replace entity @s weapon.mainhand with minecraft:carrot_on_a_stick[CustomModelData:520,display:{Name:"{\"text\":\"laser rifle aiming\"}"},custom_data={gun:1b,laser:1b,silenced:0}]
 
 execute if score @s aim matches 2 run playsound minecraft:gun/awp/zoom player @a ~ ~ ~ 1 0.8
 

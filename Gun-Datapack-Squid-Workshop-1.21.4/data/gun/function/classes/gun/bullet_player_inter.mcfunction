@@ -4,7 +4,7 @@
 
 #execute if score v15 V matches 1 run particle block cobweb ~ ~ ~ 0 0 0 1 1
 execute if entity @s[tag=bullet] if block ~ ~ ~ #gun:glassy run playsound minecraft:block.glass.break block @p ~ ~ ~ 3 2
-execute if entity @s[tag=bullet] if block ~ ~ ~ #gun:glassy run particle block cobweb ~ ~ ~ 0.2 0.2 0.2 10 12 force
+execute if entity @s[tag=bullet] if block ~ ~ ~ #gun:glassy run particle block{block_state:{Name:"cobweb"}} ~ ~ ~ 0.2 0.2 0.2 10 12 force
 
 #water
 execute if entity @s[tag=bullet,tag=!grenade] if block ~ ~ ~ minecraft:water run playsound minecraft:gun/hit/water1 block @a ~ ~ ~ 1 1
