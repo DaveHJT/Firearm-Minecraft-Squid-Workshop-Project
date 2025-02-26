@@ -1,0 +1,44 @@
+Unstructured NBT tags on items tags (tag field) has been replaced with structured components. This impacts /give, /clear, and commands using item NBT. For example: iron_axe{Damage:10,foo:"bar"} → iron_axe[minecraft:damage=10]{foo:"bar"}.
+
+Damage:12 → damage=12
+RepairCost:12 → repair_cost=12
+Unbreakable:1b → unbreakable={}
+Enchantments:[{id:"sharpness",lvl:2}] → enchantments={levels:{sharpness:2}}
+StoredEnchantments → stored_enchantments
+display:{Name:'"hello"'} → custom_name='"hello"'
+display:{Lore:['"hello"']} → lore=['"hello"']
+CanDestroy:["stone"] → can_break={blocks:"stone"}
+CanPlaceOn:["stone"] → can_place_on={blocks:"stone"}
+display:{color:16711680} → dyed_color={rgb:16711680}
+AttributeModifiers:[] → attribute_modifiers={modifiers=[]}
+Charged:1b,ChargedProjectiles:[{id:"arrow"}] → charged_projectiles=[{id:"arrow"}]
+Items:[] (bundle) → bundle_contents=[]
+display:{MapColor:16711680} → map_color=16711680
+Decorations:[] (filled map) → map_decorations={}
+map:1 → map=1
+CustomModelData → custom_model_data
+Potion:"invisibility",CustomPotionColor:16711680,custom_potion_effects:[] → potion_contents={potion:"invisibility",custom_color:16711680,custom_effects:[]}
+pages:["hello"] (book and quill) → writable_book_content={pages:["hello"]}
+pages:['"hello"'],title:"Title",author:"Misode",generation:1,resolved:1b (written book) → written_book_content={pages:['"hello"'],title:"Title",author:"Misode",generation:1,resolved:true}
+Trim={...} → trim={...}
+effects:[] (suspicious stew) → suspicious_stew=[]
+HideFlags → split to the different components as well as hide_additional_tooltip component
+DebugProperty → debug_stick_state
+EntityTag:{...} → entity_data={...}
+bucketed mobs data → bucket_entity_data={...}
+instrument:"ponder_goat_horn" → instrument="ponder_goat_horn"
+Recipes:[] (knowledge book) → recipes=[]
+LodestonePos, LodestoneDimension, and LodestoneTracked → lodestone_target={pos:[13,64,-43],dimension:"the_nether"}
+Explosion (firework star) → firework_exlosion={}
+Fireworks:{Explosions:[],Flight:1} (firework rocket) → fireworks={explosions:[],flight_duration:1}
+SkullOwner:{Name:"Steve"} → profile={name:"Steve"}
+BlockEntityTag:{note_block_sound:"ambient.cave"} → note_block_sound="ambient.cave"
+BlockEntityTag:{Base:2} → base_color="magenta"
+BlockEntityTag:{Patterns:[]} → banner_patterns=[]
+BlockEntityTag:{sherds:[]} → pot_decorations=[]
+BlockEntityTag:{Items:[]} (shulker box) → container=[]
+BlockEntityTag:{Bees:[]} → bees=[]
+BlockEntityTag:{Lock:"test"} → lock="test"
+BlockEntityTag:{LootTable:"foo",LootTableSeed:123} → container_loot={loot_table:"foo",seed:123}
+BlockEntityTag:{...} → block_entity_data={...}
+BlockStateTag:{...} → block_state={...}

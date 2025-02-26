@@ -1,1 +1,1 @@
-give @s minecraft:bow[custom_model_data={strings:["bow_light_beam"]}, item_name='{"text":"Light Beam Bow"}', lore=['{"text":"A bow that shoots light beams"}'], custom_data={private:1b,light:1b}, enchantments={levels:{unbreaking:3,power:1,punch:2,infinity:1,vanishing_curse:1}}]
+give @s bow[item_name='{"text":"Bow of Light Beam"}', lore=['{"text":"A holy bow with a bow string"}','{"text":"made of light and shoots out"}','{"text":"light arrows."}'], custom_data={private:1b,light:1b}, enchantments={levels:{unbreaking:3,power:1,punch:2,infinity:1,vanishing_curse:1}}]

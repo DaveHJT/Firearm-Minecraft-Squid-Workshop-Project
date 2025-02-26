@@ -1,0 +1,1 @@
+give @s iron_sword{private:1b,invisibility:1b,item_name="\"katana of shadow\"", enchantments={levels:{sharpness:2,sweeping:5,unbreaking:3,vanishing_curse:1}}} 1 
