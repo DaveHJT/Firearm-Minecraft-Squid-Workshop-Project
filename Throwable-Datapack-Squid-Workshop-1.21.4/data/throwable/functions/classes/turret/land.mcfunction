@@ -1,8 +1,8 @@
 summon armor_stand ~ ~0.5 ~ {NoBasePlate:1b,NoGravity:0b,Small:1b,ArmorItems:[{},{},{},{}],HandItems:[{},{}],Pose:{Head:[180f,0f,0f],LeftLeg:[180f,0f,0f],RightLeg:[180f,0f,0f]},Tags:["turret_effect","effect"],Invisible:0b}
 #skin
-item replace entity @e[limit=1,sort=nearest,tag=turret_effect,type=armor_stand] armor.head with minecraft:iron_nugget[custom_model_data={strings:["turret_base_head"]}, item_name='{"text":"turret base head"}', Private:1b]
-item replace entity @e[limit=1,sort=nearest,tag=turret_effect,type=armor_stand] weapon.mainhand with minecraft:iron_nugget[custom_model_data={strings:["turret_base_hand"]}, item_name='{"text":"turret base hand"}', Private:1b]
-item replace entity @e[limit=1,sort=nearest,tag=turret_effect,type=!armor_stand] armor.head with minecraft:iron_nugget[custom_model_data={strings:["turret_head"]}, item_name='{"text":"turret head"}', Private:1b]
+item replace entity @e[limit=1,sort=nearest,tag=turret_effect,type=armor_stand] armor.head with minecraft:iron_nugget[custom_model_data={strings:["turret_base_head"]}, item_name='{"text":"turret base head"}', custom_data={private:1b}]
+item replace entity @e[limit=1,sort=nearest,tag=turret_effect,type=armor_stand] weapon.mainhand with minecraft:iron_nugget[custom_model_data={strings:["turret_base_hand"]}, item_name='{"text":"turret base hand"}', custom_data={private:1b}]
+item replace entity @e[limit=1,sort=nearest,tag=turret_effect,type=!armor_stand] armor.head with minecraft:iron_nugget[custom_model_data={strings:["turret_head"]}, item_name='{"text":"turret head"}', custom_data={private:1b}]
 scoreboard players set @e[limit=1,sort=nearest,tag=turret_effect] ammo 50
 
 

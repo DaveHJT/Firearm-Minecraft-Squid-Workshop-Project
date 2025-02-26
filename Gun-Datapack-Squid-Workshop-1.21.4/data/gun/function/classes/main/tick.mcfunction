@@ -17,76 +17,77 @@ execute as @a[nbt={OnGround:0b}] at @s if block ~ ~-0.01 ~ #gun:jump run scorebo
 
 #<<<<<<<<<<<<<<<<<<detect fire
 #rifle
-execute as @a[scores={right_click=1..,b_rifle=1..,cooldown=0},nbt={SelectedItem:{components:{"minecraft:custom_data":{rifle:1b, silenced:0}}}}] at @s run function gun:classes/rifle/fire
+execute as @a[scores={right_click=1..,b_rifle=1..,cooldown=0},nbt={SelectedItem:{components:{"minecraft:custom_data":{rifle:1b,silenced:1b}}}}] at @s run function gun:classes/rifle_silenced/fire
 
 #rifle silenced
-execute as @a[scores={right_click=1..,b_rifle=1..,cooldown=0},nbt={SelectedItem:{tag:{rifle:1b,silenced:1b}}}] at @s run function gun:classes/rifle_silenced/fire
+execute as @a[scores={right_click=1..,b_rifle=1..,cooldown=0},nbt={SelectedItem:{components:{"minecraft:custom_data":{rifle:1b,silenced:1b}}}}] at @s run function gun:classes/rifle_silenced/fire
 
 #smg
-execute as @a[scores={right_click=1..,b_smg=1..,cooldown=0},nbt={SelectedItem:{tag:{smg:1b,silenced:0}}}] at @s run function gun:classes/smg/fire
-execute as @a[scores={right_click=0,b_smg=1..,cooldown=1},nbt={SelectedItem:{tag:{smg:1b,silenced:0}}}] at @s run function gun:classes/smg/fire
+execute as @a[scores={right_click=1..,b_smg=1..,cooldown=0},nbt={SelectedItem:{components:{"minecraft:custom_data":{smg:1b,silenced:0}}}}] at @s run function gun:classes/smg/fire
+execute as @a[scores={right_click=0,b_smg=1..,cooldown=1},nbt={SelectedItem:{components:{"minecraft:custom_data":{smg:1b,silenced:0}}}}] at @s run function gun:classes/smg/fire
 
 #smg silenced
-execute as @a[scores={right_click=1..,b_smg=1..,cooldown=0},nbt={SelectedItem:{tag:{smg:1b,silenced:1b}}}] at @s run function gun:classes/smg_silenced/fire
-execute as @a[scores={right_click=0,b_smg=1..,cooldown=1},nbt={SelectedItem:{tag:{smg:1b,silenced:1b}}}] at @s run function gun:classes/smg_silenced/fire
+execute as @a[scores={right_click=1..,b_smg=1..,cooldown=0},nbt={SelectedItem:{components:{"minecraft:custom_data":{smg:1b,silenced:1b}}}}] at @s run function gun:classes/smg_silenced/fire
+execute as @a[scores={right_click=0,b_smg=1..,cooldown=1},nbt={SelectedItem:{components:{"minecraft:custom_data":{smg:1b,silenced:1b}}}}] at @s run function gun:classes/smg_silenced/fire
 
 #shotgun slug
-execute as @a[scores={right_click=1..,b_shot=1..,cooldown=0},nbt={SelectedItem:{tag:{shotgun:1b,slug:1b}}}] at @s run function gun:classes/shotgun_slug/fire
+execute as @a[scores={right_click=1..,b_shot=1..,cooldown=0},nbt={SelectedItem:{components:{"minecraft:custom_data":{shotgun:1b,slug:1b}}}}] at @s run function gun:classes/shotgun_slug/fire
 
 #shotgun buck
-execute as @a[scores={right_click=1..,b_shot=1..,cooldown=0},nbt={SelectedItem:{tag:{shotgun:1b,buck:1b}}}] at @s run function gun:classes/shotgun_buck/fire
+execute as @a[scores={right_click=1..,b_shot=1..,cooldown=0},nbt={SelectedItem:{components:{"minecraft:custom_data":{shotgun:1b,buck:1b}}}}] at @s run function gun:classes/shotgun_buck/fire
 
 #sniper
-execute as @a[scores={right_click=1..,b_sniper=1..,cooldown=0},nbt={SelectedItem:{tag:{sniper:1b}}}] at @s run function gun:classes/sniper/fire
+execute as @a[scores={right_click=1..,b_sniper=1..,cooldown=0},nbt={SelectedItem:{components:{"minecraft:custom_data":{sniper:1b}}}}] at @s run function gun:classes/sniper/fire
 
 #laser
-execute as @a[scores={right_click=1..,b_energy=1..,cooldown=0},nbt={SelectedItem:{tag:{laser:1b}}}] at @s run function gun:classes/laser/fire
-execute as @a[scores={right_click=0,b_energy=1..,cooldown=1},nbt={SelectedItem:{tag:{laser:1b}}}] at @s run function gun:classes/laser/fire
-execute as @a[scores={right_click=0,b_energy=1..,cooldown=2},nbt={SelectedItem:{tag:{laser:1b}}}] at @s run function gun:classes/laser/fire
-execute as @a[scores={right_click=0,b_energy=1..,cooldown=3},nbt={SelectedItem:{tag:{laser:1b}}}] at @s run function gun:classes/laser/fire
+execute as @a[scores={right_click=1..,b_energy=1..,cooldown=0},nbt={SelectedItem:{components:{"minecraft:custom_data":{laser:1b}}}}] at @s run function gun:classes/laser/fire
+execute as @a[scores={right_click=0,b_energy=1..,cooldown=1},nbt={SelectedItem:{components:{"minecraft:custom_data":{laser:1b}}}}] at @s run function gun:classes/laser/fire
+execute as @a[scores={right_click=0,b_energy=1..,cooldown=2},nbt={SelectedItem:{components:{"minecraft:custom_data":{laser:1b}}}}] at @s run function gun:classes/laser/fire
+execute as @a[scores={right_click=0,b_energy=1..,cooldown=3},nbt={SelectedItem:{components:{"minecraft:custom_data":{laser:1b}}}}] at @s run function gun:classes/laser/fire
 
-execute as @a[scores={right_click=0,cooldown=0,aim=0,shift=0,r_cooldown=0},nbt={SelectedItem:{tag:{laser:1b,custom_model_data:{strings:["laser_powered"]}}}}] at @s run item replace entity @s weapon.mainhand with minecraft:carrot_on_a_stick[custom_model_data={strings:["laser"]}, item_name='{"text":"laser rifle"}', custom_data={gun:1b,laser:1b,silenced:0}]
+execute as @a[scores={right_click=0,cooldown=0,aim=0,shift=0,r_cooldown=0},nbt={SelectedItem:{components:{"minecraft:custom_data":{laser:1b}},custom_model_data:{strings:["laser_powered"]}}}] at @s run item replace entity @s weapon.mainhand with minecraft:carrot_on_a_stick[custom_model_data={strings:["laser"]}, item_name='{"text":"laser rifle"}', custom_data={gun:1b,laser:1b,silenced:0}]
 
 #minigun
-#execute as @a[nbt={SelectedItem:{tag:{minigun:1b,silenced:0}}}] at @s run effect give @s minecraft:slowness 1 1 true
+#execute as @a[nbt={SelectedItem:{components:{"minecraft:custom_data":{minigun:1b,silenced:0}}}}] at @s run effect give @s minecraft:slowness 1 1 true
 
-execute as @a[scores={right_click=1..},nbt={SelectedItem:{tag:{minigun:1b,silenced:0}}}] at @s run scoreboard players add @s spin 1
+execute as @a[scores={right_click=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{minigun:1b,silenced:0}}}}] at @s run scoreboard players add @s spin 1
 
-execute as @a[scores={right_click=1..},nbt={SelectedItem:{tag:{minigun:1b,silenced:0}}}] at @s run scoreboard players set @s cooldown 5
+execute as @a[scores={right_click=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{minigun:1b,silenced:0}}}}] at @s run scoreboard players set @s cooldown 5
 
 
-execute as @a[scores={right_click=0,spin=10..,cooldown=0},nbt={SelectedItem:{tag:{minigun:1b,silenced:0}}}] at @s run stopsound @a player
-execute as @a[scores={right_click=0,spin=10..,cooldown=0},nbt={SelectedItem:{tag:{minigun:1b,silenced:0}}}] at @s run playsound minecraft:gun/minigun/spin_end player @a ^-0.3 ^ ^0.5 0.6 0.8
+execute as @a[scores={right_click=0,spin=10..,cooldown=0},nbt={SelectedItem:{components:{"minecraft:custom_data":{minigun:1b,silenced:0}}}}] at @s run stopsound @a player
+execute as @a[scores={right_click=0,spin=10..,cooldown=0},nbt={SelectedItem:{components:{"minecraft:custom_data":{minigun:1b,silenced:0}}}}] at @s run playsound minecraft:gun/minigun/spin_end player @a ^-0.3 ^ ^0.5 0.6 0.8
 
-execute as @a[scores={right_click=0,cooldown=0},nbt={SelectedItem:{tag:{minigun:1b,silenced:0}}}] at @s run scoreboard players set @s spin 0
+execute as @a[scores={right_click=0,cooldown=0},nbt={SelectedItem:{components:{"minecraft:custom_data":{minigun:1b,silenced:0}}}}] at @s run scoreboard players set @s spin 0
 
-execute as @a[scores={right_click=1..,spin=1},nbt={SelectedItem:{tag:{minigun:1b,silenced:0}}}] at @s run playsound minecraft:gun/minigun/spin_up player @a ^-0.3 ^ ^0.5 0.8 0.55
+execute as @a[scores={right_click=1..,spin=1},nbt={SelectedItem:{components:{"minecraft:custom_data":{minigun:1b,silenced:0}}}}] at @s run playsound minecraft:gun/minigun/spin_up player @a ^-0.3 ^ ^0.5 0.8 0.55
 
-execute as @a[scores={b_mini=1..,spin=75..},nbt={SelectedItem:{tag:{minigun:1b,silenced:0}}}] at @s run playsound minecraft:gun/minigun/minigun player @a ^-0.3 ^ ^0.5 2 1
+execute as @a[scores={b_mini=1..,spin=75..},nbt={SelectedItem:{components:{"minecraft:custom_data":{minigun:1b,silenced:0}}}}] at @s run playsound minecraft:gun/minigun/minigun player @a ^-0.3 ^ ^0.5 2 1
 
-#execute as @a[scores={b_mini=1..,spin=75..},nbt={SelectedItem:{tag:{minigun:1b,silenced:0}}}] at @s run function gun:classes/minigun/fire
-execute as @a[scores={b_mini=1..,spin=75..},nbt={SelectedItem:{tag:{minigun:1b,silenced:0}}}] at @s run function gun:classes/minigun/fire
+#execute as @a[scores={b_mini=1..,spin=75..},nbt={SelectedItem:{components:{"minecraft:custom_data":{minigun:1b,silenced:0}}}}] at @s run function gun:classes/minigun/fire
+execute as @a[scores={b_mini=1..,spin=75..},nbt={SelectedItem:{components:{"minecraft:custom_data":{minigun:1b,silenced:0}}}}] at @s run function gun:classes/minigun/fire
 
-execute as @a[scores={spin=1..},nbt={SelectedItem:{tag:{minigun:1b,silenced:0}}}] at @s run scoreboard players add @s spin 1
+execute as @a[scores={spin=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{minigun:1b,silenced:0}}}}] at @s run scoreboard players add @s spin 1
 
-execute as @a[scores={spin=75..},nbt={SelectedItem:{tag:{minigun:1b,silenced:0}}}] at @s run playsound minecraft:entity.enderman.death player @a ~ ~ ~ 0.1 1.6
+execute as @a[scores={spin=75..},nbt={SelectedItem:{components:{"minecraft:custom_data":{minigun:1b,silenced:0}}}}] at @s run playsound minecraft:entity.enderman.death player @a ~ ~ ~ 0.1 1.6
 
 #cannon
-execute as @a[scores={right_click=1..,cooldown=0},nbt={SelectedItem:{tag:{cannon:1b}}}] at @s run function gun:classes/cannon/fire
+execute as @a[scores={right_click=1..,cooldown=0},nbt={SelectedItem:{components:{"minecraft:custom_data":{cannon:1b}}}}] at @s run function gun:classes/cannon/fire
 execute as @e[type=minecraft:giant,scores={cooldown=0},tag=war_machine] at @s run function gun:classes/cannon/fire_giant
 #>>>>>>>>>>>>>>>>>>detect fire
 
 #lowammo
-execute as @a[scores={right_click=1..,b_rifle=0},nbt={SelectedItem:{tag:{rifle:1b}}}] at @s run function gun:classes/rifle/low_ammo
+execute as @a[scores={right_click=1..,b_rifle=0},nbt={SelectedItem:{components:{"minecraft:custom_data":{rifle:1b}}}}] at @s run function gun:classes/rifle/low_ammo
 
-execute as @a[scores={right_click=1..,b_smg=0},nbt={SelectedItem:{tag:{smg:1b}}}] at @s run function gun:classes/smg/low_ammo
+execute as @a[scores={right_click=1..,b_smg=0},nbt={SelectedItem:{components:{"minecraft:custom_data":{smg:1b}}}}] at @s run function gun:classes/smg/low_ammo
 
-execute as @a[scores={right_click=1..,b_shot=0},nbt={SelectedItem:{tag:{shotgun:1b}}}] at @s run function gun:classes/shotgun_buck/low_ammo
+execute as @a[scores={right_click=1..,b_shot=0},nbt={SelectedItem:{components:{"minecraft:custom_data":{shotgun:1b}}}}] at @s run function gun:classes/shotgun_buck/low_ammo
 
-execute as @a[scores={right_click=1..,b_sniper=0},nbt={SelectedItem:{tag:{sniper:1b}}}] at @s run function gun:classes/sniper/low_ammo
+execute as @a[scores={right_click=1..,b_sniper=0},nbt={SelectedItem:{components:{"minecraft:custom_data":{sniper:1b}}}}] at @s run function gun:classes/sniper/low_ammo
 
-execute as @a[scores={right_click=1..,b_energy=0},nbt={SelectedItem:{tag:{laser:1b}}}] at @s run function gun:classes/laser/low_ammo
+execute as @a[scores={right_click=1..,b_energy=0},nbt={SelectedItem:{components:{"minecraft:custom_data":{laser:1b}}}}] at @s run function gun:classes/laser/low_ammo
 
+execute as @a[scores={spin=75..,b_mini=0},nbt={SelectedItem:{components:{"minecraft:custom_data":{minigun:1b}}}}] at @s run function gun:classes/minigun/low_ammo
 execute as @a[scores={spin=75..,b_mini=0},nbt={SelectedItem:{tag:{minigun:1b}}}] at @s run function gun:classes/minigun/low_ammo
 
 #reload
