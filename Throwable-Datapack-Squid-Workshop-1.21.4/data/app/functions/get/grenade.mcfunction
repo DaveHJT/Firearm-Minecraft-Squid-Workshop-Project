@@ -1,1 +1,1 @@
-give @s minecraft:snowball{throw:1b,grenade:1b,CustomModelData:501,display:{Name:"{\"text\":\"grenade\"}"}}
+give @s minecraft:snowball[custom_model_data={strings:["grenade"]}, item_name='{"text":"grenade"}', custom_data={throw:1b,grenade:1b}]

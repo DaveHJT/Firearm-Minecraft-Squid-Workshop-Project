@@ -1,6 +1,6 @@
 # turn red
-item replace entity @s[type=armor_stand] armor.head with minecraft:iron_nugget{CustomModelData:511}
-item replace entity @s[type=!armor_stand] armor.head with minecraft:iron_nugget{CustomModelData:521}
+item replace entity @s[type=armor_stand] armor.head with minecraft:iron_nugget[custom_model_data={strings:["turret_base_head_fire"]}, item_name='{"text":"turret base head fire"}']
+item replace entity @s[type=!armor_stand] armor.head with minecraft:iron_nugget[custom_model_data={strings:["turret_head_fire"]}, item_name='{"text":"turret head fire"}']
 tag @s remove green
 #summon bullet and face player
 summon minecraft:area_effect_cloud ^ ^ ^0.2 {Duration:20,Tags:["bullet","turret","bullet_new"]}

@@ -1,6 +1,6 @@
 effect give @s minecraft:slowness 1 2 true
 scoreboard players add @s aim 1
-execute if score @s aim matches 2 run item replace entity @s weapon.mainhand with minecraft:carrot_on_a_stick[CustomModelData:514,display:{Name:"{\"text\":\"smg\"}"},custom_data={gun:1b,smg:1b,silenced:1b}]
+execute if score @s aim matches 2 run item replace entity @s weapon.mainhand with minecraft:carrot_on_a_stick[custom_model_data={strings:["smg_aim"]}, item_name='{"text":"smg"}', custom_data={gun:1b,smg:1b,silenced:1b}]
 
 
 

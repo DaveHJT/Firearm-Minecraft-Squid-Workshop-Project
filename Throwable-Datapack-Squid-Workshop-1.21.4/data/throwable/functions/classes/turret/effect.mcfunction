@@ -32,8 +32,8 @@ execute if entity @s[tag=target_aimed] if score @s cooldown matches 0 run functi
 execute if entity @s[scores={throwable_life=140..}] run scoreboard players set @s throwable_life 80
 #green head
 
-execute if entity @s[tag=!green,type=armor_stand,tag=!target_aimed] run item replace entity @s armor.head with minecraft:iron_nugget{CustomModelData:510}
-execute if entity @s[tag=!green,type=!armor_stand,tag=!target_aimed] run item replace entity @s armor.head with minecraft:iron_nugget{CustomModelData:520}
+execute if entity @s[tag=!green,type=armor_stand,tag=!target_aimed] run item replace entity @s armor.head with minecraft:iron_nugget[custom_model_data={strings:["turret_base_head"]}, item_name='{"text":"turret base head"}']
+execute if entity @s[tag=!green,type=!armor_stand,tag=!target_aimed] run item replace entity @s armor.head with minecraft:iron_nugget[custom_model_data={strings:["turret_head"]}, item_name='{"text":"turret head"}']
 tag @s[tag=!green,tag=!target_aimed] add green
 
 

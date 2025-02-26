@@ -17,7 +17,7 @@ execute as @a[nbt={OnGround:0b}] at @s if block ~ ~-0.01 ~ #gun:jump run scorebo
 
 #<<<<<<<<<<<<<<<<<<detect fire
 #rifle
-execute as @a[scores={right_click=1..,b_rifle=1..,cooldown=0},nbt={SelectedItem:{tag:{rifle:1b,silenced:0}}}] at @s run function gun:classes/rifle/fire
+execute as @a[scores={right_click=1..,b_rifle=1..,cooldown=0},nbt={SelectedItem:{components:{"minecraft:custom_data":{rifle:1b, silenced:0}}}}] at @s run function gun:classes/rifle/fire
 
 #rifle silenced
 execute as @a[scores={right_click=1..,b_rifle=1..,cooldown=0},nbt={SelectedItem:{tag:{rifle:1b,silenced:1b}}}] at @s run function gun:classes/rifle_silenced/fire
@@ -45,7 +45,7 @@ execute as @a[scores={right_click=0,b_energy=1..,cooldown=1},nbt={SelectedItem:{
 execute as @a[scores={right_click=0,b_energy=1..,cooldown=2},nbt={SelectedItem:{tag:{laser:1b}}}] at @s run function gun:classes/laser/fire
 execute as @a[scores={right_click=0,b_energy=1..,cooldown=3},nbt={SelectedItem:{tag:{laser:1b}}}] at @s run function gun:classes/laser/fire
 
-execute as @a[scores={right_click=0,cooldown=0,aim=0,shift=0,r_cooldown=0},nbt={SelectedItem:{tag:{laser:1b,CustomModelData:521}}}] at @s run item replace entity @s weapon.mainhand with minecraft:carrot_on_a_stick[CustomModelData:519,display:{Name:"{\"text\":\"laser rifle\"}"},gun:1b,laser:1b,silenced:0]
+execute as @a[scores={right_click=0,cooldown=0,aim=0,shift=0,r_cooldown=0},nbt={SelectedItem:{tag:{laser:1b,custom_model_data:{strings:["laser_powered"]}}}}] at @s run item replace entity @s weapon.mainhand with minecraft:carrot_on_a_stick[custom_model_data={strings:["laser"]}, item_name='{"text":"laser rifle"}', custom_data={gun:1b,laser:1b,silenced:0}]
 
 #minigun
 #execute as @a[nbt={SelectedItem:{tag:{minigun:1b,silenced:0}}}] at @s run effect give @s minecraft:slowness 1 1 true

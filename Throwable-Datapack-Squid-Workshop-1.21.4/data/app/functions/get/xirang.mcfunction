@@ -1,1 +1,1 @@
-give @s minecraft:snowball{throw:1b,xirang:1b,CustomModelData:504,display:{Name:"\"Swelling Earth\"",Lore:["{\"text\":\"Mythical earth of Da'Yu\"}","{\"text\":\"Drop to summon coral block wall\"}"]}}
+give @s minecraft:snowball[custom_model_data={strings:["xirang"]}, item_name='{"text":"Swelling Earth"}', custom_data={throw:1b,xirang:1b}, lore=['{"text":"Mythical relic of Da\'Yu"}','{"text":"Throw to summon coral block wall"}']]

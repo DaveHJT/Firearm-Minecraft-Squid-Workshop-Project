@@ -6,7 +6,7 @@ execute if entity @s[scores={b_energy=20..}] run playsound minecraft:entity.cree
 
 execute if entity @s[scores={b_energy=23..}] run playsound minecraft:block.note_block.didgeridoo player @a ~ ~ ~ 2 1
 
-execute if entity @s[scores={b_energy=20..}] run item replace entity @s weapon.offhand with minecraft:carrot_on_a_stick[CustomModelData:521,display:{Name:"{\"text\":\"laser rifle\"}"},custom_data={gun:1b,laser:1b,silenced:0}]
+execute if entity @s[scores={b_energy=20..}] run item replace entity @s weapon.offhand with minecraft:carrot_on_a_stick[custom_model_data={strings:["laser_powered"]}, item_name='{"text":"laser rifle"}', custom_data={gun:1b,laser:1b,silenced:0}]
 
 
 playsound minecraft:block.beehive.work player @a ~ ~ ~ 1 0.5
@@ -37,7 +37,7 @@ execute if entity @s[scores={b_energy=..20}] run title @s actionbar ["",{"score"
 execute if entity @s[scores={b_energy=21..}] run title @s actionbar ["",{"score":{"name":"@s","objective":"b_energy"},"color":"red"},{"text":"/"},{"score":{"name":"@s","objective":"ammo"},"color":"white"}]
 
 # clear scope
-clear @s minecraft:carrot_on_a_stick[CustomModelData:517,display:{Name:"{\"text\":\"scope\"}"}]
+clear @s minecraft:carrot_on_a_stick[custom_model_data={strings:["scope"]}, item_name='{"text":"scope"}']
 
 # reload ammo
 scoreboard players add @s b_energy 1
