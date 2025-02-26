@@ -44,6 +44,17 @@
     "minecraft:cocoa",
     "minecraft:lantern",
     "minecraft:scaffolding",
-    "minecraft:tripwire"
+    "minecraft:tripwire",
+    "#minecraft:candles",
+    "#minecraft:wall_corals",
+    "#minecraft:underwater_bonemeals",
+    "#minecraft:fire",
+    "#minecraft:candle_cakes",
+    "#minecraft:small_flowers",
+    "#minecraft:wall_post_override",
+    "#minecraft:climbable",
+    "#minecraft:fall_damage_resetting",
+    "#minecraft:saplings",
+    "#minecraft:crops"
     ]
     }
