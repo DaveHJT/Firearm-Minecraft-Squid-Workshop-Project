@@ -1,4 +1,3 @@
-
 #ammo score change
 scoreboard players operation @s ammo += @s b_rifle
 
@@ -17,7 +16,7 @@ tag @s remove full
 
 scoreboard players set @s reload 0
 
-item replace entity @s[nbt={Inventory:[{Slot:-106b,tag:{rifle:1b,silenced:1b}}]}] weapon.offhand with minecraft:air
+item replace entity @s[nbt={Inventory:[{Slot:-106b,components:{"minecraft:custom_data":{rifle:1b,silenced:1b}}}]}] weapon.offhand with minecraft:air
 
 function app:get/rifle_silenced
 

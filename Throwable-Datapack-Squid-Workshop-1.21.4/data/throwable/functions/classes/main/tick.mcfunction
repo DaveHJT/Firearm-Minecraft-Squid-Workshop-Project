@@ -12,21 +12,21 @@
 
 # cooldown
 execute as @a[scores={r_cooldown=0}] run scoreboard players set @s throwable 0
-execute as @a[nbt={SelectedItem:{tag:{throw:1b}}}] run scoreboard players set @s r_cooldown 10
+execute as @a[nbt={SelectedItem:{components:{"minecraft:custom_data":{throw:1b}}}}] run scoreboard players set @s r_cooldown 10
 
 #throwID
-execute as @a[nbt={SelectedItem:{tag:{grenade:1b}}}] run scoreboard players set @s throwable 1
-execute as @a[nbt={SelectedItem:{tag:{molotov:1b}}}] run scoreboard players set @s throwable 2
-execute as @a[nbt={SelectedItem:{tag:{turret:1b}}}] run scoreboard players set @s throwable 3
-execute as @a[nbt={SelectedItem:{tag:{xirang:1b}}}] run scoreboard players set @s throwable 4
+execute as @a[nbt={SelectedItem:{components:{"minecraft:custom_data":{grenade:1b}}}}] run scoreboard players set @s throwable 1
+execute as @a[nbt={SelectedItem:{components:{"minecraft:custom_data":{molotov:1b}}}}] run scoreboard players set @s throwable 2
+execute as @a[nbt={SelectedItem:{components:{"minecraft:custom_data":{turret:1b}}}}] run scoreboard players set @s throwable 3
+execute as @a[nbt={SelectedItem:{components:{"minecraft:custom_data":{xirang:1b}}}}] run scoreboard players set @s throwable 4
 
-execute as @a[nbt={SelectedItem:{tag:{template:1b}}}] run scoreboard players set @s throwable 5
+execute as @a[nbt={SelectedItem:{components:{"minecraft:custom_data":{template:1b}}}}] run scoreboard players set @s throwable 5
 
-execute as @a[nbt={SelectedItem:{tag:{smoke:1b}}}] run scoreboard players set @s throwable 6
-execute as @a[nbt={SelectedItem:{tag:{signal:1b}}}] run scoreboard players set @s throwable 7
-execute as @a[nbt={SelectedItem:{tag:{flash:1b}}}] run scoreboard players set @s throwable 8
-execute as @a[nbt={SelectedItem:{tag:{firecracker:1b}}}] run scoreboard players set @s throwable 9
-execute as @a[nbt={SelectedItem:{tag:{ninjasmoke:1b}}}] run scoreboard players set @s throwable 10
+execute as @a[nbt={SelectedItem:{components:{"minecraft:custom_data":{smoke:1b}}}}] run scoreboard players set @s throwable 6
+execute as @a[nbt={SelectedItem:{components:{"minecraft:custom_data":{signal:1b}}}}] run scoreboard players set @s throwable 7
+execute as @a[nbt={SelectedItem:{components:{"minecraft:custom_data":{flash:1b}}}}] run scoreboard players set @s throwable 8
+execute as @a[nbt={SelectedItem:{components:{"minecraft:custom_data":{firecracker:1b}}}}] run scoreboard players set @s throwable 9
+execute as @a[nbt={SelectedItem:{components:{"minecraft:custom_data":{ninjasmoke:1b}}}}] run scoreboard players set @s throwable 10
 
 #<<<<<<<<<<<<<<<throw init
 #grenade

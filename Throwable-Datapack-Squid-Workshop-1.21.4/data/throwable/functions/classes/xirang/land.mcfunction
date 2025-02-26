@@ -1,4 +1,4 @@
-#summon item ~ ~ ~ {Item:{id:"minecraft:snowball",Count:1b,tag:{custom_model_data:{strings:["xirang"]}, item_name:'{"text":"xirang"}'}},PickupDelay:1s,Tags:["template_effect","effect"]}
+#summon item ~ ~ ~ {Item:{id:"minecraft:snowball",Count:1b,components:{"minecraft:custom_data":{custom_model_data:{strings:["xirang"]}, item_name:'{"text":"xirang"}'}}},PickupDelay:1s,Tags:["template_effect","effect"]}
 
 # summon a grid wall of clouds
 execute rotated as @p run summon minecraft:area_effect_cloud ^-2 ^ ^ {Duration:120,Tags:["xirang_effect", "effect"]}
