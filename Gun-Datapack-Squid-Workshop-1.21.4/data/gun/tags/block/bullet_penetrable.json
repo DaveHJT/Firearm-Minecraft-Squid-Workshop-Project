@@ -1,6 +1,7 @@
 {
 "replace": false,
 "values": [
+"minecraft:short_grass",
 "minecraft:tall_grass",
 "minecraft:fern",
 "minecraft:vine",
@@ -9,8 +10,6 @@
 "#minecraft:saplings",
 "minecraft:red_mushroom",
 "#minecraft:banners",
-"minecraft:brown_mushroom",
-"minecraft:tall_grass",
 "minecraft:large_fern",
 "#minecraft:wool_carpets",
 "#minecraft:flower_pots",
