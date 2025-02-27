@@ -13,6 +13,8 @@
         "minecraft:sugar_cane",
         "minecraft:bamboo",
         "minecraft:vine",
-        "minecraft:lily_pad"
+        "minecraft:lily_pad",
+        "minecraft:cave_vines",
+        "minecraft:cave_vines_plant"
     ]
 }

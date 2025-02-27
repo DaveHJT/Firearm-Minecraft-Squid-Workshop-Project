@@ -1,9 +1,7 @@
 
 
-execute if entity @s[tag=bullet] if block ~ ~ ~ #minecraft:logs run scoreboard players set v0 V 3
-execute if entity @s[tag=bullet] if block ~ ~ ~ #minecraft:logs run scoreboard players operation @s damage /= medium damage
-execute if entity @s[tag=bullet] if block ~ ~ ~ #minecraft:planks run scoreboard players set v0 V 3
-execute if entity @s[tag=bullet] if block ~ ~ ~ #minecraft:planks run scoreboard players operation @s damage /= medium damage
+execute if entity @s[tag=bullet] if block ~ ~ ~ #gun:bullet_penetrable run scoreboard players set v0 V 3
+execute if entity @s[tag=bullet] if block ~ ~ ~ #gun:bullet_penetrable run scoreboard players operation @s damage /= medium damage
 
 
 execute if entity @s[tag=bullet] if block ~ ~ ~ #gun:watery run scoreboard players set v0 V 3
@@ -16,4 +14,5 @@ execute if entity @s[tag=bullet] unless score v0 V matches 3 run scoreboard play
 execute if entity @s[tag=laser] run scoreboard players set @s damage 0
 execute if entity @s[tag=light] run scoreboard players set @s damage 0
 
-tag @s add penetrate
+#add penetrate tag
+execute if entity @s[tag=bullet] if block ~ ~ ~ #gun:bullet_penetrable run tag @s add penetrate

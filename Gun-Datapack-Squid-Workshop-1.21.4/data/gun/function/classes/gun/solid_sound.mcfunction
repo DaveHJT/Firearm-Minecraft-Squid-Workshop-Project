@@ -15,3 +15,4 @@ execute if entity @s[tag=bullet] if block ~ ~ ~ #gun:misc run playsound minecraf
 execute if entity @s[tag=bullet] if block ~ ~ ~ #gun:watery run playsound minecraft:block.honey_block.step ambient @a ~ ~ ~ 1 1.6
 execute if entity @s[tag=bullet] if block ~ ~ ~ #gun:watery run particle minecraft:block{block_state:{Name:"slime_block"}} ~ ~ ~ 0.1 0.1 0.1 0.3 8 force
 
+execute if entity @s[tag=bullet] if block ~ ~ ~ minecraft:bell run playsound minecraft:block.bell.use ambient @a ~ ~ ~ 1 1
