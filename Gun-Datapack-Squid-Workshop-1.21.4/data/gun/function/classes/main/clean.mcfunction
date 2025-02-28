@@ -12,6 +12,9 @@ scoreboard objectives remove shift
 scoreboard objectives remove walk 
 scoreboard objectives remove sprint
 scoreboard objectives remove jump
+scoreboard objectives remove shield_hold
+scoreboard objectives remove bow_use
+scoreboard objectives remove crossbow_use
 scoreboard objectives remove b_rifle 
 scoreboard objectives remove b_smg 
 scoreboard objectives remove b_shot 

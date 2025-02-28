@@ -178,6 +178,9 @@ execute as @a[scores={shift=1..}] run scoreboard players set @s shift 0
 execute as @a[scores={walk=1..}] run scoreboard players set @s walk 0
 execute as @a[scores={sprint=1..}] run scoreboard players set @s sprint 0
 execute as @a[scores={jump=1..}] run scoreboard players set @s jump 0
+execute as @a[scores={shield_hold=1..}] run scoreboard players set @s shield_hold 0
+execute as @a[scores={bow_use=1..}] run scoreboard players set @s bow_use 0
+execute as @a[scores={crossbow_use=1..}] run scoreboard players set @s crossbow_use 0
 
 
 #debug bullet
@@ -217,7 +220,7 @@ execute as @a[scores={shift=0,lever=1..}] at @s run scoreboard players remove @s
 
 #shield
 function gun:classes/shield/tick
-execute as @s[tag=shield] at @s unless entity @a[scores={shield_bool=1},distance=..1] run kill @s
+execute as @s[tag=shield] at @s unless entity @a[scores={shield_hold=1},distance=..1] run kill @s
 
 #light arrow
 execute as @e[type=minecraft:arrow,nbt={Color:16449336},tag=!arrow] at @s run function gun:classes/arrow_light/init
@@ -241,10 +244,10 @@ execute as @e[type=minecraft:arrow,nbt={Color:11080735},tag=!throw] at @s run fu
 
 
 #light bow
-execute as @a[scores={bow_bool=1},nbt={SelectedItem:{components:{"minecraft:custom_data":{light:1b}}}}] at @s as @e[type=minecraft:arrow,tag=!light,limit=1,sort=nearest] at @s run function gun:classes/arrow_light/init
+execute as @a[scores={bow_use=1},nbt={SelectedItem:{components:{"minecraft:custom_data":{light:1b}}}}] at @s as @e[type=minecraft:arrow,tag=!light,limit=1,sort=nearest] at @s run function gun:classes/arrow_light/init
 #light crossbow
-execute as @a[scores={crossbow_bool=1},nbt={SelectedItem:{components:{"minecraft:custom_data":{light:1b}}}}] at @s as @e[type=minecraft:arrow,tag=!light,limit=1,sort=nearest] at @s run function gun:classes/arrow_light/init
-execute as @a[scores={crossbow_bool=1},nbt={SelectedItem:{components:{"minecraft:custom_data":{light:1b}}}}] at @s as @e[type=minecraft:firework_rocket,tag=!light,limit=1,sort=nearest] at @s run function gun:classes/arrow_light/init
+execute as @a[scores={crossbow_use=1},nbt={SelectedItem:{components:{"minecraft:custom_data":{light:1b}}}}] at @s as @e[type=minecraft:arrow,tag=!light,limit=1,sort=nearest] at @s run function gun:classes/arrow_light/init
+execute as @a[scores={crossbow_use=1},nbt={SelectedItem:{components:{"minecraft:custom_data":{light:1b}}}}] at @s as @e[type=minecraft:firework_rocket,tag=!light,limit=1,sort=nearest] at @s run function gun:classes/arrow_light/init
 
 #time 
 scoreboard players add time V 1
