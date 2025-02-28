@@ -2,7 +2,7 @@
 
 summon armor_stand ~ ~ ~ {Invisible:1b,Marker:1b,Tags:["grenade_effect","effect"]}
 
-summon item ~ ~ ~ {Item:{id:"minecraft:snowball",Count:1b,components:{"minecraft:custom_data":{custom_model_data:{strings:["grenade"]}, item_name:'{"text":"grenade"}'}}},PickupDelay:32767s,Tags:["display"]}
+summon item ~ ~ ~ {Item:{id:"minecraft:snowball",components:{custom_model_data:{strings:["grenade"]}, item_name:'{"text":"grenade"}'}},PickupDelay:32767s,Tags:["display"]}
 
 #scoreboard players add @s throwable_life 20
 

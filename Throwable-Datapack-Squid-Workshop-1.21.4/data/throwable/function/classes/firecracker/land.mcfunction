@@ -1,4 +1,4 @@
-summon item ~ ~ ~ {Item:{id:"minecraft:snowball",Count:1b,components:{"minecraft:custom_data":{custom_model_data:{strings:["firecracker"]}, item_name:'{"text":"firecracker"}'}}},PickupDelay:32767s,Tags:["firecracker_effect","effect"]}
+summon item ~ ~ ~ {Item:{id:"minecraft:snowball",components:{custom_model_data:{strings:["firecracker"]}, item_name:'{"text":"firecracker"}'}},PickupDelay:32767s,Tags:["firecracker_effect","effect"]}
 
 scoreboard players operation @e[tag=effect,limit=1,sort=nearest] throwable_life = @s throwable_life
 
