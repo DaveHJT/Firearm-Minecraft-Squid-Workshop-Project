@@ -4,7 +4,7 @@ tag @s add xirang
 
 scoreboard players operation @s UID = @p UID
 
-execute if entity @s[type=arrow] run data merge entity @s {pickup:-1b}
+execute if entity @s[type=arrow] run data merge entity @s {pickup:0b}
 
 summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["xirang","tracer","tracer_new"],Duration:2000}
 
