@@ -4,7 +4,7 @@ tag @s add molotov
 
 scoreboard players operation @s UID = @p UID
 
-execute if entity @s[type=arrow] run data merge entity @s {Fire:100s,pickup:-1b}
+execute if entity @s[type=arrow] run data merge entity @s {Fire:100s,pickup:0b}
 
 
 summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["molotov","tracer","tracer_new"],Duration:2000}
