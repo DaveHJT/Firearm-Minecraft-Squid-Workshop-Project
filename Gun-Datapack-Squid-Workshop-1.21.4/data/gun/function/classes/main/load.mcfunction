@@ -23,14 +23,6 @@ scoreboard objectives add bulletrange dummy
 scoreboard objectives add accu dummy
 scoreboard objectives add aim dummy
 scoreboard objectives add spin dummy
-scoreboard objectives add carotClik_bool minecraft.used:minecraft.carrot_on_a_stick
-scoreboard objectives add shift_bool minecraft.custom:minecraft.sneak_time
-scoreboard objectives add walk_bool minecraft.custom:minecraft.walk_one_cm
-scoreboard objectives add sprint_bool minecraft.custom:minecraft.sprint_one_cm
-scoreboard objectives add jump_bool minecraft.custom:minecraft.jump_bool
-scoreboard objectives add shield_bool dummy
-scoreboard objectives add bow_bool minecraft.used:minecraft.bow
-scoreboard objectives add crossbow_bool minecraft.used:minecraft.crossbow
 scoreboard objectives add b_rifle dummy
 scoreboard objectives add b_smg dummy
 scoreboard objectives add b_shot dummy

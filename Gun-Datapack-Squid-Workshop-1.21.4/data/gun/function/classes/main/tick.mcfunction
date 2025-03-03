@@ -172,17 +172,6 @@ execute as @a[scores={r_cooldown=1..}] run scoreboard players remove @s r_cooldo
 #save last pos
 execute as @a[tag=!dead] at @s run function gun:classes/gun/last_pos
 
-#reset
-execute as @a[scores={carotClik_bool=1..}] run scoreboard players set @s carotClik_bool 0
-execute as @a[scores={shift_bool=1..}] run scoreboard players set @s shift_bool 0
-execute as @a[scores={walk_bool=1..}] run scoreboard players set @s walk_bool 0
-execute as @a[scores={sprint_bool=1..}] run scoreboard players set @s sprint_bool 0
-execute as @a[scores={jump_bool=1..}] run scoreboard players set @s jump_bool 0
-execute as @a[scores={shield_bool=1..}] run scoreboard players set @s shield_bool 0
-execute as @a[scores={bow_bool=1..}] run scoreboard players set @s bow_bool 0
-execute as @a[scores={crossbow_bool=1..}] run scoreboard players set @s crossbow_bool 0
-
-
 #debug bullet
 #execute as @e[tag=bullet_fired] at @s run particle minecraft:crit ~ ~ ~ 0.1 0.1 0.1 1 0
 #execute as @e[tag=bullet_fired] at @s run tp @s ^ ^ ^0.1
