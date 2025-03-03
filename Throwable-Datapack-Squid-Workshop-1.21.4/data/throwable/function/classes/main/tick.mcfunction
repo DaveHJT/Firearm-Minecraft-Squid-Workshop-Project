@@ -133,7 +133,7 @@ execute as @e[tag=molotov_effect,scores={throwable_life=200..}] at @s run kill @
 execute as @e[tag=ignited_molotov] at @s run function throwable:classes/molotov/ignited_effect
 #execute if entity @e[tag=ignited_molotov] as @a at @s if entity @e[limit=1,tag=ignited_molotov,distance=..6,scores={throwable_life=0},sort=nearest] run scoreboard players add @s damage 3
 execute as @e[tag=onfire] run scoreboard players add @s damage 2
-execute as @e[tag=onfire,nbt={ActiveEffects:[{Id:12b}]}] run scoreboard players remove @s damage 2
+execute as @e[tag=onfire,nbt={active_effects:[{id:"minecraft:fire_resistance"}]}] run scoreboard players remove @s damage 2
 tag @e[tag=onfire] add molotoved
 tag @e[tag=onfire] remove onfire
 execute if entity @e[tag=ignited_molotov] run scoreboard players add fire throwable_life 1

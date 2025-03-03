@@ -15,8 +15,8 @@ execute if score @s throwable_life matches 50 run playsound minecraft:block.pist
 execute if score @s throwable_life matches 60 run playsound minecraft:block.piston.contract player @a ~ ~ ~ 2 1.5
 
 #model
-execute if score @s throwable_life matches 10 run item replace entity @s[type=armor_stand] weapon.mainhand with minecraft:iron_nugget[custom_model_data={strings:["turret_base"]}, item_name='{"text":"turret base"}']
-item replace entity @e[limit=1,sort=nearest,tag=turret_effect,type=!armor_stand] armor.head with minecraft:iron_nugget[custom_model_data={strings:["turret_head"]}, item_name='{"text":"turret head"}']
+execute if score @s throwable_life matches 10 run item replace entity @s[type=armor_stand] weapon.mainhand with minecraft:iron_nugget[custom_model_data={strings:["turret_body"]}, item_name='{"text":"turret_body"}']
+item replace entity @e[limit=1,sort=nearest,tag=turret_effect,type=!armor_stand] armor.head with minecraft:iron_nugget[custom_model_data={strings:["turret_head_g_mob"]}, item_name='{"text":"turret_head_g_mob"}']
 #execute if score @s throwable_life matches 10 run item replace entity @s[type=zombie] weapon.mainhand with minecraft:iron_nugget[custom_model_data={strings:["turret_zombie"]}, item_name='{"text":"turret zombie"}']
 
 
