@@ -1,1 +1,1 @@
-give @s minecraft:snowball[custom_model_data={strings:["turret"]}, item_name='{"text":"portable pistol turret"}', custom_data={throw:1b,turret:1b}] 16
+give @s minecraft:snowball[custom_model_data={strings:["turret_folded"]}, item_name='{"text":"portable pistol turret"}', custom_data={throw:1b,turret:1b}] 16
