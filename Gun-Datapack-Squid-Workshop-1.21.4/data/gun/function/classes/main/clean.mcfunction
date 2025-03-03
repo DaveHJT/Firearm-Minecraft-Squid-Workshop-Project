@@ -6,15 +6,17 @@ scoreboard objectives remove SID
 scoreboard objectives remove bulletrange 
 scoreboard objectives remove accu 
 scoreboard objectives remove aim 
-scoreboard objectives remove spin 
-scoreboard objectives remove right_click 
-scoreboard objectives remove shift
-scoreboard objectives remove walk 
-scoreboard objectives remove sprint
-scoreboard objectives remove jump
-scoreboard objectives remove shield_hold
-scoreboard objectives remove bow_use
-scoreboard objectives remove crossbow_use
+scoreboard objectives remove spin
+
+scoreboard objectives remove carotClik_bool 
+scoreboard objectives remove shift_bool
+scoreboard objectives remove walk_bool 
+scoreboard objectives remove sprint_bool
+scoreboard objectives remove jump_bool
+scoreboard objectives remove shield_bool
+scoreboard objectives remove bow_bool
+scoreboard objectives remove crossbow_bool
+
 scoreboard objectives remove b_rifle 
 scoreboard objectives remove b_smg 
 scoreboard objectives remove b_shot 
