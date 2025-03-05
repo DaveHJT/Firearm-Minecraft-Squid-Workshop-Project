@@ -15,9 +15,9 @@ summon minecraft:area_effect_cloud ^ ^ ^0.4 {Duration:30,Tags:["bullet","b_rifle
 execute at @e[tag=bullet_new,limit=1,sort=nearest] run tp @e[tag=bullet_new,limit=1,sort=nearest] ~ ~ ~ facing entity @s
 
 
-execute if entity @s[scores={shift_bool=0}] as @e[tag=bullet_new,limit=1,sort=nearest] at @s run tp @s ~ ~1.6 ~
+execute if entity @s[scores={shift=0}] as @e[tag=bullet_new,limit=1,sort=nearest] at @s run tp @s ~ ~1.6 ~
 
-execute if entity @s[scores={shift_bool=1..}] as @e[tag=bullet_new,limit=1,sort=nearest] at @s run tp @s ~ ~1.25 ~
+execute if entity @s[scores={shift=1..}] as @e[tag=bullet_new,limit=1,sort=nearest] at @s run tp @s ~ ~1.25 ~
 
 
 #sign name
@@ -41,10 +41,10 @@ execute store result entity @e[tag=bullet_new,limit=1,sort=nearest] Rotation[1] 
 
 #score spread
 scoreboard players set @s spread 2
-execute if entity @s[scores={walk_bool=1..,recoil=..2}] run scoreboard players add @s spread 1
-execute if entity @s[scores={sprint_bool=1..,recoil=..2}] run scoreboard players add @s spread 1
-execute if entity @s[scores={jump_bool=1..}] run scoreboard players add @s spread 2
-execute if entity @s[scores={shift_bool=1..}] run scoreboard players remove @s spread 1
+execute if entity @s[scores={walk=1..,recoil=..2}] run scoreboard players add @s spread 1
+execute if entity @s[scores={sprint=1..,recoil=..2}] run scoreboard players add @s spread 1
+execute if entity @s[scores={jump=1..}] run scoreboard players add @s spread 2
+execute if entity @s[scores={shift=1..}] run scoreboard players remove @s spread 1
 
 
 #recoil
@@ -58,7 +58,7 @@ execute if entity @s[scores={recoil=18..}] as @e[tag=bullet_new,limit=1,sort=nea
 
 
 #cooldown
-execute if entity @s[scores={carotClik_bool=1..}] run scoreboard players add @s cooldown 3
+execute if entity @s[scores={right_click=1..}] run scoreboard players add @s cooldown 3
 
 
 #remove ammo

@@ -7,10 +7,10 @@ scoreboard players operation @s UID = @p UID
 
 execute at @e[tag=bullet_new,limit=1,sort=nearest] run tp @e[tag=bullet_new,limit=1,sort=nearest] ~ ~ ~ facing entity @p
 
-execute as @p[scores={shift_bool=0}] as @e[tag=bullet_new,limit=1,sort=nearest] at @s run tp @s ~ ~1.6 ~
+execute as @p[scores={shift=0}] as @e[tag=bullet_new,limit=1,sort=nearest] at @s run tp @s ~ ~1.6 ~
 
-execute as @p[scores={shift_bool=1..}] as @e[tag=bullet_new,limit=1,sort=nearest] at @s run tp @s ~ ~-0.35 ~
-execute as @p[scores={shift_bool=1..}] as @e[tag=bullet_new,limit=1,sort=nearest] at @s run tp @s ^ ^ ^0.5
+execute as @p[scores={shift=1..}] as @e[tag=bullet_new,limit=1,sort=nearest] at @s run tp @s ~ ~-0.35 ~
+execute as @p[scores={shift=1..}] as @e[tag=bullet_new,limit=1,sort=nearest] at @s run tp @s ^ ^ ^0.5
 
 #damage
 execute as @e[tag=bullet_new,limit=1,sort=nearest] run scoreboard players set @s damage 5
@@ -20,10 +20,10 @@ execute store result entity @e[tag=bullet_new,limit=1,sort=nearest] Rotation[1] 
 
 #score spread
 scoreboard players set @s spread 1
-execute if entity @p[scores={walk_bool=1..}] run scoreboard players add @s spread 1
-execute if entity @p[scores={sprint_bool=1..}] run scoreboard players add @s spread 1
-execute if entity @p[scores={jump_bool=1..}] run scoreboard players add @s spread 1
-execute if entity @p[scores={shift_bool=1..}] run scoreboard players remove @s spread 1
+execute if entity @p[scores={walk=1..}] run scoreboard players add @s spread 1
+execute if entity @p[scores={sprint=1..}] run scoreboard players add @s spread 1
+execute if entity @p[scores={jump=1..}] run scoreboard players add @s spread 1
+execute if entity @p[scores={shift=1..}] run scoreboard players remove @s spread 1
 scoreboard players set @s[scores={role=7}] spread 0
 
 execute if entity @s[nbt={crit:0b}] run scoreboard players add @s spread 3
