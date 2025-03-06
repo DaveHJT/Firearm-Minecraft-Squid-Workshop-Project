@@ -49,8 +49,8 @@ execute store result entity @e[tag=bullet_new,limit=1,sort=nearest] Rotation[1] 
 
 #score spread
 scoreboard players set @s spread 2
-execute if entity @s[scores={walk=1..,spread=..1}] run scoreboard players add @s spread 1
-execute if entity @s[scores={sprint=1..,spread=..1}] run scoreboard players add @s spread 1
+execute if entity @s[scores={walk_bool=1..,spread=..1}] run scoreboard players add @s spread 1
+execute if entity @s[scores={sprint_bool=1..,spread=..1}] run scoreboard players add @s spread 1
 execute if entity @s[scores={jump=1..}] run scoreboard players add @s spread 3
 execute if entity @s[scores={shift=1..}] run scoreboard players remove @s spread 1
 
@@ -65,7 +65,7 @@ execute if entity @s[scores={recoil=14..17}] as @e[tag=bullet_new,limit=1,sort=n
 execute if entity @s[scores={recoil=18..}] as @e[tag=bullet_new,limit=1,sort=nearest] at @s run tp @s ~ ~ ~ ~-1.5 ~-3
 
 #cooldown
-execute if entity @s[scores={right_click=1..}] run scoreboard players add @s cooldown 3
+execute if entity @s[scores={carotClik_bool=1..}] run scoreboard players add @s cooldown 3
 
 #remove ammo
 scoreboard players remove @s b_smg 1
