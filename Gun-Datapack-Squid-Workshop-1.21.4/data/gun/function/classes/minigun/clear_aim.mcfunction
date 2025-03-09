@@ -1,1 +1,1 @@
-item modify entity @s weapon.mainhand [{"function":"set_custom_model_data","strings":{"values": ["minigun"],"mode":"replace_all"}}, {"function":"minecraft:set_components","components":{"!attribute_modifiers":{}}}]
+item modify entity @s weapon.mainhand [{"function":"set_custom_model_data","strings":{"values": ["minigun"],"mode":"replace_all"}}, {"function":"minecraft:set_components","components":{"!attribute_modifiers":{}}},{"function":"set_custom_data","tag":{aimed:0}}]

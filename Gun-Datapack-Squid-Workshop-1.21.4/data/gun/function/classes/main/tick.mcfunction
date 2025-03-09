@@ -103,66 +103,59 @@ execute as @a unless entity @s[nbt={Inventory:[{Slot:-106b,components:{"minecraf
 scoreboard players remove @e[scores={cooldown=1..}] cooldown 1
 
 
-#<<<<<<<<<<<<<<<<<<detect aim
 
-#rifle
-execute as @a[scores={shift=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{rifle:1b,silenced:0}}}}] at @s run function gun:classes/rifle/aim
-#rifle silenced
-execute as @a[scores={shift=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{rifle:1b,silenced:1b}}}}] at @s run function gun:classes/rifle_silenced/aim
-#smg
-execute as @a[scores={shift=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{smg:1b,silenced:0}}}}] at @s run function gun:classes/smg/aim
-#smg silenced
-execute as @a[scores={shift=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{smg:1b,silenced:1b}}}}] at @s run function gun:classes/smg_silenced/aim
-#shotgun slug
-execute as @a[scores={shift=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{shotgun:1b,slug:1b}}}}] at @s run function gun:classes/shotgun_slug/aim
-#shotgun buck
-execute as @a[scores={shift=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{shotgun:1b,buck:1b}}}}] at @s run function gun:classes/shotgun_buck/aim
-#sniper
-execute as @a[scores={shift=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{sniper:1b}}}}] at @s run function gun:classes/sniper/aim
-#laser
-execute as @a[scores={shift=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{laser:1b}}}}] at @s run function gun:classes/laser/aim
-#minigun
-execute as @a[scores={shift=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{minigun:1b}}}}] at @s run function gun:classes/minigun/aim
+#<<<<<<<<<<<<<<<<<<aim update
 
-#>>>>>>>>>>>>>>>>>>detect aim
+#add aim
+execute as @a[scores={shift=1..,aim=0},nbt={SelectedItem:{components:{"minecraft:custom_data":{gun:1b}}}}] run scoreboard players add @s aim 1
 
 #remove aim
 execute as @a[scores={shift=0,aim=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{gun:1b}}}}] run scoreboard players remove @s aim 1
 
-#limit aim
-execute as @a[scores={aim=3..}] run scoreboard players set @s aim 3
+#overide aim
+execute as @a[scores={shift=1..,climb=1..}] run scoreboard players set @s aim 0
 
-#climb clear aim shift
-execute as @a[scores={shift=1..,climb=1..}] run scoreboard players set @s shift 0
+#>>>>>>>>>>>>>>>>>>aim update
 
-#<<<<<<<<<<<<<<<<<<clear aim
+#<<<<<<<<<<<<<<<<<<aim state
+
 #rifle
-execute as @a[scores={shift=0,aim=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{rifle:1b,silenced:0}}}}] at @s run function gun:classes/rifle/clear_aim
+execute as @a[scores={aim=0},nbt={SelectedItem:{components:{"minecraft:custom_data":{rifle:1b,silenced:0,aimed:1b}}}}] at @s run function gun:classes/rifle/clear_aim
+execute as @a[scores={aim=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{rifle:1b,silenced:0,aimed:0}}}}] at @s run function gun:classes/rifle/aim
 #rifle silenced
-execute as @a[scores={shift=0,aim=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{rifle:1b,silenced:1b}}}}] at @s run function gun:classes/rifle_silenced/clear_aim
-
+execute as @a[scores={aim=0},nbt={SelectedItem:{components:{"minecraft:custom_data":{rifle:1b,silenced:1b,aimed:1b}}}}] at @s run function gun:classes/rifle_silenced/clear_aim
+execute as @a[scores={aim=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{rifle:1b,silenced:1b,aimed:0}}}}] at @s run function gun:classes/rifle_silenced/aim
 #smg
-execute as @a[scores={shift=0,aim=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{smg:1b,silenced:0}}}}] at @s run function gun:classes/smg/clear_aim
+execute as @a[scores={aim=0},nbt={SelectedItem:{components:{"minecraft:custom_data":{smg:1b,silenced:0,aimed:1b}}}}] at @s run function gun:classes/smg/clear_aim
+execute as @a[scores={aim=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{smg:1b,silenced:0,aimed:0}}}}] at @s run function gun:classes/smg/aim
 #smg silenced
-execute as @a[scores={shift=0,aim=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{smg:1b,silenced:1b}}}}] at @s run function gun:classes/smg_silenced/clear_aim
-
+execute as @a[scores={aim=0},nbt={SelectedItem:{components:{"minecraft:custom_data":{smg:1b,silenced:1b,aimed:1b}}}}] at @s run function gun:classes/smg_silenced/clear_aim
+execute as @a[scores={aim=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{smg:1b,silenced:1b,aimed:0}}}}] at @s run function gun:classes/smg_silenced/aim
 #shotgun slug
-execute as @a[scores={shift=0,aim=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{shotgun:1b,slug:1b}}}}] at @s run function gun:classes/shotgun_slug/clear_aim
+execute as @a[scores={aim=0},nbt={SelectedItem:{components:{"minecraft:custom_data":{shotgun:1b,slug:1b,aimed:1b}}}}] at @s run function gun:classes/shotgun_slug/clear_aim
+execute as @a[scores={aim=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{shotgun:1b,slug:1b,aimed:0}}}}] at @s run function gun:classes/shotgun_slug/aim
 #shotgun buck
-execute as @a[scores={shift=0,aim=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{shotgun:1b,buck:1b}}}}] at @s run function gun:classes/shotgun_buck/clear_aim
-
+execute as @a[scores={aim=0},nbt={SelectedItem:{components:{"minecraft:custom_data":{shotgun:1b,buck:1b,aimed:1b}}}}] at @s run function gun:classes/shotgun_buck/clear_aim
+execute as @a[scores={aim=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{shotgun:1b,buck:1b,aimed:0}}}}] at @s run function gun:classes/shotgun_buck/aim
 #sniper
-execute as @a[scores={shift=0,aim=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{sniper:1b}}}}] at @s run function gun:classes/sniper/clear_aim
-
+execute as @a[scores={aim=0},nbt={SelectedItem:{components:{"minecraft:custom_data":{sniper:1b,aimed:1b}}}}] at @s run function gun:classes/sniper/clear_aim
+execute as @a[scores={aim=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{sniper:1b,aimed:0}}}}] at @s run function gun:classes/sniper/aim
 #laser
-execute as @a[scores={shift=0,aim=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{laser:1b}}}}] at @s run function gun:classes/laser/clear_aim
-
+execute as @a[scores={aim=0},nbt={SelectedItem:{components:{"minecraft:custom_data":{laser:1b,aimed:1b}}}}] at @s run function gun:classes/laser/clear_aim
+execute as @a[scores={aim=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{laser:1b,aimed:0}}}}] at @s run function gun:classes/laser/aim
 #minigun
-execute as @a[scores={shift=0,aim=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{minigun:1b}}}}] at @s run function gun:classes/minigun/clear_aim
+execute as @a[scores={aim=0},nbt={SelectedItem:{components:{"minecraft:custom_data":{minigun:1b,aimed:1b}}}}] at @s run function gun:classes/minigun/clear_aim
+execute as @a[scores={aim=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{minigun:1b,aimed:0}}}}] at @s run function gun:classes/minigun/aim
 
+#equip scope
+execute as @a[scores={aim=1..}] unless entity @s[nbt=!{SelectedItem:{components:{"minecraft:custom_data":{sniper:1b}}}},nbt=!{SelectedItem:{components:{"minecraft:custom_data":{laser:1b}}}}] run item replace entity @s weapon.offhand with minecraft:carrot_on_a_stick[custom_model_data={strings:["scope"]}, item_name='{"text":"scope"}', custom_data={scope:1b}]
 #clear scope
-execute as @a[scores={shift=0,aim=2}] at @s run clear @s minecraft:carrot_on_a_stick[custom_data={scope:1b}]
-#>>>>>>>>>>>>>>>>>>clear aim
+execute as @a unless entity @s[scores={aim=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{sniper:1b}}}}] unless entity @s[scores={aim=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{laser:1b}}}}] run clear @s minecraft:carrot_on_a_stick[custom_data={scope:1b}]
+
+#remove recoil
+execute as @a[scores={aim=1..,recoil=12..},nbt={SelectedItem:{components:{"minecraft:custom_data":{gun:1b}}}},nbt=!{SelectedItem:{components:{"minecraft:custom_data":{minigun:1b}}}}] run scoreboard players remove @s recoil 1
+
+#>>>>>>>>>>>>>>>>>>aim state
 
 
 #remove recoil
