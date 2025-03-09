@@ -1,7 +1,5 @@
-effect give @s minecraft:slowness 1 2 true
 scoreboard players add @s aim 1
-execute if score @s aim matches 2 run item replace entity @s weapon.mainhand with minecraft:carrot_on_a_stick[custom_model_data={strings:["smg_aim"]}, item_name='{"text":"smg"}', custom_data={gun:1b,smg:1b,silenced:0}]
-
+execute if score @s aim matches 2 run item modify entity @s weapon.mainhand [{"function":"set_custom_model_data","strings":{"values": ["smg_aim"],"mode":"replace_all"}}, {"function":"minecraft:set_attributes","modifiers":[{"attribute":"minecraft:movement_speed","id":"minecraft:","amount":-0.03,"operation":"add_value","slot":"mainhand"}]}]
 
 
 #remove recoil

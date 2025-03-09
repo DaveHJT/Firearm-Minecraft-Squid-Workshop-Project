@@ -122,7 +122,7 @@ execute as @a[scores={shift=1..},nbt={SelectedItem:{components:{"minecraft:custo
 #laser
 execute as @a[scores={shift=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{laser:1b}}}}] at @s run function gun:classes/laser/aim
 #minigun
-execute as @a[scores={shift=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{minigun:1b,silenced:0}}}}] at @s run function gun:classes/minigun/aim
+execute as @a[scores={shift=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{minigun:1b}}}}] at @s run function gun:classes/minigun/aim
 
 #>>>>>>>>>>>>>>>>>>detect aim
 
@@ -158,7 +158,7 @@ execute as @a[scores={shift=0,aim=1..},nbt={SelectedItem:{components:{"minecraft
 execute as @a[scores={shift=0,aim=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{laser:1b}}}}] at @s run function gun:classes/laser/clear_aim
 
 #minigun
-execute as @a[scores={shift=0,aim=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{minigun:1b,silenced:0}}}}] at @s run function gun:classes/minigun/clear_aim
+execute as @a[scores={shift=0,aim=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{minigun:1b}}}}] at @s run function gun:classes/minigun/clear_aim
 
 #clear scope
 execute as @a[scores={shift=0,aim=2}] at @s run clear @s minecraft:carrot_on_a_stick[custom_data={scope:1b}]
