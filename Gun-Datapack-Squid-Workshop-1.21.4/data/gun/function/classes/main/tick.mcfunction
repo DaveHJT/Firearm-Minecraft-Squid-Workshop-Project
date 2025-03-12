@@ -104,8 +104,7 @@ scoreboard players remove @e[scores={cooldown=1..}] cooldown 1
 
 
 
-#<<<<<<<<<<<<<<<<<<aim update
-
+#<<<<<<<<<<<<<<<<<<aim state update
 #add aim
 execute as @a[scores={shift=1..,aim=0},nbt={SelectedItem:{components:{"minecraft:custom_data":{gun:1b}}}}] run scoreboard players add @s aim 1
 
@@ -117,11 +116,9 @@ execute as @a[scores={reload=1..}] run scoreboard players set @s aim 0
 
 #overide aim
 execute as @a[scores={shift=1..,climb=1..}] run scoreboard players set @s aim 0
+#>>>>>>>>>>>>>>>>>>aim state update
 
-#>>>>>>>>>>>>>>>>>>aim update
-
-#<<<<<<<<<<<<<<<<<<aim state
-
+#<<<<<<<<<<<<<<<<<<aim dependent functions
 #aim up
 execute as @a[scores={aim=1..}] if items entity @s weapon.mainhand *[custom_data~{aimed:0}] run function gun:classes/gun/aim/toggle/mainhand {toggle:up}
 #aim clear
@@ -134,8 +131,7 @@ execute as @a[predicate=!gun:scope_up] if items entity @s weapon.offhand *[custo
 
 #remove recoil
 execute as @a[scores={aim=1..,recoil=12..},nbt={SelectedItem:{components:{"minecraft:custom_data":{gun:1b}}}},nbt=!{SelectedItem:{components:{"minecraft:custom_data":{minigun:1b}}}}] run scoreboard players remove @s recoil 1
-
-#>>>>>>>>>>>>>>>>>>aim state
+#>>>>>>>>>>>>>>>>>>aim dependent functions
 
 
 #remove recoil
