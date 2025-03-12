@@ -10,6 +10,7 @@ execute as @e[tag=shield,tag=!ini] run function gun:classes/gun/init/mob_init
 # init scores
 scoreboard players add @a ammo 0
 scoreboard players add @a shift 0
+scoreboard players add @a aim 0
 
 # player status
 execute as @a[nbt={OnGround:0b}] at @s if block ~ ~-0.01 ~ #gun:jump run scoreboard players add @s jump 1
