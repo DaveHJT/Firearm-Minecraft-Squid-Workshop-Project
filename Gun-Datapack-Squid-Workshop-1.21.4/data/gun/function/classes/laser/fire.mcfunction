@@ -1,7 +1,7 @@
 #powered model
-execute if entity @s[scores={shift=0},nbt={SelectedItem:{components:{"minecraft:custom_data":{laser:1b}},custom_model_data:{strings:["laser_powered"]}}}] run item replace entity @s weapon.mainhand with minecraft:carrot_on_a_stick[custom_model_data={strings:["laser_powered"]}, item_name='{"text":"laser rifle"}', custom_data={gun:1b,laser:1b,silenced:0}]
+execute if entity @s[scores={shift=0},nbt={SelectedItem:{components:{"minecraft:custom_data":{laser:1b},"minecraft:custom_model_data":{strings:["laser"]}}}}] run item modify entity @s weapon.mainhand gun:classes/laser/powered
 
-execute if entity @s[scores={shift=1..}] run item replace entity @s weapon.mainhand with minecraft:carrot_on_a_stick[custom_model_data={strings:["laser_aim_powered"]}, item_name='{"text":"laser rifle aiming"}', custom_data={gun:1b,laser:1b,silenced:0}]
+execute if entity @s[scores={shift=1..}] run item modify entity @s weapon.mainhand gun:classes/laser/powered_aim
 
 #summon bullet and face player
 summon minecraft:area_effect_cloud ^ ^ ^0.4 {Duration:20,Tags:["laser","b_sniper","bullet_new"]}
