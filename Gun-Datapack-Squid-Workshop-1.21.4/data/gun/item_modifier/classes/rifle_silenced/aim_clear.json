@@ -16,7 +16,8 @@
         "operation":"add_value",
         "slot":"mainhand"
       }
-    ]
+    ],
+    "replace": false
   },
   {
     "function":"set_custom_data",
