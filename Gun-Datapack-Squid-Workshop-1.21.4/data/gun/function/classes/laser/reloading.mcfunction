@@ -6,7 +6,7 @@ execute if entity @s[scores={b_energy=20..}] run playsound minecraft:entity.cree
 
 execute if entity @s[scores={b_energy=23..}] run playsound minecraft:block.note_block.didgeridoo player @a ~ ~ ~ 2 1
 
-execute if entity @s[scores={b_energy=20..}] run item replace entity @s weapon.offhand with minecraft:carrot_on_a_stick[custom_model_data={strings:["laser_powered"]}, item_name='{"text":"laser rifle"}', custom_data={private:1b,gun:1b,laser:1b,silenced:0,aimed:0,key:"laser"}]
+execute if entity @s[scores={b_energy=20..}] run item modify entity @s weapon.offhand gun:classes/laser/powered
 
 
 playsound minecraft:block.beehive.work player @a ~ ~ ~ 1 0.5

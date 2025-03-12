@@ -45,7 +45,7 @@ execute as @a[scores={carotClik_bool=0,b_energy=1..,cooldown=1},nbt={SelectedIte
 execute as @a[scores={carotClik_bool=0,b_energy=1..,cooldown=2},nbt={SelectedItem:{components:{"minecraft:custom_data":{laser:1b}}}}] at @s run function gun:classes/laser/fire
 execute as @a[scores={carotClik_bool=0,b_energy=1..,cooldown=3},nbt={SelectedItem:{components:{"minecraft:custom_data":{laser:1b}}}}] at @s run function gun:classes/laser/fire
 
-execute as @a[scores={carotClik_bool=0,cooldown=0,aim=0,shift=0,r_cooldown=0},nbt={SelectedItem:{components:{"minecraft:custom_data":{laser:1b},"minecraft:custom_model_data":{strings:["laser_powered"]}}}}] at @s run item replace entity @s weapon.mainhand with minecraft:carrot_on_a_stick[custom_model_data={strings:["laser"]}, item_name='{"text":"laser rifle"}', custom_data={private:1b,gun:1b,laser:1b,silenced:0,aimed:0,key:"laser"}]
+execute as @a[scores={carotClik_bool=0,cooldown=0,aim=0,shift=0,r_cooldown=0},nbt={SelectedItem:{components:{"minecraft:custom_data":{laser:1b},"minecraft:custom_model_data":{strings:["laser_powered"]}}}}] at @s run item modify entity @s weapon.mainhand gun:classes/laser/powered_clear
 
 #minigun
 #execute as @a[nbt={SelectedItem:{components:{"minecraft:custom_data":{minigun:1b,silenced:0}}}}] at @s run effect give @s minecraft:slowness 1 1 true
