@@ -45,7 +45,7 @@ execute as @a[scores={carotClik_bool=0,b_energy=1..,cooldown=1},nbt={SelectedIte
 execute as @a[scores={carotClik_bool=0,b_energy=1..,cooldown=2},nbt={SelectedItem:{components:{"minecraft:custom_data":{laser:1b}}}}] at @s run function gun:classes/laser/fire
 execute as @a[scores={carotClik_bool=0,b_energy=1..,cooldown=3},nbt={SelectedItem:{components:{"minecraft:custom_data":{laser:1b}}}}] at @s run function gun:classes/laser/fire
 
-execute as @a[scores={carotClik_bool=0,cooldown=0,aim=0,shift=0,r_cooldown=0},nbt={SelectedItem:{components:{"minecraft:custom_data":{laser:1b},"minecraft:custom_model_data":{strings:["laser_powered"]}}}}] at @s run item replace entity @s weapon.mainhand with minecraft:carrot_on_a_stick[custom_model_data={strings:["laser"]}, item_name='{"text":"laser rifle"}', custom_data={gun:1b,laser:1b,silenced:0}]
+execute as @a[scores={carotClik_bool=0,cooldown=0,aim=0,shift=0,r_cooldown=0},nbt={SelectedItem:{components:{"minecraft:custom_data":{laser:1b},"minecraft:custom_model_data":{strings:["laser_powered"]}}}}] at @s run item replace entity @s weapon.mainhand with minecraft:carrot_on_a_stick[custom_model_data={strings:["laser"]}, item_name='{"text":"laser rifle"}', custom_data={private:1b,gun:1b,laser:1b,silenced:0,aimed:0,key:"laser"}]
 
 #minigun
 #execute as @a[nbt={SelectedItem:{components:{"minecraft:custom_data":{minigun:1b,silenced:0}}}}] at @s run effect give @s minecraft:slowness 1 1 true
@@ -113,6 +113,9 @@ execute as @a[scores={shift=1..,aim=0},nbt={SelectedItem:{components:{"minecraft
 execute as @a[scores={shift=0,aim=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{gun:1b}}}}] run scoreboard players remove @s aim 1
 
 #overide aim
+execute as @a[scores={reload=1..}] run scoreboard players set @s aim 0
+
+#overide aim
 execute as @a[scores={shift=1..,climb=1..}] run scoreboard players set @s aim 0
 
 #>>>>>>>>>>>>>>>>>>aim update
@@ -125,9 +128,9 @@ execute as @a[scores={aim=1..}] if items entity @s weapon.mainhand *[custom_data
 execute as @a[scores={aim=0}] if items entity @s weapon.mainhand *[custom_data~{aimed:1b}] run function gun:classes/gun/aim/toggle/mainhand {toggle:clear} 
 
 #equip scope
-execute as @a[scores={aim=1..}] unless entity @s[nbt=!{SelectedItem:{components:{"minecraft:custom_data":{sniper:1b}}}},nbt=!{SelectedItem:{components:{"minecraft:custom_data":{laser:1b}}}}] run item replace entity @s weapon.offhand with minecraft:carrot_on_a_stick[custom_model_data={strings:["scope"]}, item_name='{"text":"scope"}', custom_data={scope:1b}]
+execute as @a[predicate=gun:scope_up] unless items entity @s weapon.offhand * run item replace entity @s weapon.offhand with minecraft:carrot_on_a_stick[custom_model_data={strings:["scope"]}, item_name='{"text":"scope"}', custom_data={scope:1b}]
 #clear scope
-execute as @a unless entity @s[scores={aim=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{sniper:1b}}}}] unless entity @s[scores={aim=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{laser:1b}}}}] run clear @s minecraft:carrot_on_a_stick[custom_data={scope:1b}]
+execute as @a[predicate=!gun:scope_up] if items entity @s weapon.offhand *[custom_data~{scope:1b}] run clear @s minecraft:carrot_on_a_stick[custom_data={scope:1b}]
 
 #remove recoil
 execute as @a[scores={aim=1..,recoil=12..},nbt={SelectedItem:{components:{"minecraft:custom_data":{gun:1b}}}},nbt=!{SelectedItem:{components:{"minecraft:custom_data":{minigun:1b}}}}] run scoreboard players remove @s recoil 1
