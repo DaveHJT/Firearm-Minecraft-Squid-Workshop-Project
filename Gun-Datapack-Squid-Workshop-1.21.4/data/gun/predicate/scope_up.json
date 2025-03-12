@@ -2,7 +2,7 @@
   "condition": "all_of",
   "terms": [
     {
-      "__comment": "aiming with laser/sniper",
+      "__comment": "aiming with scoped weapon",
       "condition": "reference",
       "name":"gun:scope_up_core"
     },

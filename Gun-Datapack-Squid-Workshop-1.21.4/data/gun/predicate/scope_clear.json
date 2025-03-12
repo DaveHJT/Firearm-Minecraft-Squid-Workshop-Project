@@ -2,7 +2,7 @@
   "condition": "all_of",
   "terms": [
     {
-      "__comment": "not aiming with laser/sniper",
+      "__comment": "not aiming with scoped weapon",
       "condition": "inverted",
       "term": {"condition": "reference",  "name":"gun:scope_up_core"}
     },

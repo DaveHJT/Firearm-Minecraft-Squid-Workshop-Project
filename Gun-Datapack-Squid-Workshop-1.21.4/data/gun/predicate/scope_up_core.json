@@ -8,24 +8,12 @@
       "scores": {"aim":{"min":1}}
     },
     {
-      "__comment": "using sniper/laser",
-      "condition": "any_of",
-      "terms": [
-        {
-          "condition": "entity_properties",
-          "entity": "this",
-          "predicate": {
-            "slots": {"weapon.mainhand": {"predicates": {"custom_data":"{sniper:1b}"}}}
-          }
-        },
-        {
-          "condition": "entity_properties",
-          "entity": "this",
-          "predicate": {
-            "slots": {"weapon.mainhand": {"predicates": {"custom_data":"{laser:1b}"}}}
-          }
-        }
-      ]
+      "__comment": "using scoped weapon",
+      "condition": "entity_properties",
+      "entity": "this",
+      "predicate": {
+        "slots": {"weapon.mainhand": {"predicates": {"custom_data":"{scoped:1b}"}}}
+      }
     }
   ]
 }
