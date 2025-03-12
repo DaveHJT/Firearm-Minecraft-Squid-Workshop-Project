@@ -1,0 +1,25 @@
+[
+  {
+    "function":"set_custom_model_data",
+    "strings":{
+      "values": ["laser"],
+      "mode":"replace_all"
+    }
+  },
+  {
+    "function":"set_attributes",
+    "modifiers":[
+      {
+        "attribute":"movement_speed",
+        "id":"firearm:aim_slow",
+        "amount":0.0,
+        "operation":"add_value",
+        "slot":"mainhand"
+      }
+    ]
+  },
+  {
+    "function":"set_custom_data",
+    "tag":"{aimed:0}"
+  }
+]
