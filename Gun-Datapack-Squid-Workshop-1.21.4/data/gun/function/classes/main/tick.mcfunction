@@ -119,8 +119,8 @@ execute as @a[scores={shift=1..,climb=1..}] run scoreboard players set @s aim 0
 
 #<<<<<<<<<<<<<<<<<<aim state
 
-execute as @a[scores={aim=0}] if items entity @s weapon.mainhand *[custom_data~{aimed:1b}] run function gun:classes/gun/aim/toggle/mainhand {toggle:clear} 
 execute as @a[scores={aim=1..}] if items entity @s weapon.mainhand *[custom_data~{aimed:0}] run function gun:classes/gun/aim/toggle/mainhand {toggle:up}
+execute as @a[scores={aim=0}] if items entity @s weapon.mainhand *[custom_data~{aimed:1b}] run function gun:classes/gun/aim/toggle/mainhand {toggle:clear} 
 
 #equip scope
 execute as @a[scores={aim=1..}] unless entity @s[nbt=!{SelectedItem:{components:{"minecraft:custom_data":{sniper:1b}}}},nbt=!{SelectedItem:{components:{"minecraft:custom_data":{laser:1b}}}}] run item replace entity @s weapon.offhand with minecraft:carrot_on_a_stick[custom_model_data={strings:["scope"]}, item_name='{"text":"scope"}', custom_data={scope:1b}]
