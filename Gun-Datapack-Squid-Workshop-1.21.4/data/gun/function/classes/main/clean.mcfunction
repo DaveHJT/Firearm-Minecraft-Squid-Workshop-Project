@@ -38,3 +38,6 @@ scoreboard objectives remove V
 
 # remove all tags
 tag @e[tag=ini] remove ini
+
+# remove all storage
+data remove storage firearm:storage arg
