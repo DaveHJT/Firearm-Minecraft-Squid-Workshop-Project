@@ -2,28 +2,17 @@
   "condition": "all_of",
   "terms": [
     {
-      "condition": "entity_scores",
-      "entity": "this",
-      "scores": {"aim":{"min":1}}
+      "__comment": "aiming with laser/sniper",
+      "condition": "reference",
+      "name":"gun:scope_up_core"
     },
     {
-      "condition": "any_of",
-      "terms": [
-        {
-          "condition": "entity_properties",
-          "entity": "this",
-          "predicate": {
-            "slots": {"weapon.mainhand": {"predicates": {"custom_data":"{sniper:1b}"}}}
-          }
-        },
-        {
-          "condition": "entity_properties",
-          "entity": "this",
-          "predicate": {
-            "slots": {"weapon.mainhand": {"predicates": {"custom_data":"{laser:1b}"}}}
-          }
-        }
-      ]
+      "__comment": "no item offhand",
+      "condition": "entity_properties",
+      "entity": "this",
+      "predicate": {
+        "slots": {"weapon.offhand": {"count":0}}
+      }
     }
   ]
 }

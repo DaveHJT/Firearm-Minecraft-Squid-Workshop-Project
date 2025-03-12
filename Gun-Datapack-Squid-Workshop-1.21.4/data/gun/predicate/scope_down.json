@@ -1,0 +1,18 @@
+{
+  "condition": "all_of",
+  "terms": [
+    {
+      "__comment": "not aiming with laser/sniper",
+      "condition": "inverted",
+      "term": {"condition": "reference",  "name":"gun:scope_up_core"}
+    },
+    {
+      "__comment": "scope offhand",
+      "condition": "entity_properties",
+      "entity": "this",
+      "predicate": {
+        "slots": {"weapon.offhand": {"predicates": {"custom_data":"{scope:1b}"}}}
+      }
+    }
+  ]
+}
