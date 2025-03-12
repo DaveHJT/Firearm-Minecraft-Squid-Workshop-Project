@@ -106,7 +106,7 @@ scoreboard players remove @e[scores={cooldown=1..}] cooldown 1
 
 #<<<<<<<<<<<<<<<<<<aim state update
 #add aim
-execute as @a[scores={shift=1..,aim=0},nbt={SelectedItem:{components:{"minecraft:custom_data":{gun:1b}}}}] run scoreboard players add @s aim 1
+execute as @a[scores={shift=1..,aim=0..2},nbt={SelectedItem:{components:{"minecraft:custom_data":{gun:1b}}}}] run scoreboard players add @s aim 1
 
 #remove aim
 execute as @a[scores={shift=0,aim=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{gun:1b}}}}] run scoreboard players remove @s aim 1
@@ -130,7 +130,7 @@ execute as @a[predicate=gun:scope_up] unless items entity @s weapon.offhand * ru
 execute as @a[predicate=!gun:scope_up] if items entity @s weapon.offhand *[custom_data~{scope:1b}] run clear @s minecraft:carrot_on_a_stick[custom_data={scope:1b}]
 
 #remove recoil
-execute as @a[scores={aim=1..,recoil=12..},nbt={SelectedItem:{components:{"minecraft:custom_data":{gun:1b}}}},nbt=!{SelectedItem:{components:{"minecraft:custom_data":{minigun:1b}}}}] run scoreboard players remove @s recoil 1
+execute as @a[scores={aim=3,recoil=12..},nbt={SelectedItem:{components:{"minecraft:custom_data":{gun:1b}}}},nbt=!{SelectedItem:{components:{"minecraft:custom_data":{minigun:1b}}}}] run scoreboard players remove @s recoil 1
 #>>>>>>>>>>>>>>>>>>aim dependent functions
 
 
