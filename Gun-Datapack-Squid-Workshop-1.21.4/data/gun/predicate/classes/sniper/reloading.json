@@ -1,0 +1,8 @@
+{
+  "condition": "entity_scores",
+  "entity": "this",
+  "scores": {
+    "b_sniper": {"max":4},
+    "ammo": {"min":1}
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "condition": "any_of",
+  "terms": [
+    {
+      "condition": "entity_scores",
+      "entity": "this",
+      "scores": {
+        "carotClik_bool": 1,
+        "cooldown": 0
+      }
+    },
+    {
+      "condition": "entity_properties",
+      "entity": "this",
+      "predicate": {
+        "type": "giant",
+        "slots": {"weapon.*": {"predicates": {"custom_data":"{mode:\"giant\"}"}}}
+      }
+    }
+  ]
+}

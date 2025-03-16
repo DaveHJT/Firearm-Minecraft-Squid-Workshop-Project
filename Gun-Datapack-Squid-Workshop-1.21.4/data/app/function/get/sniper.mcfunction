@@ -1,4 +1,11 @@
 give @s minecraft:carrot_on_a_stick[\
   custom_model_data={strings:["awm"]}, item_name='{"text":"sniper rifle"}',\
-  attribute_modifiers={modifiers:[],show_in_tooltip:false},\
-  custom_data={private:1b,gun:1b,sniper:1b,scoped:1b,silenced:0,aimed:0,key:"sniper"}]
+  attribute_modifiers={\
+    modifiers:[{ \
+      type:"movement_speed", \
+      id:"firearm:reload_slow", \
+      amount:-0.03, \
+      operation:"add_value", \
+      slot:"offhand"}],\
+    show_in_tooltip:false}, \
+  custom_data={private:1b,gun:1b,scoped:1b,aimed:0,key:"sniper",mode:"default"}]

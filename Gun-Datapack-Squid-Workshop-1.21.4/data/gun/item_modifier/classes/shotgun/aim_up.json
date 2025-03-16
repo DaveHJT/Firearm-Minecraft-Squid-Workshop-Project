@@ -1,0 +1,38 @@
+[
+  {
+    "function":"set_custom_model_data",
+    "strings":{
+      "values": ["double_barrel_shotgun_aim"],
+      "mode":"replace_all"
+    },
+    "conditions": [
+      {
+        "condition": "entity_properties",
+        "entity": "this",
+        "predicate": {
+          "slots": {"weapon.mainhand": {"predicates": {"custom_data":"{mode:\"buck\"}"}}}
+        }
+      }
+    ]
+  },
+  {
+    "function":"set_custom_model_data",
+    "strings":{
+      "values": ["double_barrel_shotgun_copper_aim"],
+      "mode":"replace_all"
+    },
+    "conditions": [
+      {
+        "condition": "entity_properties",
+        "entity": "this",
+        "predicate": {
+          "slots": {"weapon.mainhand": {"predicates": {"custom_data":"{mode:\"slug\"}"}}}
+        }
+      }
+    ]
+  },
+  {
+    "function":"set_custom_data",
+    "tag":"{aimed:1b}"
+  }
+]

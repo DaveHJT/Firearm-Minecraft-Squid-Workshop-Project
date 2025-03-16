@@ -1,0 +1,8 @@
+{
+  "condition": "entity_scores",
+  "entity": "this",
+  "scores": {
+    "spin":{"min":75},
+    "b_mini": 0
+  }
+}
