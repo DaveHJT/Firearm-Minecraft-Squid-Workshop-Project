@@ -1,1 +1,1 @@
-give @s carrot_on_a_stick[custom_model_data={strings:["turret_cannon"]}, item_name='{"text":"hand cannon"}', custom_data={private:1b,gun:1b,cannon:1b,silenced:0}]
+give @s carrot_on_a_stick[custom_model_data={strings:["turret_cannon"]}, item_name='{"text":"hand cannon"}', custom_data={private:1b,gun:1b,cannon:1b,silenced:0,aimed:0,key:"cannon"}]

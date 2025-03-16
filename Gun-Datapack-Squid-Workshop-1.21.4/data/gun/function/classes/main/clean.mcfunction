@@ -6,8 +6,9 @@ scoreboard objectives remove SID
 scoreboard objectives remove bulletrange 
 scoreboard objectives remove accu 
 scoreboard objectives remove aim 
-scoreboard objectives remove spin
-
+scoreboard objectives remove spin 
+scoreboard objectives remove shift
+scoreboard objectives remove jump
 scoreboard objectives remove b_rifle 
 scoreboard objectives remove b_smg 
 scoreboard objectives remove b_shot 
@@ -24,7 +25,7 @@ scoreboard objectives remove recoil
 scoreboard objectives remove r_cooldown 
 scoreboard objectives remove spread 
 scoreboard objectives remove spread_id 
-#scoreboard objectives remove gun_settings 
+scoreboard objectives remove gun_settings 
 scoreboard objectives remove aimbot
 
 scoreboard objectives remove r 
@@ -37,3 +38,6 @@ scoreboard objectives remove V
 
 # remove all tags
 tag @e[tag=ini] remove ini
+
+# remove all storage
+data remove storage firearm:storage arg

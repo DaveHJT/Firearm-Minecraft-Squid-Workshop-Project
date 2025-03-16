@@ -10,9 +10,9 @@ summon minecraft:area_effect_cloud ^ ^ ^0.4 {Duration:5,Tags:["bullet","b_shot",
 
 execute at @e[tag=bullet_new,limit=1,sort=nearest] run tp @e[tag=bullet_new,limit=1,sort=nearest] ~ ~ ~ facing entity @s
 
-execute if entity @s[scores={shift_bool=0}] as @e[tag=bullet_new,limit=1,sort=nearest] at @s run tp @s ~ ~1.6 ~
+execute if entity @s[scores={shift=0}] as @e[tag=bullet_new,limit=1,sort=nearest] at @s run tp @s ~ ~1.6 ~
 
-execute if entity @s[scores={shift_bool=1..}] as @e[tag=bullet_new,limit=1,sort=nearest] at @s run tp @s ~ ~1.25 ~
+execute if entity @s[scores={shift=1..}] as @e[tag=bullet_new,limit=1,sort=nearest] at @s run tp @s ~ ~1.25 ~
 
 
 #sign name

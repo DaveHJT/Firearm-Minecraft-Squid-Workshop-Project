@@ -14,9 +14,9 @@ summon minecraft:area_effect_cloud ^ ^ ^0.4 {Duration:10,Tags:["bullet","b_shot"
 
 execute at @e[tag=bullet_new,limit=1,sort=nearest] run tp @e[tag=bullet_new,limit=1,sort=nearest] ~ ~ ~ facing entity @s
 
-execute if entity @s[scores={shift_bool=0}] as @e[tag=bullet_new,limit=1,sort=nearest] at @s run tp @s ~ ~1.6 ~
+execute if entity @s[scores={shift=0}] as @e[tag=bullet_new,limit=1,sort=nearest] at @s run tp @s ~ ~1.6 ~
 
-execute if entity @s[scores={shift_bool=1..}] as @e[tag=bullet_new,limit=1,sort=nearest] at @s run tp @s ~ ~1.25 ~
+execute if entity @s[scores={shift=1..}] as @e[tag=bullet_new,limit=1,sort=nearest] at @s run tp @s ~ ~1.25 ~
 
 
 #sign name
@@ -27,16 +27,16 @@ playsound minecraft:gun/shotgun/xm1014-1 player @a ~ ~ ~ 2 1
 execute as @a[distance=31..] run playsound minecraft:gun/shotgun/xm1014-1-distant player @s ~ ~ ~ 10 1
 
 #own view
-execute if entity @s[scores={shift_bool=0}] positioned ~ ~1.6 ~ run particle minecraft:flame ^-0.15 ^ ^0.6 0.01 0.01 0.01 100 1 force @s
+execute if entity @s[scores={shift=0}] positioned ~ ~1.6 ~ run particle minecraft:flame ^-0.15 ^ ^0.6 0.01 0.01 0.01 100 1 force @s
 
-execute if entity @s[scores={shift_bool=1..}] positioned ~ ~1.3 ~ run particle minecraft:flame ^ ^ ^1 0.01 0.01 0.01 100 1 force @s
+execute if entity @s[scores={shift=1..}] positioned ~ ~1.3 ~ run particle minecraft:flame ^ ^ ^1 0.01 0.01 0.01 100 1 force @s
 
 particle minecraft:poof ^-0.4 ^1.3 ^1.5 0.1 0.1 0.1 0.05 1
 
 #others view
 tag @s add display_fire
-execute if entity @s[scores={shift_bool=0}] positioned ~ ~1.6 ~ run particle minecraft:flame ^-0.2 ^-0.4 ^1 0.01 0.01 0.01 100 1 force @a[tag=!display_fire]
-execute if entity @s[scores={shift_bool=1..}] positioned ~ ~1.3 ~ run particle minecraft:flame ^-0.2 ^-0.4 ^1 0.01 0.01 0.01 100 1 force @a[tag=!display_fire]
+execute if entity @s[scores={shift=0}] positioned ~ ~1.6 ~ run particle minecraft:flame ^-0.2 ^-0.4 ^1 0.01 0.01 0.01 100 1 force @a[tag=!display_fire]
+execute if entity @s[scores={shift=1..}] positioned ~ ~1.3 ~ run particle minecraft:flame ^-0.2 ^-0.4 ^1 0.01 0.01 0.01 100 1 force @a[tag=!display_fire]
 tag @s remove display_fire
 
 #damage
@@ -73,8 +73,8 @@ scoreboard players set @s r_cooldown 4
 scoreboard players set @s spread 2
 execute if entity @s[scores={walk_bool=1..}] run scoreboard players add @s spread 1
 execute if entity @s[scores={sprint_bool=1..}] run scoreboard players add @s spread 2
-execute if entity @s[scores={jump_bool=1..}] run scoreboard players add @s spread 3
-execute if entity @s[scores={shift_bool=1..}] run scoreboard players remove @s spread 1
+execute if entity @s[scores={jump=1..}] run scoreboard players add @s spread 3
+execute if entity @s[scores={shift=1..}] run scoreboard players remove @s spread 1
 
 #scoreboard players set @s spread 3
 

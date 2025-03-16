@@ -1,7 +1,7 @@
 #powered model
-execute if entity @s[scores={shift_bool=0},nbt={SelectedItem:{components:{"minecraft:custom_data":{laser:1b}},custom_model_data:{strings:["laser_powered"]}}}] run item replace entity @s weapon.mainhand with minecraft:carrot_on_a_stick[custom_model_data={strings:["laser_powered"]}, item_name='{"text":"laser rifle"}', custom_data={gun:1b,laser:1b,silenced:0}]
+execute if entity @s[scores={shift=0},nbt={SelectedItem:{components:{"minecraft:custom_data":{laser:1b},"minecraft:custom_model_data":{strings:["laser"]}}}}] run item modify entity @s weapon.mainhand gun:classes/laser/powered
 
-execute if entity @s[scores={shift_bool=1..}] run item replace entity @s weapon.mainhand with minecraft:carrot_on_a_stick[custom_model_data={strings:["laser_aim_powered"]}, item_name='{"text":"laser rifle aiming"}', custom_data={gun:1b,laser:1b,silenced:0}]
+execute if entity @s[scores={shift=1..}] run item modify entity @s weapon.mainhand gun:classes/laser/powered_aim
 
 #summon bullet and face player
 summon minecraft:area_effect_cloud ^ ^ ^0.4 {Duration:20,Tags:["laser","b_sniper","bullet_new"]}
@@ -15,9 +15,9 @@ tag @s remove me
 
 execute at @e[tag=bullet_new,limit=1,sort=nearest] run tp @e[tag=bullet_new,limit=1,sort=nearest] ~ ~ ~ facing entity @s
 
-execute if entity @s[scores={shift_bool=0}] as @e[tag=bullet_new,limit=1,sort=nearest] at @s run tp @s ~ ~1.6 ~
+execute if entity @s[scores={shift=0}] as @e[tag=bullet_new,limit=1,sort=nearest] at @s run tp @s ~ ~1.6 ~
 
-execute if entity @s[scores={shift_bool=1..}] as @e[tag=bullet_new,limit=1,sort=nearest] at @s run tp @s ~ ~1.25 ~
+execute if entity @s[scores={shift=1..}] as @e[tag=bullet_new,limit=1,sort=nearest] at @s run tp @s ~ ~1.25 ~
 
 #execute as @e[tag=bullet_new,limit=1,sort=nearest] at @s run tp @s ~ ~1.25 ~
 
@@ -55,8 +55,8 @@ execute if entity @s[scores={carotClik_bool=1..}] run scoreboard players remove 
 scoreboard players set @s spread 1
 execute if entity @s[scores={walk_bool=1..}] run scoreboard players add @s spread 2
 execute if entity @s[scores={sprint_bool=1..}] run scoreboard players add @s spread 3
-execute if entity @s[scores={jump_bool=1..}] run scoreboard players add @s spread 4
-execute if entity @s[scores={shift_bool=1..}] run scoreboard players remove @s spread 1
+execute if entity @s[scores={jump=1..}] run scoreboard players add @s spread 4
+execute if entity @s[scores={shift=1..}] run scoreboard players remove @s spread 1
 
 #scoreboard players set @s spread 3
 

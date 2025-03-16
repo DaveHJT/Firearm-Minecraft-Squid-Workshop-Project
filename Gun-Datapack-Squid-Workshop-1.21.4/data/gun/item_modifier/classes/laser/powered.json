@@ -1,0 +1,9 @@
+[
+  {
+    "function":"set_custom_model_data",
+    "strings":{
+      "values": ["laser_powered"],
+      "mode":"replace_all"
+    }
+  }
+]

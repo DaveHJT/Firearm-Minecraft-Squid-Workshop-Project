@@ -1,7 +1,0 @@
-effect give @s minecraft:slowness 1 10 true
-scoreboard players add @s aim 1
-execute if score @s aim matches 2 run item replace entity @s weapon.mainhand with minecraft:carrot_on_a_stick[custom_model_data={strings:["rifle_aim"]}, item_name='{"text":"auto rifle"}', custom_data={gun:1b,rifle:1b,silenced:1b}]
-
-
-#remove recoil
-execute as @a[scores={recoil=12..}] run scoreboard players remove @s recoil 1

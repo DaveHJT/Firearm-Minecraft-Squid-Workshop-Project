@@ -20,9 +20,9 @@ tag @s remove me
 
 execute at @e[tag=bullet_new,limit=1,sort=nearest] run tp @e[tag=bullet_new,limit=1,sort=nearest] ~ ~ ~ facing entity @s
 
-execute if entity @s[scores={shift_bool=0}] as @e[tag=bullet_new,limit=1,sort=nearest] at @s run tp @s ~ ~1.6 ~
+execute if entity @s[scores={shift=0}] as @e[tag=bullet_new,limit=1,sort=nearest] at @s run tp @s ~ ~1.6 ~
 
-execute if entity @s[scores={shift_bool=1..}] as @e[tag=bullet_new,limit=1,sort=nearest] at @s run tp @s ~ ~1.25 ~
+execute if entity @s[scores={shift=1..}] as @e[tag=bullet_new,limit=1,sort=nearest] at @s run tp @s ~ ~1.25 ~
 
 
 #sign name
@@ -33,14 +33,14 @@ playsound minecraft:gun/awp/awp_02 player @a ~ ~ ~ 2 1
 execute as @a[distance=31..] run playsound minecraft:gun/awp/awp_distant player @s ~ ~ ~ 10 1
 
 #own view
-execute if entity @s[scores={shift_bool=0}] positioned ~ ~1.6 ~ run particle minecraft:flame ^-0.1 ^ ^0.7 0.01 0.01 0.01 100 1 force @s
+execute if entity @s[scores={shift=0}] positioned ~ ~1.6 ~ run particle minecraft:flame ^-0.1 ^ ^0.7 0.01 0.01 0.01 100 1 force @s
 
-#execute if entity @s[scores={shift_bool=1..}] positioned ~ ~1.3 ~ run particle minecraft:flame ^ ^ ^1 0.01 0.01 0.01 100 1 force @s
+#execute if entity @s[scores={shift=1..}] positioned ~ ~1.3 ~ run particle minecraft:flame ^ ^ ^1 0.01 0.01 0.01 100 1 force @s
 
 #others view
 tag @s add display_fire
-execute if entity @s[scores={shift_bool=0}] positioned ~ ~1.6 ~ run particle minecraft:flame ^-0.2 ^-0.4 ^1 0.01 0.01 0.01 100 1 force @a[tag=!display_fire]
-execute if entity @s[scores={shift_bool=1..}] positioned ~ ~1.3 ~ run particle minecraft:flame ^-0.2 ^-0.4 ^1 0.01 0.01 0.01 100 1 force @a[tag=!display_fire]
+execute if entity @s[scores={shift=0}] positioned ~ ~1.6 ~ run particle minecraft:flame ^-0.2 ^-0.4 ^1 0.01 0.01 0.01 100 1 force @a[tag=!display_fire]
+execute if entity @s[scores={shift=1..}] positioned ~ ~1.3 ~ run particle minecraft:flame ^-0.2 ^-0.4 ^1 0.01 0.01 0.01 100 1 force @a[tag=!display_fire]
 tag @s remove display_fire
 
 #damage
@@ -77,8 +77,8 @@ scoreboard players set @s r_cooldown 6
 scoreboard players set @s spread 4
 execute if entity @s[scores={walk_bool=1..}] run scoreboard players add @s spread 0
 execute if entity @s[scores={sprint_bool=1..}] run scoreboard players add @s spread 0
-execute if entity @s[scores={jump_bool=1..}] run scoreboard players add @s spread 1
-execute if entity @s[scores={shift_bool=1..}] run scoreboard players remove @s spread 4
+execute if entity @s[scores={jump=1..}] run scoreboard players add @s spread 1
+execute if entity @s[scores={shift=1..}] run scoreboard players remove @s spread 4
 
 #scoreboard players set @s spread 3
 

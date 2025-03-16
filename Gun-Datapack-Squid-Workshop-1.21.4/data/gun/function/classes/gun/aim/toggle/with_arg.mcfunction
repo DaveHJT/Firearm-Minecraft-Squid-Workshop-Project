@@ -1,0 +1,1 @@
+$item modify entity @s container.$(slot) gun:classes/$(key)/aim_$(toggle)

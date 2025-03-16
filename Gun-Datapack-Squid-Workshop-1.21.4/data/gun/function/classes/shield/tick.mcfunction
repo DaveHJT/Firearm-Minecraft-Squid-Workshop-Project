@@ -6,8 +6,8 @@ execute as @a[tag=shieldon] at @s run scoreboard players operation @e[tag=shield
 tag @a[tag=shieldon] remove shieldon
 tag @a[scores={shield_bool=1}] add shielding
 #tellraw @a[tag=shielding] {"text":"shielding","color":"green"}
-execute as @a[tag=shielding,scores={shift_bool=0}] at @s positioned ~ ~1.6 ~ run tp @e[tag=shield,limit=1,sort=nearest] ^ ^-1.1 ^1
-execute as @a[tag=shielding,scores={shift_bool=1}] at @s positioned ~ ~1.3 ~ run tp @e[tag=shield,limit=1,sort=nearest] ^ ^-1.1 ^1
+execute as @a[tag=shielding,scores={shift=0}] at @s positioned ~ ~1.6 ~ run tp @e[tag=shield,limit=1,sort=nearest] ^ ^-1.1 ^1
+execute as @a[tag=shielding,scores={shift=1}] at @s positioned ~ ~1.3 ~ run tp @e[tag=shield,limit=1,sort=nearest] ^ ^-1.1 ^1
 
 
 execute as @e[tag=shield] at @s run particle minecraft:composter ~ ~ ~ 0 0 0 1 1
