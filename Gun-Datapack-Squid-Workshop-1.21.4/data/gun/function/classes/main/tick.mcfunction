@@ -37,19 +37,17 @@ execute as @a if items entity @s weapon.offhand *[custom_data~{gun:1b}] run func
 #>>>>>>>>>>>>>>>>>>reloading, mode toggling
 
 
-
 #cooldown
 scoreboard players remove @e[scores={cooldown=1..}] cooldown 1
 
 
-
 #<<<<<<<<<<<<<<<<<<aim state update
 #add aim
-execute as @a[scores={shift=1..,aim=0..2},nbt={SelectedItem:{components:{"minecraft:custom_data":{gun:1b}}}}] run scoreboard players add @s aim 1
+execute as @a[predicate=gun:classes/aim/state/add] run scoreboard players add @s aim 1
 #remove aim
-execute as @a[scores={shift=0,aim=1..},nbt={SelectedItem:{components:{"minecraft:custom_data":{gun:1b}}}}] run scoreboard players remove @s aim 1
+execute as @a[predicate=gun:classes/aim/state/remove] run scoreboard players remove @s aim 1
 #overide aim
-execute as @a[predicate=gun:aim_overide] run scoreboard players set @s aim 0
+execute as @a[predicate=gun:classes/aim/state/overide] run scoreboard players set @s aim 0
 #>>>>>>>>>>>>>>>>>>aim state update
 
 #<<<<<<<<<<<<<<<<<<aim dependent functions
@@ -59,10 +57,10 @@ execute as @a[scores={aim=1..}] if items entity @s weapon.mainhand *[custom_data
 execute as @a[scores={aim=0}] if items entity @s weapon.mainhand *[custom_data~{aimed:1b}] run function gun:classes/gun/aim {toggle:clear} 
 
 #equip scope
-execute as @a[predicate=gun:scope_up] at @s run playsound minecraft:gun/awp/zoom player @a ~ ~ ~ 1 0.8
-execute as @a[predicate=gun:scope_up] run item replace entity @s weapon.offhand with minecraft:carrot_on_a_stick[custom_model_data={strings:["scope"]}, item_name='{"text":"scope"}', custom_data={scope:1b}]
+execute as @a[predicate=gun:classes/aim/scope_up] at @s run playsound minecraft:gun/awp/zoom player @a ~ ~ ~ 1 0.8
+execute as @a[predicate=gun:classes/aim/scope_up] run item replace entity @s weapon.offhand with minecraft:carrot_on_a_stick[custom_model_data={strings:["scope"]}, item_name='{"text":"scope"}', custom_data={scope:1b}]
 #clear scope
-execute as @a[predicate=gun:scope_clear] run clear @s *[custom_data~{scope:1b}]
+execute as @a[predicate=gun:classes/aim/scope_clear] run clear @s *[custom_data~{scope:1b}]
 
 #remove recoil
 execute as @a[scores={aim=3,recoil=12..},nbt={SelectedItem:{components:{"minecraft:custom_data":{gun:1b}}}},nbt=!{SelectedItem:{components:{"minecraft:custom_data":{minigun:1b}}}}] run scoreboard players remove @s recoil 1

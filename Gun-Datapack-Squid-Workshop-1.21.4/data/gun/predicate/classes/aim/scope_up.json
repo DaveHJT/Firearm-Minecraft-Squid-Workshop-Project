@@ -4,7 +4,7 @@
     {
       "__comment": "aiming with scoped weapon",
       "condition": "reference",
-      "name":"gun:scope_up_core"
+      "name":"gun:classes/aim/scope_up_core"
     },
     {
       "__comment": "no item offhand",

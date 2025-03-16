@@ -4,7 +4,7 @@
     {
       "__comment": "not aiming with scoped weapon",
       "condition": "inverted",
-      "term": {"condition": "reference",  "name":"gun:scope_up_core"}
+      "term": {"condition": "reference",  "name":"gun:classes/aim/scope_up_core"}
     },
     {
       "__comment": "scope offhand",

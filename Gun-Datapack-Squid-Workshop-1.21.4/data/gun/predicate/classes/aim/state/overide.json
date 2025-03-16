@@ -2,14 +2,14 @@
   "condition": "any_of",
   "terms": [
     {
-      "__comment": "override when reloading",
+      "__comment": "reloading",
       "condition": "entity_scores",
       "entity": "this",
       "scores": {"reload":{"min":1}}
     },
 
     {
-      "__comment": "override when holding non-scope offhand",
+      "__comment": "holding non-scope offhand",
       "condition": "inverted",
       "term": {
         "condition": "any_of",
@@ -33,7 +33,7 @@
     },
   
     {
-      "__comment": "override when climbing (fight club)",
+      "__comment": "climbing (fight club)",
       "condition": "entity_scores",
       "entity": "this",
       "scores": {"climb":{"min":1}}
