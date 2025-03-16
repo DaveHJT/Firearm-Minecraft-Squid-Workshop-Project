@@ -6,8 +6,8 @@ tag @s remove me
 
 #effects
 #sound
-playsound minecraft:gun/m4a1/m4a1_01 player @a ~ ~ ~ 2 1
-execute as @a[distance=31..] run playsound minecraft:gun/m4a1/awp_distant player @s ~ ~ ~ 10 1
+playsound minecraft:gun/awp/awp_02 player @a ~ ~ ~ 2 1
+execute as @a[distance=31..] run playsound minecraft:gun/awp/awp_distant player @s ~ ~ ~ 10 1
 
 #muzzle: own view
 execute if entity @s[scores={shift=0}] positioned ~ ~1.6 ~ run particle minecraft:flame ^-0.1 ^ ^0.7 0.01 0.01 0.01 100 1 force @s
