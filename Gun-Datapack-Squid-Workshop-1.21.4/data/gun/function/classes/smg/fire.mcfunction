@@ -24,7 +24,7 @@ $function gun:classes/$(key)/fire/recoil/$(mode)
 
 #spread bullet
 scoreboard players set @s spread 2
-execute if entity @s[scores={gunjump_bool=1..}] run scoreboard players add @s spread 3
+execute if entity @s[scores={gunJump_bool=1..}] run scoreboard players add @s spread 3
 execute if entity @s[scores={shift_bool=1..}] run scoreboard players remove @s spread 1
 execute if entity @s[scores={recoil=3..}] run scoreboard players add @s spread 1
 scoreboard players operation @e[tag=bullet_new,limit=1,sort=nearest] spread = @s spread

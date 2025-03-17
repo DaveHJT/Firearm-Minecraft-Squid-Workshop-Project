@@ -1,1 +1,1 @@
-scoreboard objectives add gunjump_bool dummy
+scoreboard objectives add gunJump_bool dummy

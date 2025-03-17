@@ -22,7 +22,7 @@ execute store result entity @e[tag=bullet_new,limit=1,sort=nearest] Rotation[1] 
 scoreboard players set @s spread 1
 execute if entity @p[scores={walk_bool=1..}] run scoreboard players add @s spread 1
 execute if entity @p[scores={sprint_bool=1..}] run scoreboard players add @s spread 1
-execute if entity @p[scores={gunjump_bool=1..}] run scoreboard players add @s spread 1
+execute if entity @p[scores={gunJump_bool=1..}] run scoreboard players add @s spread 1
 execute if entity @p[scores={shift_bool=1..}] run scoreboard players remove @s spread 1
 scoreboard players set @s[scores={role=7}] spread 0
 

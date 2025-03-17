@@ -1,1 +1,1 @@
-scoreboard objectives remove gunjump_bool
+scoreboard objectives remove gunJump_bool
