@@ -22,7 +22,7 @@ execute as @a[nbt={OnGround:0b}] at @s if block ~ ~-0.01 ~ #gun:jump run scorebo
 
 
 #<<<<<<<<<<<<<<<<<<detect fire, low ammo
-#fire, low_ammo (no spin up)
+#fire, low_ammo
 execute as @a if items entity @s weapon.mainhand *[custom_data~{gun:1b}] run function gun:classes/gun/mainhand with entity @s SelectedItem.components."minecraft:custom_data"
 #>>>>>>>>>>>>>>>>>>detect fire, low ammo
 
@@ -34,10 +34,6 @@ execute as @a unless items entity @s weapon.offhand *[custom_data~{gun:1b}] run 
 #reloading, mode_toggling
 execute as @a if items entity @s weapon.offhand *[custom_data~{gun:1b}] run function gun:classes/gun/offhand with entity @s Inventory[{Slot:-106b}].components."minecraft:custom_data"
 #>>>>>>>>>>>>>>>>>>reloading, mode toggling
-
-
-#cooldown
-scoreboard players remove @e[scores={cooldown=1..}] cooldown 1
 
 
 #<<<<<<<<<<<<<<<<<<aim
@@ -61,6 +57,9 @@ execute as @a[predicate=gun:classes/aim/scope_clear] run clear @s *[custom_data~
 execute as @a[scores={aim=3,recoil=12..}] if items entity @s weapon.mainhand *[custom_data~{gun:1b},!custom_data~{key:"minigun"}] run scoreboard players remove @s recoil 1
 #>>>>>>>>>>>>>>>>>>aim
 
+
+#cooldown
+scoreboard players remove @e[scores={cooldown=1..}] cooldown 1
 
 #remove recoil
 execute as @a[scores={recoil=2..,r_cooldown=0}] run scoreboard players remove @s recoil 2
