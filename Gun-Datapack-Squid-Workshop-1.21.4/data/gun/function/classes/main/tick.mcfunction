@@ -17,9 +17,6 @@ scoreboard players add @a b_sniper 0
 scoreboard players add @a b_energy 0
 scoreboard players add @a b_mini 0
 
-# player status
-execute as @a[nbt={OnGround:0b}] at @s if block ~ ~-0.01 ~ #gun:jump run scoreboard players add @s jump 1
-
 
 #<<<<<<<<<<<<<<<<<<detect fire, low ammo
 #fire, low_ammo
@@ -68,9 +65,6 @@ execute as @a[scores={r_cooldown=1..}] run scoreboard players remove @s r_cooldo
 
 #save last pos
 execute as @a[tag=!dead] at @s run function gun:classes/gun/last_pos
-
-#reset
-execute as @a[scores={jump=1..}] run scoreboard players set @s jump 0
 
 
 #debug bullet

@@ -1,0 +1,1 @@
+scoreboard objectives remove gunjump_bool

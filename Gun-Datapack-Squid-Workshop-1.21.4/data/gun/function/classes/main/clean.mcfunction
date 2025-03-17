@@ -7,13 +7,13 @@ scoreboard objectives remove bulletrange
 scoreboard objectives remove accu 
 scoreboard objectives remove aim 
 scoreboard objectives remove spin 
-scoreboard objectives remove jump
 scoreboard objectives remove b_rifle 
 scoreboard objectives remove b_smg 
 scoreboard objectives remove b_shot 
 scoreboard objectives remove b_sniper 
 scoreboard objectives remove b_energy 
 scoreboard objectives remove b_mini 
+function bools:classes/gunjump/clean
 
 scoreboard objectives remove deaths
 scoreboard objectives remove Kills

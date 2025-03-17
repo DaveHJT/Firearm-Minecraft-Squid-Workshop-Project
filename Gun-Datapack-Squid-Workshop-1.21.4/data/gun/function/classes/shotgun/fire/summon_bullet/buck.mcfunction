@@ -15,7 +15,7 @@ function gun:classes/shotgun/fire/summon_bullet/buck_helper
 scoreboard players set @s spread 2
 execute if entity @s[scores={walk_bool=1..}] run scoreboard players add @s spread 1
 execute if entity @s[scores={sprint_bool=1..}] run scoreboard players add @s spread 1
-execute if entity @s[scores={jump=1..}] run scoreboard players add @s spread 3
+execute if entity @s[scores={gunjump_bool=1..}] run scoreboard players add @s spread 3
 execute if entity @s[scores={shift_bool=1..}] run scoreboard players remove @s spread 1
 scoreboard players operation @e[tag=buck,limit=10,sort=nearest] spread = @s spread
 execute as @e[tag=buck,limit=10,sort=nearest] at @s run function gun:classes/gun/spread/spread

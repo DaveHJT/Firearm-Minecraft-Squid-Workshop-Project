@@ -23,13 +23,13 @@ scoreboard objectives add bulletrange dummy
 scoreboard objectives add accu dummy
 scoreboard objectives add aim dummy
 scoreboard objectives add spin dummy
-scoreboard objectives add jump minecraft.custom:minecraft.jump
 scoreboard objectives add b_rifle dummy
 scoreboard objectives add b_smg dummy
 scoreboard objectives add b_shot dummy
 scoreboard objectives add b_sniper dummy
 scoreboard objectives add b_energy dummy
 scoreboard objectives add b_mini dummy
+function bools:classes/gunjump/load
 
 scoreboard objectives add deaths deathCount
 scoreboard objectives add Kills playerKillCount
