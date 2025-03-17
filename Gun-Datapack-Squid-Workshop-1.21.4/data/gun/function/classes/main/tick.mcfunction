@@ -58,7 +58,7 @@ execute as @a[predicate=gun:classes/aim/scope_up] run item replace entity @s wea
 execute as @a[predicate=gun:classes/aim/scope_clear] run clear @s *[custom_data~{key:"scope"}]
 
 #remove recoil
-execute as @a[scores={aim=3,recoil=12..},nbt={SelectedItem:{components:{"minecraft:custom_data":{gun:1b}}}},nbt=!{SelectedItem:{components:{"minecraft:custom_data":{minigun:1b}}}}] run scoreboard players remove @s recoil 1
+execute as @a[scores={aim=3,recoil=12..}] if items entity @s weapon.mainhand *[custom_data~{gun:1b},!custom_data~{key:"minigun"}] run scoreboard players remove @s recoil 1
 #>>>>>>>>>>>>>>>>>>aim
 
 
