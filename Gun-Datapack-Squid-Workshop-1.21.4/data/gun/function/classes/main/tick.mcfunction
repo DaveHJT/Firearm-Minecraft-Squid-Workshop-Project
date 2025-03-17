@@ -1,15 +1,14 @@
 #init
 execute as @a unless score @s SID = SID C run tag @s remove ini
 execute as @a[tag=!ini] run function gun:classes/gun/init/player_init
-scoreboard players set @a[tag=ini,scores={shift=1..}] h 1500
-scoreboard players set @a[tag=ini,scores={shift=..0}] h 1950
+scoreboard players set @a[tag=ini,scores={shift_bool=1..}] h 1500
+scoreboard players set @a[tag=ini,scores={shift_bool=..0}] h 1950
 execute as @e[type=#gun:supported,tag=babe,nbt={Age:0}] run function gun:classes/gun/init/mob_init_a
 execute as @e[type=#gun:supported,tag=!ini] run function gun:classes/gun/init/mob_init
 execute as @e[tag=shield,tag=!ini] run function gun:classes/gun/init/mob_init
 
 # init scores
 scoreboard players add @a ammo 0
-scoreboard players add @a shift 0
 scoreboard players add @a aim 0
 scoreboard players add @a b_rifle 0
 scoreboard players add @a b_smg 0
@@ -72,7 +71,6 @@ execute as @a[scores={r_cooldown=1..}] run scoreboard players remove @s r_cooldo
 execute as @a[tag=!dead] at @s run function gun:classes/gun/last_pos
 
 #reset
-execute as @a[scores={shift=1..}] run scoreboard players set @s shift 0
 execute as @a[scores={jump=1..}] run scoreboard players set @s jump 0
 
 
@@ -107,9 +105,9 @@ execute if score rand accu >= 10000 C run scoreboard players set rand accu 0
 
 #other weapons
 #jetpack
-execute as @a[scores={shift=1},nbt={SelectedItem:{components:{"minecraft:custom_data":{jetpack:1b}}}}] at @s run function gun:classes/jetpack/tick
-execute as @a[scores={shift=1,lever=160},nbt={SelectedItem:{components:{"minecraft:custom_data":{jetpack:1b}}}}] at @s run playsound minecraft:block.beacon.deactivate ambient @s ~ ~ ~ 1 2
-execute as @a[scores={shift=0,lever=1..}] at @s run scoreboard players remove @s lever 1
+execute as @a[scores={shift_bool=1},nbt={SelectedItem:{components:{"minecraft:custom_data":{jetpack:1b}}}}] at @s run function gun:classes/jetpack/tick
+execute as @a[scores={shift_bool=1,lever=160},nbt={SelectedItem:{components:{"minecraft:custom_data":{jetpack:1b}}}}] at @s run playsound minecraft:block.beacon.deactivate ambient @s ~ ~ ~ 1 2
+execute as @a[scores={shift_bool=0,lever=1..}] at @s run scoreboard players remove @s lever 1
 
 #shield
 function gun:classes/shield/tick

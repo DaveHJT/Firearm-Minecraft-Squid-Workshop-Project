@@ -30,7 +30,7 @@ scoreboard players set @s spread 2
 execute if entity @s[scores={walk_bool=1..}] run scoreboard players add @s spread 3
 execute if entity @s[scores={sprint_bool=1..}] run scoreboard players add @s spread 3
 execute if entity @s[scores={jump=1..}] run scoreboard players add @s spread 3
-execute if entity @s[scores={shift=1..}] run scoreboard players remove @s spread 1
+execute if entity @s[scores={shift_bool=1..}] run scoreboard players remove @s spread 1
 scoreboard players operation @e[tag=bullet_new,limit=1,sort=nearest] spread = @s spread
 execute as @e[tag=bullet_new,limit=1,sort=nearest] at @s run function gun:classes/gun/spread/spread
 
