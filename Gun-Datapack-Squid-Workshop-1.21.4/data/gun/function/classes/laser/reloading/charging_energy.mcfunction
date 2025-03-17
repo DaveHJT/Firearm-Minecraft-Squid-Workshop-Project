@@ -15,7 +15,7 @@ execute if entity @s[scores={b_energy=..20}] run title @s actionbar ["",{"score"
 execute if entity @s[scores={b_energy=21..}] run title @s actionbar ["",{"score":{"name":"@s","objective":"b_energy"},"color":"red"},{"text":"/"},{"score":{"name":"@s","objective":"ammo"},"color":"white"}]
 
 # clear scope
-clear @s *[custom_data~{scope:1b}]
+clear @s *[custom_data~{key:"scope"}]
 
 # reload ammo
 scoreboard players add @s b_energy 1

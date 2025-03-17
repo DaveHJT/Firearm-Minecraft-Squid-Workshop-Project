@@ -8,4 +8,4 @@ execute if score @s reload matches 25 run playsound minecraft:gun/m4a1/m4a1_clip
 execute if score @s reload matches 45 run playsound minecraft:gun/m4a1/m4a1_cliphit player @a ~ ~ ~ 0.5 0.6
 $execute if score @s reload matches 0 run function gun:classes/$(key)/reloading/complete
 title @s actionbar ["",{"text":"reloading..."}]
-clear @s *[custom_data~{scope:1b}]
+clear @s *[custom_data~{key:"scope"}]

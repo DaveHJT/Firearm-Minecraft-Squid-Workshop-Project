@@ -11,7 +11,7 @@
       "condition": "entity_properties",
       "entity": "this",
       "predicate": {
-        "slots": {"weapon.offhand": {"predicates": {"custom_data":"{scope:1b}"}}}
+        "slots": {"weapon.offhand": {"predicates": {"custom_data":"{key:scope}"}}}
       }
     }
   ]
