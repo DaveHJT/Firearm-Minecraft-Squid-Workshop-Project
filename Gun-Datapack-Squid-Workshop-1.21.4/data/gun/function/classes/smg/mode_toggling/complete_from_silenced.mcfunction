@@ -1,2 +1,2 @@
 item replace entity @s weapon.offhand with minecraft:air
-function app:get/smg
+function gun:classes/smg/get/default
