@@ -38,7 +38,7 @@ tag @e[tag=bullet_new,limit=1,sort=nearest] add bullet_fired
 tag @e[tag=bullet_new,limit=1,sort=nearest] remove bullet_new
 
 #cooldown
-scoreboard players add @s cooldown 3
+execute if entity @s[scores={carotClik_bool=1..}] run scoreboard players add @s cooldown 3
 
 #remove ammo
 scoreboard players remove @s b_smg 1
