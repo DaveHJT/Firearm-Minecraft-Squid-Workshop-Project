@@ -44,8 +44,6 @@ scoreboard players remove @e[scores={cooldown=1..}] cooldown 1
 #<<<<<<<<<<<<<<<<<<aim state update
 #add aim
 execute as @a[predicate=gun:classes/aim/state/add] run scoreboard players add @s aim 1
-#remove aim
-execute as @a[predicate=gun:classes/aim/state/remove] run scoreboard players remove @s aim 1
 #overide aim
 execute as @a[predicate=gun:classes/aim/state/overide] run scoreboard players set @s aim 0
 #>>>>>>>>>>>>>>>>>>aim state update
