@@ -10,4 +10,4 @@ tag @s remove full
 
 item replace entity @s weapon.offhand with minecraft:air
 
-function app:get/sniper
+$function gun:classes/$(key)/get/$(mode)
