@@ -1,0 +1,8 @@
+{
+  "condition": "entity_scores",
+  "entity": "this",
+  "scores": {
+    "carotClik_bool": 1,
+    "b_shot": 0
+  }
+}

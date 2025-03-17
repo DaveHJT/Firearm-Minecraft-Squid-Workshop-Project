@@ -1,0 +1,8 @@
+{
+  "condition": "inverted",
+  "term":
+  {
+    "condition": "reference",
+    "name": "gun:classes/shotgun/reloading"
+  }
+}

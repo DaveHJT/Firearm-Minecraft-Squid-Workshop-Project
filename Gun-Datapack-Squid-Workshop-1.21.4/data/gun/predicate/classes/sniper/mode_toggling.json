@@ -1,0 +1,7 @@
+{
+  "condition": "inverted",
+  "term": {
+    "condition": "reference",
+    "name": "gun:classes/sniper/reloading"
+  }
+}

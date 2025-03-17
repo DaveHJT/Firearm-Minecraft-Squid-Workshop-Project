@@ -1,4 +1,1 @@
-give @s minecraft:carrot_on_a_stick[\
-  custom_model_data={strings:["rifle"]}, item_name='{"text":"auto rifle"}',\
-  attribute_modifiers={modifiers:[],show_in_tooltip:false},\
-  custom_data={private:1b,gun:1b,rifle:1b,silenced:0,aimed:0,key:"rifle"}]
+function gun:classes/rifle/get/default

@@ -1,0 +1,7 @@
+{
+  "condition": "inverted",
+  "term": {
+    "condition": "reference",
+    "name": "gun:classes/minigun/reloading"
+  }
+}

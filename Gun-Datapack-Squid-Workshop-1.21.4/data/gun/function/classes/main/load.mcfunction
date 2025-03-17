@@ -23,7 +23,6 @@ scoreboard objectives add bulletrange dummy
 scoreboard objectives add accu dummy
 scoreboard objectives add aim dummy
 scoreboard objectives add spin dummy
-scoreboard objectives add shift minecraft.custom:minecraft.sneak_time
 scoreboard objectives add jump minecraft.custom:minecraft.jump
 scoreboard objectives add b_rifle dummy
 scoreboard objectives add b_smg dummy

@@ -1,45 +1,6 @@
-execute if score @s b_energy matches 1 run playsound minecraft:block.beacon.activate player @a ~ ~ ~ 2 0.5
+#reload state update
+scoreboard players add @s reload 1
+scoreboard players set @s[scores={reload=4..}] reload 0
 
-execute if score @s b_energy matches 15 run playsound minecraft:block.beacon.power_select player @a ~ ~ ~ 2 0.5
-
-execute if entity @s[scores={b_energy=20..}] run playsound minecraft:entity.creeper.primed player @a ~ ~ ~ 2 1
-
-execute if entity @s[scores={b_energy=23..}] run playsound minecraft:block.note_block.didgeridoo player @a ~ ~ ~ 2 1
-
-execute if entity @s[scores={b_energy=20..}] run item modify entity @s weapon.offhand gun:classes/laser/powered
-
-
-playsound minecraft:block.beehive.work player @a ~ ~ ~ 1 0.5
-execute if entity @s[scores={b_energy=..22}] run playsound minecraft:item.chorus_fruit.teleport player @a ~ ~ ~ 0.4 1
-
-
-# self explode when charged too much power
-execute if entity @s[scores={b_energy=36..}] run playsound minecraft:gun/awp/awp_02 player @a ~ ~ ~ 4 2
-
-execute if entity @s[scores={b_energy=36..}] run clear @s minecraft:carrot_on_a_stick[custom_data={gun:1b,laser:1b,silenced:0}] 1
-
-execute if entity @s[scores={b_energy=36..}] run scoreboard players add @s damage 19
-
-execute if entity @s[scores={b_energy=36..}] run tag @s add exploded
-
-execute if entity @s[scores={b_energy=36..}] run particle minecraft:explosion ^-0.15 ^1 ^1 0.2 0.2 0.2 0.0001 10 force
-
-execute if entity @s[scores={b_energy=36..}] run scoreboard players set @s b_energy 0
-
-execute if entity @s[scores={b_energy=36..}] run scoreboard players operation @s hit_by = @s UID
-
-effect give @s slowness 4 2 true
-
-# display ammo
-
-execute if entity @s[scores={b_energy=..20}] run title @s actionbar ["",{"score":{"name":"@s","objective":"b_energy"},"color":"white"},{"text":"/"},{"score":{"name":"@s","objective":"ammo"},"color":"white"}]
-
-execute if entity @s[scores={b_energy=21..}] run title @s actionbar ["",{"score":{"name":"@s","objective":"b_energy"},"color":"red"},{"text":"/"},{"score":{"name":"@s","objective":"ammo"},"color":"white"}]
-
-# clear scope
-clear @s minecraft:carrot_on_a_stick[custom_model_data={strings:["scope"]}, item_name='{"text":"scope"}']
-
-# reload ammo
-scoreboard players add @s b_energy 1
-
-
+#reload dependent functions
+$execute if score @s reload matches 0 run function gun:classes/$(key)/reloading/charging_energy

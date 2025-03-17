@@ -1,4 +1,1 @@
-give @s minecraft:carrot_on_a_stick[\
-  custom_model_data={strings:["smg"]}, item_name='{"text":"smg"}',\
-  attribute_modifiers={modifiers:[],show_in_tooltip:false},\
-  custom_data={private:1b,gun:1b,smg:1b,silenced:0,aimed:0,key:"smg"}]
+function gun:classes/smg/get/default

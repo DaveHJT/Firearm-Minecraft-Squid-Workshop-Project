@@ -1,0 +1,1 @@
+execute as @e[tag=bullet_new,limit=1,sort=nearest] run scoreboard players set @s damage 5
