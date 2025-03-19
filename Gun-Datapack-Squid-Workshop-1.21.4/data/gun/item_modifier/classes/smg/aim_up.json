@@ -18,7 +18,7 @@
   {
     "function":"set_custom_model_data",
     "strings":{
-      "values": ["smg_aim"],
+      "values": ["smg_silenced_aim"],
       "mode":"replace_all"
     },
     "conditions": [

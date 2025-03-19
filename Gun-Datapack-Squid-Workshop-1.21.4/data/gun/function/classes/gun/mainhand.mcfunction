@@ -2,6 +2,8 @@
 $data modify storage firearm:storage arg.key set value $(key)
 $data modify storage firearm:storage arg.mode set value $(mode)
 
+#mainhand default
+$execute at @s run function gun:classes/$(key)/tick_mainhand
 #low ammo
 $execute if predicate gun:classes/$(key)/low_ammo at @s run function gun:classes/$(key)/low_ammo
 #detect fire

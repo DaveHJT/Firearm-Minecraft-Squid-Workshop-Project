@@ -4,6 +4,31 @@
     "strings":{
       "values": ["laser"],
       "mode":"replace_all"
-    }
+    },
+    "conditions": [
+      {
+        "condition": "entity_properties",
+        "entity": "this",
+        "predicate": {
+          "slots": {"weapon.mainhand": {"components": {"custom_model_data":{"strings":["laser_powered"]}}}}
+        }
+      }
+    ]
+  },
+  {
+    "function":"set_custom_model_data",
+    "strings":{
+      "values": ["laser_aim"],
+      "mode":"replace_all"
+    },
+    "conditions": [
+      {
+        "condition": "entity_properties",
+        "entity": "this",
+        "predicate": {
+          "slots": {"weapon.mainhand": {"components": {"custom_model_data":{"strings":["laser_aim_powered"]}}}}
+        }
+      }
+    ]
   }
 ]
