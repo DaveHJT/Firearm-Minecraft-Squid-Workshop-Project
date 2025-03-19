@@ -1,1 +1,1 @@
-give @s minecraft:tipped_arrow[potion_contents={custom_color:1656347}, item_name='{"text":"Smoke Arrow"}']
+give @s minecraft:tipped_arrow[potion_contents={custom_color:1656347}, custom_name='{"text":"Smoke Arrow","italic":false}', intangible_projectile={}]
