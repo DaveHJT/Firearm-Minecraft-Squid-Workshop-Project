@@ -46,9 +46,6 @@ execute as @a[scores={aim=0}] if items entity @s weapon.mainhand *[custom_data~{
 
 #equip scope
 execute as @a[predicate=gun:classes/aim/scope_up] at @s run playsound minecraft:gun/awp/zoom player @a ~ ~ ~ 1 0.8
-execute as @a[predicate=gun:classes/aim/scope_up] run item replace entity @s weapon.offhand with minecraft:carrot_on_a_stick[custom_model_data={strings:["scope"]}, item_name='{"text":"scope"}', custom_data={key:"scope"}]
-#clear scope
-execute as @a[predicate=gun:classes/aim/scope_clear] run clear @s *[custom_data~{key:"scope"}]
 
 #remove recoil
 execute as @a[scores={aim=3,recoil=12..}] if items entity @s weapon.mainhand *[custom_data~{gun:1b},!custom_data~{key:"minigun"}] run scoreboard players remove @s recoil 1

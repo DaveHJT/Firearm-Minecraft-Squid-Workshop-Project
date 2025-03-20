@@ -17,7 +17,16 @@
 			{"when": "smg_silenced",                     "model": {"type": "model", "model": "item/guns/smg_silenced"}},
 			{"when": "smg_silenced_aim",                 "model": {"type": "model", "model": "item/guns/smg_silenced_aim"}},
 			{"when": "awm",                              "model": {"type": "model", "model": "item/guns/awm"}},
-			{"when": "awm_aim",                          "model": {"type": "model", "model": "item/guns/awm_aim"}},
+			{
+				"when": "awm_aim",
+				"model": {
+					"type": "composite",
+					"models": [
+						{"type": "model", "model": "item/guns/scope"},
+						{"type": "model", "model": "item/guns/awm_aim"}
+					]
+				}
+			},
 			{
 				"when": "laser",
 				"model": {
@@ -38,20 +47,37 @@
 				"model": {
 					"type": "condition",
 					"property": "selected",
-					"on_false": {"type": "model", "model": "item/guns/laser_aim"},
+					"on_false": {
+						"type": "composite",
+						"models": [
+							{"type": "model", "model": "item/guns/scope"},
+							{"type": "model", "model": "item/guns/laser_aim"}
+						]
+					},
 					"on_true": {
 						"type": "condition",
 						"property": "keybind_down",
 						"keybind": "key.use",
-						"on_false": {"type": "model", "model": "item/guns/laser_aim"},
-						"on_true": {"type": "model", "model": "item/guns/laser_aim_powered"}
+						"on_false": {
+							"type": "composite",
+							"models": [
+								{"type": "model", "model": "item/guns/scope"},
+								{"type": "model", "model": "item/guns/laser_aim"}
+							]
+						},
+						"on_true": {
+							"type": "composite",
+							"models": [
+								{"type": "model", "model": "item/guns/scope"},
+								{"type": "model", "model": "item/guns/laser_aim_powered"}
+							]
+						}
 					}
 				}
 			},
 			{"when": "laser_powered",                    "model": {"type": "model", "model": "item/guns/laser_powered"}},
 			{"when": "minigun",                          "model": {"type": "model", "model": "item/guns/minigun"}},
 			{"when": "minigun_aim",                      "model": {"type": "model", "model": "item/guns/minigun_aim"}},
-			{"when": "scope",                            "model": {"type": "model", "model": "item/guns/scope"}},
 			{"when": "turret_cannon",                    "model": {"type": "model", "model": "item/throwable/turret_cannon"}}
 		]
 	}

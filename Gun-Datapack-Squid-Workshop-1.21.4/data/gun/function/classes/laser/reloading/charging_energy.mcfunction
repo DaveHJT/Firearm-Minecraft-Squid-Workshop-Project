@@ -14,8 +14,5 @@ execute if entity @s[scores={b_energy=36..}] run function gun:classes/laser/relo
 execute if entity @s[scores={b_energy=..20}] run title @s actionbar ["",{"score":{"name":"@s","objective":"b_energy"},"color":"white"},{"text":"/"},{"score":{"name":"@s","objective":"ammo"},"color":"white"}]
 execute if entity @s[scores={b_energy=21..}] run title @s actionbar ["",{"score":{"name":"@s","objective":"b_energy"},"color":"red"},{"text":"/"},{"score":{"name":"@s","objective":"ammo"},"color":"white"}]
 
-# clear scope
-clear @s *[custom_data~{key:"scope"}]
-
 # reload ammo
 scoreboard players add @s b_energy 1

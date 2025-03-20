@@ -28,26 +28,14 @@
     },
 
     {
-      "__comment": "holding non-scope offhand",
+      "__comment": "holding item offhand",
       "condition": "inverted",
       "term": {
-        "condition": "any_of",
-        "terms": [
-          {
-            "condition": "entity_properties",
-            "entity": "this",
-            "predicate": {
-              "slots": {"weapon.offhand": {"predicates": {"custom_data":"{key:\"scope\"}"}}}
-            }
-          },
-          {
-            "condition": "entity_properties",
-            "entity": "this",
-            "predicate": {
-              "slots": {"weapon.offhand": {"count":0}}
-            }
-          }
-        ]
+        "condition": "entity_properties",
+        "entity": "this",
+        "predicate": {
+          "slots": {"weapon.offhand": {"count":0}}
+        }
       }
     },
   
