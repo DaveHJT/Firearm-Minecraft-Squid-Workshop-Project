@@ -7,6 +7,7 @@ scoreboard objectives remove bulletrange
 scoreboard objectives remove accu 
 scoreboard objectives remove aim 
 scoreboard objectives remove spin 
+scoreboard objectives remove lever
 scoreboard objectives remove b_rifle 
 scoreboard objectives remove b_smg 
 scoreboard objectives remove b_shot 

@@ -10,6 +10,7 @@ execute as @e[tag=shield,tag=!ini] run function gun:classes/gun/init/mob_init
 # init scores
 scoreboard players add @a ammo 0
 scoreboard players add @a aim 0
+scoreboard players add @a lever 0
 scoreboard players add @a b_rifle 0
 scoreboard players add @a b_smg 0
 scoreboard players add @a b_shot 0

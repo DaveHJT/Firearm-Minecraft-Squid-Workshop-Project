@@ -23,6 +23,7 @@ scoreboard objectives add bulletrange dummy
 scoreboard objectives add accu dummy
 scoreboard objectives add aim dummy
 scoreboard objectives add spin dummy
+scoreboard objectives add lever dummy
 scoreboard objectives add b_rifle dummy
 scoreboard objectives add b_smg dummy
 scoreboard objectives add b_shot dummy
