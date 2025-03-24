@@ -1,1 +1,1 @@
-give @s minecraft:tipped_arrow[potion_contents={custom_color:16754176}, item_name='{"text":"Signal Arrow"}'] 16
+function gun:classes/arrow_light/get/signal {count:16}

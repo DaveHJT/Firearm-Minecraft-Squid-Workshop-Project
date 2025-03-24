@@ -1,0 +1,1 @@
+$give @s minecraft:tipped_arrow[potion_contents={custom_color:11080735}, custom_name='{"text":"Mini Explosive Arrow","italic":false}', intangible_projectile={}] $(count)

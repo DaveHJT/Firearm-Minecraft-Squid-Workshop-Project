@@ -1,0 +1,1 @@
+$give @s minecraft:tipped_arrow[potion_contents={custom_color:16449336}, custom_name='{"text":"Arrow of Light Beam","italic":false}', intangible_projectile={}] $(count)

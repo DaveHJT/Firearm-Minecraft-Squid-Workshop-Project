@@ -1,1 +1,1 @@
-give @s minecraft:tipped_arrow[potion_contents={custom_color:1656347}, custom_name='{"text":"Smoke Arrow","italic":false}', intangible_projectile={}]
+function gun:classes/arrow_light/get/smoke {count:1}
