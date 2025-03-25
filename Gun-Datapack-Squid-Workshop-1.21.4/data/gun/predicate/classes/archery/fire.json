@@ -1,0 +1,15 @@
+{
+  "condition":"any_of",
+  "terms": [
+    {
+      "condition": "entity_scores",
+      "entity": "this",
+      "scores": {"bow_bool": 1}
+    },
+    {
+      "condition": "entity_scores",
+      "entity": "this",
+      "scores": {"crossbow_bool": 1}
+    }
+  ]
+}
