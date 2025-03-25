@@ -1,1 +1,1 @@
-function gun:classes/arrow_light/get/grenade {count:1}
+function gun:classes/archery/get/arrow/grenade {count:1}

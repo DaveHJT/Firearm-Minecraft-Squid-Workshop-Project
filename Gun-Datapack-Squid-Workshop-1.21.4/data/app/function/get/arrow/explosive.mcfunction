@@ -1,1 +1,1 @@
-function gun:classes/arrow_light/get/explosive {count:1}
+function gun:classes/archery/get/arrow/explosive {count:1}

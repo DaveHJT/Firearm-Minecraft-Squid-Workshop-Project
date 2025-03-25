@@ -1,1 +1,1 @@
-function gun:classes/arrow_light/get/signal {count:1}
+function gun:classes/archery/get/arrow/signal {count:1}

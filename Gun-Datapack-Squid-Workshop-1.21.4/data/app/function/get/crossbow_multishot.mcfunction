@@ -1,1 +1,1 @@
-give @s crossbow[item_name='{"text":"Handcrafted Crowssbow"}', lore=['{"text":"handcrafted by outlaw ranger"}', '{"text":"with experimantal tech"}'], unbreakable={show_in_tooltip:false}, enchantments={levels:{multishot:1,quick_charge:2}}, hide_additional_tooltip={}, custom_data={private:1b}]
+function gun:classes/archery/get/crossbow_multishot

@@ -1,0 +1,5 @@
+give @s crossbow[\
+  item_name='{"text":"Zhuge Repeating Crossbow"}', lore=['{"text":"a war crossbow that can shoot repeatedly"}', '{"text":"designed by Zhuge Liang"}'], \
+  unbreakable={show_in_tooltip:false}, \
+  enchantments={levels:{multishot:1,quick_charge:3}, show_in_tooltip:false}, \
+  custom_data={private:1b}]

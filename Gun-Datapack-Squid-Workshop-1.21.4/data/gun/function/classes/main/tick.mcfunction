@@ -104,9 +104,6 @@ execute as @a[scores={shift_bool=0,lever=1..}] at @s run scoreboard players remo
 function gun:classes/shield/tick
 execute as @s[tag=shield] at @s unless entity @a[scores={shield_bool=1},distance=..1] run kill @s
 
-#light arrow
-execute as @e[type=minecraft:arrow,nbt={Color:16449336},tag=!arrow] at @s run function gun:classes/arrow_light/init
-#execute as @e[tag=light,tag=arrow] at @s run function gun:classes/arrow_light/tick
 
 #grenade arrow
 execute as @e[type=minecraft:arrow,nbt={Color:1274392},tag=!throw] at @s run function throwable:classes/grenade/init
@@ -120,13 +117,9 @@ execute as @e[type=minecraft:arrow,nbt={Color:1656347},tag=!throw] at @s run fun
 #signal arrow
 execute as @e[type=minecraft:arrow,nbt={Color:16754176},tag=!throw] at @s run function throwable:classes/signal/init
 
-
 #mini explosive arrow
 execute as @e[type=minecraft:arrow,nbt={Color:11080735},tag=!throw] at @s run function throwable:classes/firecracker/init
 
-
-#light bow
-execute as @a[predicate=gun:classes/arrow_light/shooter] at @s as @e[type=#impact_projectiles,tag=!light,limit=1,sort=nearest] at @s run function gun:classes/arrow_light/init
 
 #time 
 scoreboard players add time V 1

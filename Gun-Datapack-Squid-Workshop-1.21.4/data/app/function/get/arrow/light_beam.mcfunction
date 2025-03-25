@@ -1,1 +1,1 @@
-function gun:classes/arrow_light/get/light_beam {count:1}
+function gun:classes/archery/get/arrow/light_beam {count:1}

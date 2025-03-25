@@ -1,1 +1,1 @@
-function gun:classes/arrow_light/get/smoke {count:16}
+function gun:classes/archery/get/arrow/smoke {count:16}

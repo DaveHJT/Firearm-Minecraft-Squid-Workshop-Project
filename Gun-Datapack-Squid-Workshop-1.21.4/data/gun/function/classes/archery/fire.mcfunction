@@ -1,0 +1,1 @@
+execute as @e[type=#impact_projectiles,tag=!light,limit=1,sort=nearest] at @s run function gun:classes/archery/fire/init

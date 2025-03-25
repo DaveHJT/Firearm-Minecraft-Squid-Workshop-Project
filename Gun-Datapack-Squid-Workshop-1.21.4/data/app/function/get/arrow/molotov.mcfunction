@@ -1,1 +1,1 @@
-function gun:classes/arrow_light/get/molotov {count:1}
+function gun:classes/archery/get/arrow/molotov {count:1}
