@@ -126,10 +126,7 @@ execute as @e[type=minecraft:arrow,nbt={Color:11080735},tag=!throw] at @s run fu
 
 
 #light bow
-execute as @a[scores={bow_bool=1},nbt={SelectedItem:{components:{"minecraft:custom_data":{light:1b}}}}] at @s as @e[type=minecraft:arrow,tag=!light,limit=1,sort=nearest] at @s run function gun:classes/arrow_light/init
-#light crossbow
-execute as @a[scores={crossbow_bool=1},nbt={SelectedItem:{components:{"minecraft:custom_data":{light:1b}}}}] at @s as @e[type=minecraft:arrow,tag=!light,limit=1,sort=nearest] at @s run function gun:classes/arrow_light/init
-execute as @a[scores={crossbow_bool=1},nbt={SelectedItem:{components:{"minecraft:custom_data":{light:1b}}}}] at @s as @e[type=minecraft:firework_rocket,tag=!light,limit=1,sort=nearest] at @s run function gun:classes/arrow_light/init
+execute as @a[predicate=gun:classes/arrow_light/shooter] at @s as @e[type=#impact_projectiles,tag=!light,limit=1,sort=nearest] at @s run function gun:classes/arrow_light/init
 
 #time 
 scoreboard players add time V 1
