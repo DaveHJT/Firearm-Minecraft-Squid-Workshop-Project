@@ -1,6 +1,5 @@
-execute if entity @s[tag=!offset] run function gun:classes/gun/quick_random
-scoreboard players operation rand V %= 20 C
-
+#compile argument: get random value
+execute store result score rand V run random value 0..19
 execute if score rand V matches 0 run tp @s ~ ~ ~ facing ^-0.1 ^0.1 ^1
 execute if score rand V matches 1 run tp @s ~ ~ ~ facing ^0.2 ^-0.2 ^-1
 execute if score rand V matches 2 run tp @s ~ ~ ~ facing ^-0.3 ^0.1 ^1
@@ -21,4 +20,3 @@ execute if score rand V matches 16 run tp @s ~ ~ ~ facing ^1.4 ^0.1 ^1
 execute if score rand V matches 17 run tp @s ~ ~ ~ facing ^-1.3 ^0.10 ^-1
 execute if score rand V matches 18 run tp @s ~ ~ ~ facing ^1.8 ^-0.25 ^-1
 execute if score rand V matches 19 run tp @s ~ ~ ~ facing ^100 ^ ^1
-

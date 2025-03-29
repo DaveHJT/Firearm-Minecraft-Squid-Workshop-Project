@@ -39,7 +39,7 @@ execute if entity @s[scores={gunJump_bool=1..}] run scoreboard players add @s sp
 execute if entity @s[scores={shift_bool=1..}] run scoreboard players remove @s spread 1
 scoreboard players operation @e[tag=bullet_new,limit=1,sort=nearest] spread = @s spread
 function gun:classes/gun/quick_random
-execute as @e[tag=bullet_new,limit=1,sort=nearest] at @s run function gun:classes/gun/spread/spread
+execute as @e[tag=bullet_new,limit=1,sort=nearest] at @s run function gun:classes/gun/spread
 
 #fire
 execute as @e[tag=bullet_new,limit=1,sort=nearest] at @s run function gun:classes/gun/fire

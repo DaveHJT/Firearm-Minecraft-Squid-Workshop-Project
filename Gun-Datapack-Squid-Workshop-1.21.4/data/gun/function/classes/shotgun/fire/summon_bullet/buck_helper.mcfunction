@@ -18,14 +18,13 @@ execute if entity @s[scores={recoil=18..}] as @e[tag=bullet_new,limit=1,sort=nea
 
 #spread bullet
 scoreboard players set @e[tag=bullet_new,limit=1,sort=nearest] spread 3
-execute as @e[tag=bullet_new,limit=1,sort=nearest] at @s run function gun:classes/gun/spread/spread
+execute as @e[tag=bullet_new,limit=1,sort=nearest] at @s run function gun:classes/gun/spread
 scoreboard players set @e[tag=bullet_new,limit=1,sort=nearest] spread 1
-execute as @e[tag=bullet_new,limit=1,sort=nearest] at @s run function gun:classes/gun/spread/spread
+execute as @e[tag=bullet_new,limit=1,sort=nearest] at @s run function gun:classes/gun/spread
 
 #fire
 execute as @e[tag=bullet_new,limit=1,sort=nearest] at @s run function gun:classes/gun/fire
 
 #update bullet status
 tag @e[tag=bullet_new,limit=1,sort=nearest] add bullet_fired
-tag @e[tag=bullet_new,limit=1,sort=nearest] add offset
 tag @e[tag=bullet_new,limit=1,sort=nearest] remove bullet_new

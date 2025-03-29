@@ -69,7 +69,7 @@ execute as @a[tag=!dead] at @s run function gun:classes/gun/last_pos
 #execute as @e[tag=bullet_fired] at @s run particle minecraft:crit ~ ~ ~ 0.1 0.1 0.1 1 0
 #execute as @e[tag=bullet_fired] at @s run tp @s ^ ^ ^0.1
 #execute as @e[tag=spread] at @s run tp @s ~ ~ ~ ~ ~2
-#execute as @e[tag=spread] at @s run function gun:classes/gun/spread/spread
+#execute as @e[tag=spread] at @s run function gun:classes/gun/spread
 #execute as @e[tag=spread] run tag @s remove spread
 
 #bullet /from MGS_2.0.1 gun mod/

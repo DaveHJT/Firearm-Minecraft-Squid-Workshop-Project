@@ -1,1 +1,0 @@
-$random value -$(min)..$(max)
