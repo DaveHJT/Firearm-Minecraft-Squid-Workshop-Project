@@ -106,19 +106,19 @@ execute as @s[tag=shield] at @s unless entity @a[scores={shield_bool=1},distance
 
 
 #grenade arrow
-execute as @e[type=minecraft:arrow,nbt={Color:1274392},tag=!throw] at @s run function throwable:classes/grenade/init
+execute as @e[type=minecraft:arrow,nbt={item:{components:{"minecraft:potion_contents":{custom_color:1274392}}}},tag=!throw] at @s run function throwable:classes/grenade/init
 
 #molotov arrow
-execute as @e[type=minecraft:arrow,nbt={Color:11298561},tag=!throw] at @s run function throwable:classes/molotov/init
+execute as @e[type=minecraft:arrow,nbt={item:{components:{"minecraft:potion_contents":{custom_color:11298561}}}},tag=!throw] at @s run function throwable:classes/molotov/init
 
 #smoke arrow
-execute as @e[type=minecraft:arrow,nbt={Color:1656347},tag=!throw] at @s run function throwable:classes/smoke/init
+execute as @e[type=minecraft:arrow,nbt={item:{components:{"minecraft:potion_contents":{custom_color:1656347}}}},tag=!throw] at @s run function throwable:classes/smoke/init
 
 #signal arrow
-execute as @e[type=minecraft:arrow,nbt={Color:16754176},tag=!throw] at @s run function throwable:classes/signal/init
+execute as @e[type=minecraft:arrow,nbt={item:{components:{"minecraft:potion_contents":{custom_color:16754176}}}},tag=!throw] at @s run function throwable:classes/signal/init
 
 #mini explosive arrow
-execute as @e[type=minecraft:arrow,nbt={Color:11080735},tag=!throw] at @s run function throwable:classes/firecracker/init
+execute as @e[type=minecraft:arrow,nbt={item:{components:{"minecraft:potion_contents":{custom_color:11080735}}}},tag=!throw] at @s run function throwable:classes/firecracker/init
 
 
 #time 
