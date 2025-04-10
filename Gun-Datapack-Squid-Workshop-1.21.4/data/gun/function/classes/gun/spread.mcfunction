@@ -1,1 +1,1 @@
-function gun:classes/gun/spread/with_selector {selector:"@s"}
+function gun:classes/gun/spread/with_arg {selector:"@s",mode:"bullet"}

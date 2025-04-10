@@ -18,7 +18,7 @@ execute if entity @s[scores={sprint_bool=1..}] run scoreboard players add @s spr
 execute if entity @s[scores={gunJump_bool=1..}] run scoreboard players add @s spread 3
 execute if entity @s[scores={shift_bool=1..}] run scoreboard players remove @s spread 1
 scoreboard players operation @e[tag=buck,limit=10,sort=nearest] spread = @s spread
-function gun:classes/gun/spread/with_selector {selector:"@e[tag=buck,limit=10,sort=nearest]"}
+function gun:classes/gun/spread/with_arg {selector:"@e[tag=buck,limit=10,sort=nearest]",mode:"bullet"}
 
 #update bullet status (again)
 tag @e[tag=buck,limit=10,sort=nearest] remove buck
