@@ -50,7 +50,7 @@ scoreboard players add rand accu 12
 
 
 #spread
-execute as @e[tag=bullet_new,limit=1,sort=nearest] at @s run function gun:classes/gun/spread/spread
+execute as @e[tag=bullet_new,limit=1,sort=nearest] at @s run function gun:classes/gun/spread
 
 execute as @e[tag=bullet_new,limit=1,sort=nearest] at @s run function gun:classes/gun/fire
 
