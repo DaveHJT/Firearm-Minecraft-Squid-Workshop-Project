@@ -66,18 +66,14 @@ scoreboard players set v12 V 0
 scoreboard players set v13 V 0
 scoreboard players set v14 V 0
 scoreboard players set v15 V 0
-scoreboard players add rand V 0
-scoreboard players add randraw V 0
-scoreboard players add time V 0
 
 # reset tags
 tag @a remove uid
 tag @a remove ini
 
 # init Session ID
-function gun:classes/gun/quick_random
 scoreboard objectives add SID dummy
-scoreboard players operation SID C = randraw V
+execute store result score SID C run random value 0..2147483646
 
 # init settings
 scoreboard objectives add gun_settings dummy

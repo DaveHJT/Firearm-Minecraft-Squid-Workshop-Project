@@ -121,9 +121,6 @@ execute as @e[type=minecraft:arrow,nbt={Color:16754176},tag=!throw] at @s run fu
 execute as @e[type=minecraft:arrow,nbt={Color:11080735},tag=!throw] at @s run function throwable:classes/firecracker/init
 
 
-#time 
-scoreboard players add time V 1
-execute if score time V matches 1000000.. run scoreboard players set time V 0 
 
 # hit mark
 execute if score hit_mark gun_settings matches 1 as @e[tag=hit_mark] at @s run particle composter ~ ~ ~ 0 0 0 1 1 force
