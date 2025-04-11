@@ -1,3 +1,3 @@
 execute anchored eyes run summon minecraft:area_effect_cloud ^-1.5 ^ ^6.2 {Duration:20,Tags:["cannon","bullet_new","bullet","slow"]}
-execute store result entity @e[tag=bullet_new,limit=1,sort=nearest] Rotation[0] float 0.000001 run data get entity @s Rotation[0] 1000000
-execute store result entity @e[tag=bullet_new,limit=1,sort=nearest] Rotation[1] float 0.000001 run data get entity @s Rotation[1] 1000000
+data modify entity @e[tag=bullet_new,limit=1,sort=nearest] Rotation[0] set from entity @s Rotation[0]
+data modify entity @e[tag=bullet_new,limit=1,sort=nearest] Rotation[1] set from entity @s Rotation[1]
