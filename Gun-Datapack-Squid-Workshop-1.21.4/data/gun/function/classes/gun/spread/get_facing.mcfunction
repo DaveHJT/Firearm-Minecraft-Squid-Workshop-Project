@@ -11,15 +11,13 @@ scoreboard players operation @s dx -= v0 V
 scoreboard players operation @s dz -= v1 V
 
 #calculate delta position: y=sqrt(1-cos^2)
-#v0: in_original
-#v1: value_begin_of_loop
-#v2: value_end_of_loop
+#v0: sqrt input
+#v2: sqrt output
 $data modify storage firearm:storage arg.cos set value $(cos)
 execute store result score v1 V run data get storage firearm:storage arg.cos 1000
 scoreboard players operation v1 V *= v1 V
 scoreboard players set v0 V 1000000
 scoreboard players operation v0 V -= v1 V
-scoreboard players set v1 V 1
 function gun:classes/utilities/sqrt
 
 #compile argument
