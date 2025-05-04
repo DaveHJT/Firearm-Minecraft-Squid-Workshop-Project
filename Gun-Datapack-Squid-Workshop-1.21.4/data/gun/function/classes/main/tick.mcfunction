@@ -69,7 +69,7 @@ execute as @a[tag=!dead] at @s run function gun:classes/gun/last_pos
 #execute as @e[tag=bullet_fired] at @s run particle minecraft:crit ~ ~ ~ 0.1 0.1 0.1 1 0
 #execute as @e[tag=bullet_fired] at @s run tp @s ^ ^ ^0.1
 #execute as @e[tag=spread] at @s run tp @s ~ ~ ~ ~ ~2
-#execute as @e[tag=spread] at @s run function gun:classes/gun/spread/spread
+#execute as @e[tag=spread] at @s run function gun:classes/gun/spread
 #execute as @e[tag=spread] run tag @s remove spread
 
 #bullet /from MGS_2.0.1 gun mod/
@@ -121,9 +121,6 @@ execute as @e[type=minecraft:arrow,nbt={item:{components:{"minecraft:potion_cont
 execute as @e[type=minecraft:arrow,nbt={item:{components:{"minecraft:potion_contents":{custom_color:11080735}}}},tag=!throw] at @s run function throwable:classes/firecracker/init
 
 
-#time 
-scoreboard players add time V 1
-execute if score time V matches 1000000.. run scoreboard players set time V 0 
 
 # hit mark
 execute if score hit_mark gun_settings matches 1 as @e[tag=hit_mark] at @s run particle composter ~ ~ ~ 0 0 0 1 1 force

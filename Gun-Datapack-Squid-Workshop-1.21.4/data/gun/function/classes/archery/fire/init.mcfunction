@@ -29,7 +29,7 @@ scoreboard players set @s[scores={role=7}] spread 0
 execute if entity @s[nbt={crit:0b}] run scoreboard players add @s spread 3
 
 scoreboard players operation @e[tag=bullet_new,limit=1,sort=nearest] spread = @s spread
-execute as @e[tag=bullet_new,limit=1,sort=nearest] at @s run function gun:classes/gun/spread/spread
+execute as @e[tag=bullet_new,limit=1,sort=nearest] at @s run function gun:classes/gun/spread
 
 execute as @e[tag=bullet_new,limit=1,sort=nearest] at @s run function gun:classes/gun/fire
 

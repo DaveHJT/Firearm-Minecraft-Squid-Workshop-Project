@@ -21,8 +21,8 @@ tag @s remove display_fire
 
 #summon bullet
 execute anchored eyes run summon minecraft:area_effect_cloud ^ ^ ^0.4 {Duration:30,Tags:["bullet","b_sniper","bullet_new"]}
-execute store result entity @e[tag=bullet_new,limit=1,sort=nearest] Rotation[0] float 0.000001 run data get entity @s Rotation[0] 1000000
-execute store result entity @e[tag=bullet_new,limit=1,sort=nearest] Rotation[1] float 0.000001 run data get entity @s Rotation[1] 1000000
+data modify entity @e[tag=bullet_new,limit=1,sort=nearest] Rotation[0] set from entity @s Rotation[0]
+data modify entity @e[tag=bullet_new,limit=1,sort=nearest] Rotation[1] set from entity @s Rotation[1]
 
 #sign name
 scoreboard players operation @e[tag=bullet_new,limit=1,sort=nearest] UID = @s UID
@@ -44,7 +44,7 @@ execute if entity @s[scores={sprint_bool=1..}] run scoreboard players add @s spr
 execute if entity @s[scores={gunJump_bool=1..}] run scoreboard players add @s spread 1
 execute if entity @s[scores={shift_bool=1..}] run scoreboard players remove @s spread 4
 scoreboard players operation @e[tag=bullet_new,limit=1,sort=nearest] spread = @s spread
-execute as @e[tag=bullet_new,limit=1,sort=nearest] at @s run function gun:classes/gun/spread/spread
+execute as @e[tag=bullet_new,limit=1,sort=nearest] at @s run function gun:classes/gun/spread
 
 # fire
 execute as @e[tag=bullet_new,limit=1,sort=nearest] at @s run function gun:classes/gun/fire
